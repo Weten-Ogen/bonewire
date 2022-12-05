@@ -1,0 +1,24 @@
+{% extends "tasks/layout.html" %}
+
+{% block head %}
+    <title>Todo</title>
+{% endblock %}
+
+{% block body %}
+    <h1>To-Do's </h1>
+
+    <form method="POST" action="/">
+        {% csrf_token %} 
+        {{ form.title }}
+        <input type="submit" name="Create Task">
+    </form>
+
+
+
+
+    {% for task in tasks %}
+        <div> 
+            <p>{{ task }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
