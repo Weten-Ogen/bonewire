@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>delete</title>
+    </head>
+    <body>
+        <p>Are you sure you want to delete {{ item }}  ? </p>
+        <a href="{% url 'index'%}">Goto Home</a>
+        <form method="POST" action="">
+            <input type="submit" name="confirmed">
+
+        </form>
+    </body>
+</html>
