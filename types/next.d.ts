@@ -121,6 +121,5 @@ interface  horizontalscrollviewprops {
 
 // cart 
 interface cartprops {
-    className?:string,
-     
+    className?:string 
 }
