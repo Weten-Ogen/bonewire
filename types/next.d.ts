@@ -122,5 +122,5 @@ interface  horizontalscrollviewprops {
 // cart 
 interface cartprops {
     className?:string,
-    addedProducts :product[] | [] 
+    addedProducts? :product[] | [] 
 }
