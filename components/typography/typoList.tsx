@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import { typolistprops } from "@/types/next"
 
 export function TypographyList({content,className,listClass}:typolistprops) {
     return (
