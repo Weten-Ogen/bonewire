@@ -3,14 +3,14 @@ import HeroImage from '@/public/assets/images/bag2.jpg';
 
 export default function Home() {
   return (
-    <section className="min-h-screen  md:h-[60vh] md:overflow-hidden md:object-contain">
+    <section className=" md:overflow-hidden md:object-contain">
       {/* hero section 
           --> contents 
           --> call to action
           ---> image display
         
       */}
-      <article className="pt-10 md:pt-0 md:w-[80%] mx-auto">
+      <article className="pt-10 md:pt-10 md:w-[80%] mx-auto">
 
         <ImageWithText 
         imageurl={HeroImage}

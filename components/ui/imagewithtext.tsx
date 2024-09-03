@@ -18,7 +18,7 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
 }:imagewithtextprops) => {
   return (
     <div className={cn('',className)}>
-      <div className='flex flex-col gap-2 md:gap-4 '>
+      <div className='flex flex-col gap-2 md:gap-4  md:max-w-lg'>
         <TypographyH2 
         content={title}
         />
@@ -50,7 +50,7 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
        alt={`${imageurl} image`}
        width={500}
        height={500}
-       className="pt-5 md:pt-0"
+       className="pt-5 md:pt-0 aspect-square"
       />
     </div>
   )
