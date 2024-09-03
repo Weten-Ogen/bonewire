@@ -3,14 +3,13 @@ import Headers from '@/components/ui/headers'
 import SearchBtn from '@/components/ui/searchbtn'
 import staticlist from '@/constants/staticlist'
 import { cn } from '@/lib/utils'
-import { dashboardprops } from '@/types/next'
 import React from 'react'
 
 
-const page = ({className}:dashboardprops
+const page = (
 ) => {
   return (
-    <section className={cn('pt-5 md:w-[95%] mx-auto',className)}>
+    <section className='pt-5 md:w-[95%] mx-auto'>
       <Headers 
        className=''
        content='We have the best kente product that suits your tastes'
