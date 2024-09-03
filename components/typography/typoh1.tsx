@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { typo } from "@/types/next";
 
 export function TypographyH1({content,className}:typo) {
     return (
