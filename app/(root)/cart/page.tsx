@@ -1,6 +1,5 @@
 import { TypographyLarge } from '@/components/typography/large'
 import CartCard from '@/components/ui/cartcard'
-import NavLinks from '@/components/ui/navlinks'
 import icons from '@/constants/icons'
 import staticlist from '@/constants/staticlist'
 import { cn } from '@/lib/utils'
