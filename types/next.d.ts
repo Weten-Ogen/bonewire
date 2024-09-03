@@ -1,9 +1,8 @@
+import React from 'react'
+import { StaticImageData } from 'next/image'
+
 
 // typography components types
-
-import { StaticImport } from "next/dist/shared/lib/get-img-props"
-import { StaticImageData } from "next/image"
-
 interface typo {
     className?:string,
     content:any,
