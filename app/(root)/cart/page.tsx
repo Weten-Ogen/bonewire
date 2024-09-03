@@ -7,11 +7,10 @@ import { cn } from '@/lib/utils'
 import { cartprops } from '@/types/next'
 import React from 'react'
 
-const page = ({addedProducts,className}:cartprops) => {
+const page = ({className}:cartprops) => {
   
-  if( addedProducts) {
-  
-  return <section className={cn('pt-24',className)}>
+  if(!staticlist.fakeproducts) {
+  return( <section className={cn('pt-24',className)}>
         {/* cart cards 
         => if empty -> you have no products here
           added a button that with go back to the product page
@@ -27,7 +26,7 @@ const page = ({addedProducts,className}:cartprops) => {
       reff="/dashboard"
       className='flex items-center justify-center text-foreground text-lg'
       />
-    </section>
+    </section>)
   }
   return (
     <section className='flex flex-col gap-4 pt-10'>
