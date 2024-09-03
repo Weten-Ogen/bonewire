@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils'
 import { product } from '@/types/next'
 import React from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardTitle } from './card'
+import { Card, CardContent, CardTitle } from './card'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './button'

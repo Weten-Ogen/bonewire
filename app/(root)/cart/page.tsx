@@ -3,10 +3,9 @@ import CartCard from '@/components/ui/cartcard'
 import icons from '@/constants/icons'
 import staticlist from '@/constants/staticlist'
 import { cn } from '@/lib/utils'
-import { cartprops } from '@/types/next'
 import React from 'react'
 
-const page = ({className}:cartprops) => {
+const page = () => {
     return (
     <section className='flex flex-col gap-4 pt-10'>
       <TypographyLarge content="Cart" className="text-xl text-center"/>
