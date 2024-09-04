@@ -5,7 +5,7 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardTitle } from './card'
 import Image from 'next/image'
 
-const ProductCard = ({content,id,imageurl,label,tags,className}:productcardprops) => {
+const ProductCard = ({content,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
     <div className=''>
       <Card className=''>
@@ -23,12 +23,18 @@ const ProductCard = ({content,id,imageurl,label,tags,className}:productcardprops
              {content}
           </CardDescription>
           <div className=''>
-            <p>
-
-            </p>
-            <p>
-
-            </p>
+            <div>
+              <p>Name</p>
+              <p>{label}</p>
+            </div>
+            <div>
+            <p>Price</p>
+            <p>{price}</p>
+            </div>
+            <div>
+            <p>Gender</p>
+            <p>{gender}</p>
+            </div>
 
             
           </div>

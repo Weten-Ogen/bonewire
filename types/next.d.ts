@@ -127,5 +127,6 @@ interface productcardprops {
     label:string,
     content: string,
     tags : string[],
-    className?:string,  
+    className?:string,
+    price: number,  
 }
