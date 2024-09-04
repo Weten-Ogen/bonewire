@@ -21,8 +21,8 @@ const ImageCard = ({pathname,downloadUrl,size,updatedAt,url}:imageprops) => {
             <Image  
             src={url}
             alt={pathname}
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             className='aspect-square'
             />
             <CardTitle>pathname: {pathname}</CardTitle>
