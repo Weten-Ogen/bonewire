@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "../globals.css";
 import Providers from "@/components/providers";
 
-const inter = Poppins({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"],weight:"400" });
 
 export const metadata: Metadata = {
   title: "Bonewire",
