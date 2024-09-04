@@ -13,13 +13,13 @@ const page = (
       <Headers 
        className=''
        content='We have the best kente product that suits your tastes'
-       contentClass='max-w-sm md:max-w-lg  p-4'
+       contentClass='max-w-sm md:max-w-md text-2xl p-2 md:p-0'
        subcontent=''
        subcontentClass=''
       />
-      <article className='pt-5 mt:pt-2'>
+      <article className='pt-5 mt:pt-0'>
         <SearchBtn 
-        className="w-full md:w-[70%] md:flex items-center  gap-8 p-2 "
+        className="w-full md:w-[70%] md:flex items-center  md:gap-4  p-2 md:py-2 md:px-0 "
         />
 
       </article>
