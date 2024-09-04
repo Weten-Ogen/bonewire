@@ -1,5 +1,6 @@
 import FilterLinks from '@/components/ui/filterlinks'
 import Headers from '@/components/ui/headers'
+import ProductGrid from '@/components/ui/productgrid'
 import SearchBtn from '@/components/ui/searchbtn'
 import staticlist from '@/constants/staticlist'
 import { cn } from '@/lib/utils'
@@ -29,6 +30,9 @@ const page = (
         className='w-full  grid grid-cols-4 md:items-start md:grid-cols-12'
         />
       </article>
+      <ProductGrid 
+      products={staticlist.products}
+      />
 
     </section>
   )

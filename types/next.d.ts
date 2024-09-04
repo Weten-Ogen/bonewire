@@ -109,6 +109,8 @@ interface product {
     content: string,
     tags : string[],
     className?:string,
+    price: number,
+    gender:string
 } 
 interface  horizontalscrollviewprops {
     className?:string,
@@ -129,5 +131,10 @@ interface productcardprops {
     tags : string[],
     className?:string,
     price: number,
-    gender: "M" | "F" | "all"  
+    gender:string  
 }
+
+interface productgrid{
+    products: product[]
+}
+

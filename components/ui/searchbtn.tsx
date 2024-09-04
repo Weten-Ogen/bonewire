@@ -20,7 +20,7 @@ const SearchBtn = ({className}:searchbtnprops) => {
          width={24}
          height={24}
         />
-        <span>Search</span>
+        <span className=''>Search</span>
         
         </Button>
     </div>
