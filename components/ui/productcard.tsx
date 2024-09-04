@@ -39,7 +39,7 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
               </div>
               <div className='flex items-center justify-between gap-4 '>
               <p className='font-bold'>Price</p>
-              <p className='font-medium bg-primary leading-tight bg-primary text-sm'>{price}</p>
+              <p className='font-medium bg-primary leading-tight  text-sm'>{price}</p>
               </div>
               <div className='flex items-center justify-between gap-4 '>
               <p className='font-bold'>Gender</p>
