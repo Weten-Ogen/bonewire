@@ -50,8 +50,8 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
       <Image 
        src={imageurl}
        alt={`${imageurl} image`}
-       width={350}
-       height={350}
+       width={500}
+       height={500}
        className="mt-5 md:mt-0 aspect-square w-full  shadow-md shadow-yellow-500 rounded-lg "
       />
     </div>
