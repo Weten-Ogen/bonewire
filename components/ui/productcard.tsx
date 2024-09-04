@@ -7,34 +7,34 @@ import Image from 'next/image'
 
 const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
-    <div className=''>
-      <Card className='p-0'>
-        <CardContent className='p-0'>
+    <div className='p-2'>
+      <Card className='p-0 '>
+        <CardContent className='flex flex-col  gap-4 p-0 rounded-lg'>
           <Image 
           src={imageurl}
           alt={label}
           width={200}
           height={200}
-          className='w-full aspect-square'
+          className='w-full rounded-lg aspect-square'
           />
-          <CardTitle className=''>
+          <CardTitle className='text-lg p-2'>
              {label}
           </CardTitle>
-          <CardDescription className=''>
+          <CardDescription className='p-2'>
              {content}
           </CardDescription>
-          <div className=''>
-            <div>
-              <p>Name</p>
-              <p>{label}</p>
+          <div className='flex flex-col gap-4 rounded-lg p-2'>
+            <div  className='flex items-center justify-between gap-4 '>
+              <p className='font-bold'>Name</p>
+              <p className='font-medium leading-tight text-sm'>{label}</p>
             </div>
-            <div>
-            <p>Price</p>
-            <p>{price}</p>
+            <div className='flex items-center justify-between gap-4 '>
+            <p className='font-bold'>Price</p>
+            <p className='font-medium leading-tight text-sm'>{price}</p>
             </div>
-            <div>
-            <p>Gender</p>
-            <p>{gender}</p>
+            <div className='flex items-center justify-between gap-4 '>
+            <p className='font-bold'>Gender</p>
+            <p className='font-medium leading-tight text-sm'>{gender}</p>
             </div>
 
             
