@@ -16,7 +16,7 @@ const ImageCard = ({pathname,downloadUrl,size,updatedAt,url}:imageprops) => {
     const updated = new Date(updatedAt)
   return (
     <div className=''>
-      <Card className=''>
+      <Card className='p-0'>
         <CardContent className='flex flex-col items-center p-0'>
             <Image  
             src={url}
