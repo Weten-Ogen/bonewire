@@ -18,7 +18,7 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
       <div className='flex flex-col gap-2 md:gap-4  md:max-w-lg rounded-xl '>
         <TypographyH2 
         content={title}
-        className=''
+        className='font-bold '
         />
         <TypographyH4 
         content={content}

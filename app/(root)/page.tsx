@@ -4,7 +4,6 @@ import HeroImage from '@/public/assets/images/bag2.jpg';
 export default function Home() {
   return (
     <section className=" md:overflow-hidden md:object-contain">
-      
       <article className="pt-10 md:pt-8 md:w-[80%] mx-auto">
         <ImageWithText 
         imageurl={'https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/IMG-20240903-WA0047-SYkn8Y5BckCrZ07KsthBWCYEu82fbK.jpg'}
