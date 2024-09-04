@@ -15,7 +15,7 @@ import staticlist from '@/constants/staticlist'
 const MobileNav = () => {
     const pathname = usePathname();
     return ( 
-    <div className='md:hidden'>
+    <div className='md:hidden bg-slate-100'>
         <Sheet>
         <SheetTrigger>
             <Image 
