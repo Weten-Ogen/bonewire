@@ -8,7 +8,7 @@ export default function Home() {
         <ImageWithText 
         imageurl={'https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/IMG-20240903-WA0047-SYkn8Y5BckCrZ07KsthBWCYEu82fbK.jpg'}
         className="p-4 md:flex  flex-cols-reverse md:items-center md:justify-center gap-8 md:p-8"
-        title="Kente"
+        title="Kente Mall"
         content="Your home of quality Kente products. We have everything else you will ever need from a kente piece."
         subcontent="Quantity is Affordable."
         calltoaction="Order Now"
