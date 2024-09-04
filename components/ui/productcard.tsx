@@ -35,15 +35,15 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
             <div className='flex flex-col gap-4 rounded-lg '>
               <div  className='flex items-center justify-between gap-4 '>
                 <p className='font-bold'>Name</p>
-                <p className='font-medium bg-primary leading-tight text-sm'>{label}</p>
+                <p className='font-medium leading-tight text-sm'>{label}</p>
               </div>
               <div className='flex items-center justify-between gap-4 '>
               <p className='font-bold'>Price</p>
-              <p className='font-medium bg-primary leading-tight  text-sm'>{price}</p>
+              <p className='font-medium leading-tight  text-sm'>{price}</p>
               </div>
               <div className='flex items-center justify-between gap-4 '>
               <p className='font-bold'>Gender</p>
-              <p className='font-medium leading-tight text-sm bg-primary'>{gender}</p>
+              <p className='font-medium leading-tight text-sm'>{gender}</p>
               </div>
           </div>
 
