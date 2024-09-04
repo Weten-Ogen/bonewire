@@ -109,8 +109,6 @@ interface product {
     content: string,
     tags : string[],
     className?:string,
-    
-
 } 
 interface  horizontalscrollviewprops {
     className?:string,
@@ -121,4 +119,13 @@ interface  horizontalscrollviewprops {
 // cart 
 interface cartprops {
     className?:string 
+}
+
+interface productcardprops {
+    id: string,
+    imageurl: string,
+    label:string,
+    content: string,
+    tags : string[],
+    className?:string,  
 }
