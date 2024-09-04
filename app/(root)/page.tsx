@@ -6,7 +6,7 @@ export default function Home() {
     <section className=" md:overflow-hidden md:object-contain">
       <article className="pt-0 md:pt-8 md:w-[80%] mx-auto">
         <ImageWithText 
-        imageurl={'https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/IMG-20240903-WA0047-SYkn8Y5BckCrZ07KsthBWCYEu82fbK.jpg'}
+        imageurl={'https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/2C4F0F44-B3BF-4DCF-85FA-1C515420D86B-bNkmd3CY3lHx0GnxpJobqYMGxzZM7y.jpeg'}
         className="p-4 md:flex  flex-cols-reverse md:items-center md:justify-center gap-8 md:p-8"
         title="Kente Mall"
         content="Your home of quality Kente products. We have everything else you will ever need from a kente piece."
