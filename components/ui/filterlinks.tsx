@@ -10,7 +10,9 @@ const FilterLinks = ({filters,className}:filterlinksprops) => {
     <div className={cn('',className)}>
       {filters && filters.map(item => {
         return (
-            <Button className='text-sm md:text-sm uppercase touchbtn' variant={'link'}>
+            <Button 
+            className='text-sm text-primary font-bold md:text-sm uppercase touchbtn' variant={'link'}
+            >
                 {item.label}
             </Button>
         )
