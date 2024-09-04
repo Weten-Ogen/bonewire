@@ -41,7 +41,7 @@ const filterlist  = [
         label:'footwear'
     },
     {
-        label:'trousers'
+        label:'sass'
     },
     {
         label:'shirts'
@@ -53,14 +53,12 @@ const filterlist  = [
         label:'wristband'
     },
     {
-        label:'clothes'
+        label:'kente'
     },
     {
         label:'purse'
     },
-    {
-        label:'luggage'
-    }
+    
     
 ]
 
