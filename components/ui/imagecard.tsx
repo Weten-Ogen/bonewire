@@ -15,7 +15,7 @@ interface imageprops{
 const ImageCard = ({pathname,downloadUrl,size,updatedAt,url}:imageprops) => {
     const updated = new Date(updatedAt)
   return (
-    <div className=''>
+    <div className='p-4'>
       <Card className='p-0'>
         <CardContent className='flex flex-col items-center p-0'>
             <Image  
