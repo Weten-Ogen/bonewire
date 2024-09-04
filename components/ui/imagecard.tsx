@@ -17,13 +17,13 @@ const ImageCard = ({pathname,downloadUrl,size,updatedAt,url}:imageprops) => {
   return (
     <div className=''>
       <Card className=''>
-        <CardContent className='flex flex-col items-center'>
+        <CardContent className='flex flex-col items-center p-0'>
             <Image  
             src={url}
             alt={pathname}
             width={500}
             height={500}
-            className='aspect-square'
+            className='aspect-square w-full'
             />
             <CardTitle>pathname: {pathname}</CardTitle>
             <Link href={url}>url : {url}</Link>
