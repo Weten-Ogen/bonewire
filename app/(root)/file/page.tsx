@@ -3,6 +3,8 @@
 import type { PutBlobResult } from '@vercel/blob';
 import { useState, useRef } from 'react';
 
+export const dynamic = "force-dynamic"
+
 export default function AvatarUploadPage() {
   const inputFileRef = useRef<HTMLInputElement>(null);
   const [blob, setBlob] = useState<PutBlobResult | null>(null);

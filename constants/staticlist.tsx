@@ -147,6 +147,15 @@ const products = [
         price: 2000,
         gender: "all",
     },
+    {
+        id: "6",
+        imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/958137E6-BB2C-4389-962B-881069E77112-WxLcY9OlfZ5VmD1y4FrCcMy0g7iSAY.jpeg",
+        label:"Shinies",
+        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
+        tags : ['purse','bag'],
+        price: 2000,
+        gender: "all",
+    },
 ]
 
 export default {navlinklist,filterlist,fakeproducts,products}
