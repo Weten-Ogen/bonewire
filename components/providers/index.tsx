@@ -10,7 +10,7 @@ const Providers = ({children,className}:providersprops) => {
       <NavBar 
       className='p-2 md:px-8 '
       />
-      <div className=''>
+      <div className='pt-16 md:pt-5'>
         {children}
       </div>
     </main>
