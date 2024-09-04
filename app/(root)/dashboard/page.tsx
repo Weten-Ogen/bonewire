@@ -13,7 +13,7 @@ const page = (
       <Headers 
        className=''
        content='We have the best kente product that suits your tastes'
-       contentClass='max-w-sm md:max-w-md text-2xl leading-normal p-2 md:p-0'
+       contentClass='max-w-sm md:max-w-md text-2xl leading-tight p-2 md:p-0'
        subcontent=''
        subcontentClass=''
       />
