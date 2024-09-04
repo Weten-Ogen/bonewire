@@ -1,9 +1,9 @@
 'use client'
-
 import { productcardprops } from '@/types/next'
 import React from 'react'
 import { Card, CardContent, CardDescription, CardTitle } from './card'
 import Image from 'next/image'
+import {CirclePlusIcon} from 'lucide-react'
 
 const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
@@ -18,9 +18,17 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
           className='w-full rounded-lg aspect-square'
           />
           <div className='p-2 flex flex-col gap-3'>
+            <div className="flex items-center justify-between">
             <CardTitle className='text-lg '>
               {label}
             </CardTitle>
+            <div className='flex items-center gap-2 bg-primary p-2'>
+             add to cart
+                <CirclePlusIcon 
+                size={24}
+                className='cursor-pointer'/>
+            </div>
+            </div>
             <CardDescription className='px-1'>
               {content}
             </CardDescription>
