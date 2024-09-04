@@ -10,6 +10,7 @@ import icons from '@/constants/icons'
 import Link from 'next/link'
 import { TypographyBlockquote } from '../typography/blockQuote'
 import { buttonVariants } from './button'
+import { TypographyLarge } from '../typography/large'
 
 const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcontent,title
 }:imagewithtextprops) => {
@@ -31,8 +32,8 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
         {calltoaction && 
          <Link className={`flex items-center gap-4 bg-primary p-4 rounded-md justify-center `} 
          href={actionref}>
-            <TypographyBlockquote 
-             content={calltoaction}             className='text-md md:text-lg font-bold'
+            <TypographyLarge 
+             content={calltoaction}             className='text-md md:text-lg tracking-wide font-bold'
             />
             <Image
             src={icons.arrowright}
