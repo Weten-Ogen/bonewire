@@ -3,12 +3,9 @@ import { cn } from '@/lib/utils'
 import { imagewithtextprops } from '@/types/next'
 import Image from 'next/image'
 import React from 'react'
-import { TypographyH3 } from '../typography/typoh3'
 import { TypographyH2 } from '../typography/typoh2'
 import { TypographyMuted } from '../typography/muted'
-import { TypographyLead } from '../typography/lead'
 import { TypographyH4 } from '../typography/typoh4'
-import NavLinks from './navlinks'
 import icons from '@/constants/icons'
 import Link from 'next/link'
 import { TypographyBlockquote } from '../typography/blockQuote'
@@ -30,18 +27,19 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
         content={subcontent}
         />
         {calltoaction && 
-         <Link className={`flex items-center gap-4 ${buttonVariants({variant:"default"})}`} href={actionref}>
+         <Link className={`flex items-center gap-4 bg-primary p-4 rounded-md justify-center`} 
+         href={actionref}>
             <TypographyBlockquote 
              content={calltoaction}
             />
             <Image
             src={icons.arrowright}
             alt={'cattoaction icon'}
-            width={15}
-            height={15}
+            width={20}
+            height={20}
             className=''
             />
-            </Link>
+          </Link>
         }
         
       </div>

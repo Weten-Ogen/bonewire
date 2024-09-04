@@ -13,11 +13,11 @@ export default function Home() {
       <article className="pt-10 md:pt-10 md:w-[80%] mx-auto">
 
         <ImageWithText 
-        imageurl={HeroImage}
+        imageurl={'https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/IMG-20240903-WA0047-SYkn8Y5BckCrZ07KsthBWCYEu82fbK.jpg'}
         className="p-4 md:flex  md:items-center md:justify-center gap-8 md:p-8"
         title={"Bonewire"}
-        content="Your home of quality kente products. We have everything else you will ever need from a kente piece."
-        subcontent="quantity is affordable"
+        content="Your home of quality Kente products. We have everything else you will ever need from a kente piece."
+        subcontent="Quantity is Affordable."
         calltoaction="Order Now"
         actionref="/dashboard"
         />
