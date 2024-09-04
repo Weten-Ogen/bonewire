@@ -5,7 +5,7 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardTitle } from './card'
 import Image from 'next/image'
 
-const ProductCard = ({content,price,id,imageurl,label,tags,className}:productcardprops) => {
+const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
     <div className=''>
       <Card className=''>

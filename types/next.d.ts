@@ -128,5 +128,6 @@ interface productcardprops {
     content: string,
     tags : string[],
     className?:string,
-    price: number,  
+    price: number,
+    gender: "M" | "F" | "all"  
 }
