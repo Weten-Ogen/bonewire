@@ -10,10 +10,10 @@ const SearchBtn = ({className}:searchbtnprops) => {
   return (
     <div className={cn('',className)}>
       <Input 
-      className='py-4 border border-yellow-500 text-md  hover:ring-black md:py-6  md:px-4 w-full '
+      className='py-6 border border-yellow-500 text-md  hover:ring-black   md:px-4 w-full '
       placeholder='search for any kente product ....'
       type="text"/>
-      <Button className='text-lg mt-4 w-full md:w-[25%] md:mt-0 py-8 px-2 md:py-6  md:px-4 touchbtn flex items-center gap-4' type="submit">
+      <Button className='text-lg mt-4 w-full md:w-[25%] md:mt-0 py-6   md:px-4 touchbtn flex items-center gap-4' type="submit">
         <Image 
          src={icons.search}
          alt={"search icon"}
