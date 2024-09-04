@@ -24,7 +24,7 @@ const page = (
         />
 
       </article>
-      <article className='pt-4 w-full'>
+      <article className='pt-2 w-full'>
         <FilterLinks 
         filters={staticlist.filterlist}
         className='w-full  grid grid-cols-4 md:items-start md:grid-cols-12'
