@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './button'
 
-    const CartCard = ({content,id,imageurl,label,tags,className}:product) => {
+    const CartCard = ({content,id,imageurl,label,tags,className,price,gender}:product) => {
     const [amount , setAmount] = React.useState(0);
     const handleIncrease = () => {
         setAmount(prev => prev + 1)
