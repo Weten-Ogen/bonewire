@@ -8,7 +8,7 @@ export default function AvatarUploadPage() {
   const [blob, setBlob] = useState<PutBlobResult | null>(null);
   return (
     <>
-      <h1>Upload Your Avatar</h1>
+      <h1>Upload Your files</h1>
 
       <form
         onSubmit={async (event) => {
