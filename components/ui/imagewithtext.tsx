@@ -15,9 +15,10 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
 }:imagewithtextprops) => {
   return (
     <div className={cn('',className)}>
-      <div className='flex flex-col gap-2 md:gap-4  md:max-w-lg'>
+      <div className='flex flex-col gap-2 md:gap-4  md:max-w-lg rounded-xl '>
         <TypographyH2 
         content={title}
+        className=''
         />
         <TypographyH4 
         content={content}
@@ -27,17 +28,17 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
         content={subcontent}
         />
         {calltoaction && 
-         <Link className={`flex items-center gap-4 bg-primary p-4 rounded-md justify-center`} 
+         <Link className={`flex items-center gap-4 bg-primary p-4 rounded-md justify-center `} 
          href={actionref}>
             <TypographyBlockquote 
-             content={calltoaction}
+             content={calltoaction}             className='text-xl font-bold'
             />
             <Image
             src={icons.arrowright}
             alt={'cattoaction icon'}
             width={20}
             height={20}
-            className=''
+            className='rounded-md'
             />
           </Link>
         }
@@ -48,7 +49,7 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
        alt={`${imageurl} image`}
        width={500}
        height={500}
-       className="pt-5 md:pt-0 aspect-square"
+       className="pt-5 md:pt-0 aspect-square mx-auto shadow-md rounded-xl"
       />
     </div>
   )
