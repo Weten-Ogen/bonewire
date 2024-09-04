@@ -9,7 +9,7 @@ import MobileNav from './mobilenav'
 
 const NavBar = ({className}:navbarprops) => {
   return (
-    <nav className={cn('flex items-center justify-between',className)}>
+    <nav className={cn('flex items-center bg-gray-400 justify-between',className)}>
       {/* 
       on desktops :
             - logo 
