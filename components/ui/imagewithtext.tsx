@@ -18,27 +18,29 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
       <div className='flex flex-col gap-2 md:gap-4  md:max-w-lg rounded-xl '>
         <TypographyH2 
         content={title}
-        className='font-bold '
+        className='font-bold md:text-4xl '
         />
         <TypographyH4 
         content={content}
-        className={title ? "block": "hidden"}
+        className={content ? "block text-xl md:text-2xl": "hidden"}
         />
         <TypographyMuted 
         content={subcontent}
+        className='text-md md:text-lg'
         />
         {calltoaction && 
          <Link className={`flex items-center gap-4 bg-primary p-4 rounded-md justify-center `} 
          href={actionref}>
             <TypographyBlockquote 
-             content={calltoaction}             className='text-xl font-bold'
+             content={calltoaction}             className='text-md md:text-lg font-bold'
             />
             <Image
             src={icons.arrowright}
             alt={'cattoaction icon'}
-            width={20}
-            height={20}
-            className='rounded-md'
+            width={30}
+            height={30}
+            className=' p-2 bg-yellow-500 text-white rounded-full'
+
             />
           </Link>
         }

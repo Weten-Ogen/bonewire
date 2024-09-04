@@ -4,10 +4,10 @@ import HeroImage from '@/public/assets/images/bag2.jpg';
 export default function Home() {
   return (
     <section className=" md:overflow-hidden md:object-contain">
-      <article className="pt-10 md:pt-8 md:w-[80%] mx-auto">
+      <article className="pt-0 md:pt-8 md:w-[80%] mx-auto">
         <ImageWithText 
         imageurl={'https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/IMG-20240903-WA0047-SYkn8Y5BckCrZ07KsthBWCYEu82fbK.jpg'}
-        className="p-4 md:flex  md:items-center md:justify-center gap-8 md:p-8"
+        className="p-4 md:flex  flex-cols-reverse md:items-center md:justify-center gap-8 md:p-8"
         title={"Bonewire"}
         content="Your home of quality Kente products. We have everything else you will ever need from a kente piece."
         subcontent="Quantity is Affordable."
