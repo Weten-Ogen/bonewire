@@ -26,8 +26,8 @@ const ProductCard = (product:productcardprops) => {
           <Image 
           src={product.imageurl}
           alt={product.label}
-          width={200}
-          height={200}
+          width={350}
+          height={350}
           className='w-full rounded-lg  object-cover'
           />
           </div>
