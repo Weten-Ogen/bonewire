@@ -15,7 +15,7 @@ const ProductCard = (product:productcardprops) => {
     addItemtoCart: state.addItemToCart,
   }))
   return (
-    <div className='p-3 md:p-0 h-[560px] m-2  '>
+    <div className='p-3 md:p-0  m-2  '>
       <Card
       
        className='p-0   object-contain rounded-lg outline-none bg-transparent  '>
