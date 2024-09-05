@@ -11,12 +11,13 @@ const SearchBtn = ({className}:searchbtnprops) => {
   return (
     <div className={cn('relative',className)}>
       <Input 
+      
       className='py-6 border border-yellow-500 text-md  hover:ring-black   md:px-4 w-full '
       placeholder='search for any kente product ....'
       type="text"/>
       <SearchIcon 
-      size={40}
-      className='absolute top-3 rounded-lg right-4 md:right-2 bg-primary p-2 cursor-pointer'/>
+      size={32}
+      className='absolute top-4 rounded-lg right-4 md:right-2 bg-yellow-500 p-2 cursor-pointer'/>
       
     </div>
   )

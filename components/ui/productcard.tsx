@@ -32,8 +32,8 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
             <div className='flex items-center gap-2 bg-primary p-2 cursor-pointer'>
              add to cart
                 <CirclePlusIcon 
-                size={24}
-                className='cursor-pointer'/>
+                size={32}
+                className='cursor-pointer bg-yellow-500 rounded-full p-2'/>
             </div>
             </div>
             <CardDescription className='px-1 line-clamp-2'>
