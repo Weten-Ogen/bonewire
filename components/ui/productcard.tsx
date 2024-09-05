@@ -12,8 +12,8 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
     <div className='p-5 md:p-0 h-[560px] m-2  '>
       <Card
       
-       className='p-0   object-contain outline-none bg-transparent  '>
-        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0  outline-none shadow-lg'>
+       className='p-0   object-contain rounded-lg outline-none bg-transparent  '>
+        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0   rounded-lg outline-none shadow-lg'>
           <div className='w-full h-[200px] oveflow-hidden object-cotain'>
 
           <Image 
@@ -24,7 +24,7 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
           className='w-full rounded-lg  object-cover'
           />
           </div>
-          <article className='p-2 flex flex-col gap-4  bg-white shadow-lg h-full'>
+          <article className='p-2 flex flex-col gap-4 rounded-lg bg-white shadow-lg h-full'>
             <div className="flex items-center justify-between space-y-2 h-full">
             <CardTitle className='text-lg '>
               {label}
