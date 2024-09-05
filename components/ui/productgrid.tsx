@@ -16,7 +16,7 @@ const ProductGrid = ({products}:productgrid) => {
             label={item.label}
             price={item.price}
             tags={item.tags}
-            className=""
+            className="p-4 md:p-0"
             />
         )
       })}
