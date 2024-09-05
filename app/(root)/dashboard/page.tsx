@@ -14,19 +14,19 @@ const page = (
       <Headers 
        className=''
        content='We have the best kente product that suits your tastes'
-       contentClass='max-w-sm md:max-w-md text-2xl  p-2 md:p-0'
+       contentClass='max-w-sm md:max-w-md text-2xl font-bold  p-2 md:p-0'
        subcontent=''
        subcontentClass=''
       />
-      <article className='pt-5 mt:pt-0'>
+      <article className='mt-2'>
         <SearchBtn 
         className="w-full md:w-[70%] md:flex items-center  md:gap-4  p-2 md:py-2 md:px-0 "
         />
 
       </article>
-      <article className=' w-full mt-5'>
+      <article className=' w-full mt-2'>
         <FilterLinks 
-        className='w-full  grid grid-cols-4  md:grid-cols-8'
+        className='w-full  grid grid-cols-4  md:grid-cols-8 '
         filters={staticlist.filterlist}
         />
       </article>

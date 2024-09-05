@@ -11,7 +11,7 @@ const FilterLinks = ({filters,className}:filterlinksprops) => {
       {filters && filters.map(item => {
         return (
             <Button 
-            className='text-sm text-primary font-bold md:text-sm uppercase touchbtn' variant={'link'}
+            className='text-sm text-yellow-700 font-bold md:text-sm uppercase touchbtn' variant={'link'}
             >
                 {item.label}
             </Button>
