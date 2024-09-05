@@ -13,7 +13,7 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
       <Card
       
        className='p-0   object-contain outline-none bg-transparent  overflow-hidden'>
-        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0 overflow-hidden outline-none shadow-lg'>
+        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0  outline-none shadow-lg'>
           <div className='w-full h-[200px] oveflow-hidden object-cotain'>
 
           <Image 
