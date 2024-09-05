@@ -24,7 +24,7 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
           className='w-full rounded-lg  object-cover'
           />
           </div>
-          <article className='p-2 flex flex-col gap-2  bg-white shadow-lg h-full'>
+          <article className='p-2 flex flex-col gap-4  bg-white shadow-lg h-full'>
             <div className="flex items-center justify-between space-y-2 h-full">
             <CardTitle className='text-lg '>
               {label}
