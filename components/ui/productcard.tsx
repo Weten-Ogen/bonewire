@@ -10,8 +10,8 @@ import Link from 'next/link'
 const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
     <div className='p-2 '>
-      <Card className='p-0  object-contain'>
-        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative m-0 overflow-hidden'>
+      <Card className='p-0  object-contain border-none'>
+        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative m-0 overflow-hidden border-none'>
           <Image 
           src={imageurl}
           alt={label}
