@@ -17,7 +17,7 @@ const FilterLinks = ({filters,filterProducts,className}:filterlinksprops) => {
             <Button 
             onClick={() => 
               filterProducts(item.label.toLowerCase())}
-            className='text-sm  font-extrabold` md:text-sm uppercase touchbtn m-2 '
+            className='text-sm  font-extrabold` md:text-sm uppercase touchbtn m-2 p-2 '
             >
                 {item.label}
             </Button>
