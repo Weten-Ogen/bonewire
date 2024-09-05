@@ -1,5 +1,7 @@
 'use client'
 import { TypographyLarge } from '@/components/typography/large'
+import { TypographyH2 } from '@/components/typography/typoh2'
+import { TypographyH4 } from '@/components/typography/typoh4'
 import CartCard from '@/components/ui/cartcard'
 import icons from '@/constants/icons'
 import staticlist from '@/constants/staticlist'
@@ -17,12 +19,13 @@ const page = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-4' >
         {cart ? 
         <div className=''>
-          {
-          cart.map(item => {return(<CartCard key={item.id + item.imageurl} {...item}/>)})}
+          {cart.map(item => {return(<CartCard key={item.id + item.imageurl} {...item}/>)})}
         </div>
-        :<p>
-          there are no items in the cart
-        </p>} 
+        :<TypographyH4
+         content={"there are no items in the cart"}
+        className='flex items-center justify-center '/>
+          
+        } 
       </div>
     </section>
   )

@@ -8,7 +8,7 @@ const ProductGrid = ({products}:productgrid) => {
       {products.map(item => {
         return (
             <ProductCard 
-            key ={item.id}
+            key ={item.id + item.imageurl}
             content={item.content}
             gender={item.gender}
             imageurl={item.imageurl}

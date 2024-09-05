@@ -15,6 +15,7 @@ const FilterLinks = ({filters,filterProducts,className}:filterlinksprops) => {
       {filters && filters.map(item => {
         return (
             <Button 
+            key={Math.random() * 0.2}
             onClick={() => 
               filterProducts(item.label.toLowerCase())}
             className='text-sm  font-extrabold md:text-sm uppercase touchbtn m-2 p-2 '

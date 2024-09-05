@@ -14,14 +14,13 @@ const ProductCard = (product:productcardprops) => {
     cart: state.cart,
     addItemtoCart: state.addItemToCart,
   }))
-  console.log(cart)
   return (
     <div className='p-3 md:p-0 h-[560px] m-2  '>
       <Card
       
        className='p-0   object-contain rounded-lg outline-none bg-transparent  '>
         <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0   outline-none shadow-lg'>
-          <div className='w-full h-[200px] oveflow-hidden object-cotain'>
+          <div className='w-full h-[300px] oveflow-hidden object-cotain'>
 
           <Image 
           src={product.imageurl}
