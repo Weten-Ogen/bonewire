@@ -17,7 +17,7 @@ const SearchBtn = ({className}:searchbtnprops) => {
       type="text"/>
       <SearchIcon 
       size={32}
-      className='absolute top-4 rounded-lg right-4 md:right-2 bg-yellow-500 p-2 cursor-pointer'/>
+      className='absolute top-4  right-4 md:right-2 bg-yellow-500 p-2 rounded-full cursor-pointer'/>
       
     </div>
   )
