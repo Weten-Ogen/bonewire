@@ -3,15 +3,21 @@ import { filterlinksprops } from '@/types/next'
 import React from 'react'
 import { Button } from './button'
 import { cn } from '@/lib/utils'
+import { UseDashboardStore } from '@/store/dashboardstore'
 
 
-const FilterLinks = ({filters,className}:filterlinksprops) => {
+const FilterLinks = ({filters,filterProducts,className}:filterlinksprops) => {
+  
+  
+
   return (
-    <div className={cn('',className)}>
+    <div className={cn('gap-4',className)}>
       {filters && filters.map(item => {
         return (
             <Button 
-            className='text-sm text-primary font-extrabold` md:text-sm uppercase touchbtn' variant={'link'}
+            onClick={() => 
+              filterProducts(item.label.toLowerCase())}
+            className='text-sm  font-extrabold` md:text-sm uppercase touchbtn '
             >
                 {item.label}
             </Button>

@@ -98,7 +98,8 @@ interface filters {
 }
 interface filterlinksprops {
     className?:string,
-    filters: filters[]
+    filters: filters[],
+    filterProducts:(tag:string) => void
 }
 
 // horizontal scrollview
@@ -107,7 +108,7 @@ interface product {
     imageurl: string,
     label:string,
     content: string,
-    tags : string[],
+    tags : string,
     className?:string,
     price: number,
     gender:string
@@ -128,7 +129,7 @@ interface productcardprops {
     imageurl: string,
     label:string,
     content: string,
-    tags : string[],
+    tags : string,
     className?:string,
     price: number,
     gender:string  
@@ -138,3 +139,9 @@ interface productgrid{
     products: product[]
 }
 
+
+// store
+interface cartstore {
+    cart : product[] | []
+    addTocart: (product) => void
+}

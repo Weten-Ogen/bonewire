@@ -1,14 +1,21 @@
+"use client"
 import FilterLinks from '@/components/ui/filterlinks'
 import Headers from '@/components/ui/headers'
 import ProductGrid from '@/components/ui/productgrid'
 import SearchBtn from '@/components/ui/searchbtn'
 import staticlist from '@/constants/staticlist'
 import { cn } from '@/lib/utils'
+import { UseDashboardStore } from '@/store/dashboardstore'
 import React from 'react'
 
 
-const page = (
-) => {
+const page = () => {
+  const {products,updateProducts,filterProducts} = UseDashboardStore((state) => ({
+    products: state.products,
+    updateProducts: state.updateProducts,
+    filterProducts: state.filterProducts
+  }));
+  
   return (
     <section className='mt-2 md:w-[80%] md:mx-auto '>
       <Headers 
@@ -27,11 +34,12 @@ const page = (
       <article className=' w-full mt-2'>
         <FilterLinks 
         className='w-full  grid grid-cols-4  md:grid-cols-8 items-center  '
+        filterProducts={filterProducts}
         filters={staticlist.filterlist}
         />
       </article>
       <ProductGrid 
-      products={staticlist.products}
+      products={products}
       />
 
     </section>

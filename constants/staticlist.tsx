@@ -41,13 +41,10 @@ const filterlist  = [
         label:'footwear'
     },
     {
-        label:'sass'
+        label:'sash'
     },
     {
-        label:'shirts'
-    },
-    {
-        label:'bags'
+        label:'bag'
     },
     {
         label:'wristband'
@@ -59,7 +56,6 @@ const filterlist  = [
         label:'purse'
     },
     
-    
 ]
 
 const fakeproducts = [
@@ -68,64 +64,64 @@ const fakeproducts = [
         imageurl: "/assets/images/bag1.jpg",
         label:"School Bag",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['bag','luggage'],
+        tags : 'bag',
     },
     {
         id: "2",
         imageurl: "/assets/images/footwear1.jpg",
         label:"foot wear",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['footwear'],
+        tags : 'footwear',
     },
     {
         id: "3",
         imageurl: "/assets/images/ladybag1.jpg",
         label:"lady purse",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['bag','purse'],
+        tags : 'purse',
     },
     {
-        id: "4",
+        id: "43",
         imageurl: "/assets/images/purse1.jpg",
         label:"Purse",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['purse','bag'],
+        tags : 'purse'
     },
     {
-        id: "5",
+        id: "52",
         imageurl: "/assets/images/bands.jpg",
         label:"wristBands",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['bands','wristbands'],
+        tags : 'wristband',
     },
 ]
 
 const products = [
     {
-        id: "1",
+        id: "14",
         imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/25C06617-F3C5-463E-8579-7256CD63B1B5-wPzwGsoGbHSVanTnXD56kN5LyI5TIP.jpeg",
         label:"Triangles",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['bag','luggage'],
+        tags : 'kente',
         price: 2000,
         gender: "all",
 
     },
     {
-        id: "2",
+        id: "23",
         imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/1C1B27BB-2D04-4238-BD2D-B1453B9651B3-gvUWY8TuCrKjU6PnCCAugXsHy9y8Q7.jpeg",
         label:"Gye Nyame",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['footwear'],
+        tags : 'kente',
         price: 3000,
         gender: "M",
     },
     {
-        id: "3",
+        id: "21",
         imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/9A95ABB7-0014-4A3F-980F-9A53E81129EA-PprpnvzIIHURpntt2INsabXnUlQtm3.jpeg",
         label:"Ahenema",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['bag','purse'],
+        tags : 'footwear',
         price: 2000,
         gender: "all",
     },
@@ -134,25 +130,25 @@ const products = [
         imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/958137E6-BB2C-4389-962B-881069E77112-WxLcY9OlfZ5VmD1y4FrCcMy0g7iSAY.jpeg",
         label:"Shinies",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['purse','bag'],
+        tags : 'kente',
         price: 2000,
         gender: "all",
     },
     {
-        id: "5",
+        id: "54",
         imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/A8CCB1A1-BB58-4C57-AE55-F114214FD5D8-dDJcVZ2Cm9jQXFI9kPxT1jycpQZTB9.jpeg",
         label:"Unbury",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['bands','wristbands'],
+        tags : 'wristband',
         price: 2000,
         gender: "all",
     },
     {
-        id: "6",
+        id: "666",
         imageurl: "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/958137E6-BB2C-4389-962B-881069E77112-WxLcY9OlfZ5VmD1y4FrCcMy0g7iSAY.jpeg",
         label:"Shinies",
         content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : ['purse','bag'],
+        tags : 'purse',
         price: 2000,
         gender: "all",
     },

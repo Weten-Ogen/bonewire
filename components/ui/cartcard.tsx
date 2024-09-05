@@ -1,61 +1,48 @@
-"use client"
-import { cn } from '@/lib/utils'
-import { product } from '@/types/next'
+'use client'
+import { productcardprops } from '@/types/next'
 import React from 'react'
-import { Card, CardContent, CardTitle } from './card'
+import { Card, CardContent, CardDescription, CardTitle } from './card'
 import Image from 'next/image'
-import Link from 'next/link'
+import { CircleMinusIcon} from 'lucide-react'
 import { Button } from './button'
 
-    const CartCard = ({content,id,imageurl,label,tags,className,price,gender}:product) => {
-    const [amount , setAmount] = React.useState(0);
-    const handleIncrease = () => {
-        setAmount(prev => prev + 1)
-    }
-        const handleDecrease = () => {
-            setAmount (prev => prev != 0 ?  prev - 1 : 0)
-    }
 
-    return (
-    <div className={cn('',className)}>
+const CartCard = (product:productcardprops) => {
+  return (
+    <div className='p-3 md:p-0 h-[560px] m-2  '>
+      <Card
+      
+       className='p-0   object-contain rounded-lg outline-none bg-transparent  '>
+        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0   outline-none shadow-lg'>
+          <div className='w-full h-[200px] oveflow-hidden object-cotain'>
 
-        <Card className='p-0'>
-            <CardContent className=''>
-                <div className='w-full  overflow-hidden object-contain rounded-md'> 
-                    <Image 
-                    src={imageurl}
-                    alt={label}
-                    width={100}
-                    height={100}
-                    className='w-full aspect-square object-cover p-4 rounded-md h-auto'
-                    />
-
-                </div>
-                <CardTitle className=''>{label}</CardTitle>
-                <div className=' text-black'>
-                <p>Amount</p>
-                <p>
-                <span>$</span>
-                <span>20</span>
-                </p>
-                </div>
-                
-            <Link href={`/cart/${id}`}  className='cursor-pointer'>
-            </Link>
-                <div className=''>
-                    <div className='flex w-full justify-center items-center'>
-                        <Button disabled={amount === 0} onClick={handleDecrease}  className='w-full'>
-                          -
-                        </Button >
-                        <p className='w-full text-center'> {amount} </p>
-                        <Button onClick={handleIncrease} className='w-full'>
-                            +
-                        </Button>
-                    </div>
-                </div>
-            </CardContent>
-        </Card>     
+          <Image 
+          src={product.imageurl}
+          alt={product.label}
+          width={200}
+          height={200}
+          className='w-full rounded-lg  object-cover'
+          />
+          </div>
+          <article className='p-2 flex flex-col gap-4 rounded-b-lg bg-white shadow-lg h-full'>
+            <div className="flex items-center justify-between space-y-2 h-full ">
+            <CardTitle className='text-lg '>
+              {product.label}
+            </CardTitle>
+            <Button 
+             className='flex items-center gap-2 bg-primary p-2 cursor-pointer touchbtn rounded-lg'>
+             remove Item
+                <CircleMinusIcon 
+                size={32}
+                className='cursor-pointer bg-yellow-500 rounded-full p-2'/>
+            </Button>
+            </div>
+            
+          </article>
+        </CardContent>
+      </Card>
     </div>
-   ) }
+  )
+}
 
 export default CartCard
