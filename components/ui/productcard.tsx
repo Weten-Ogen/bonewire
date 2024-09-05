@@ -9,11 +9,11 @@ import Link from 'next/link'
 
 const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
-    <div className='p-4 md:p-0 h-[520px] overflow-hidden  '>
+    <div className='p-5 md:p-0 h-[520px] overflow-hidden  '>
       <Card
       
        className='p-0   object-contain outline-none bg-transparent  overflow-hidden'>
-        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0 overflow-hidden outline-none'>
+        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0 overflow-hidden outline-none shadow-lg'>
           <div className='w-full h-[200px] oveflow-hidden object-cotain'>
 
           <Image 
