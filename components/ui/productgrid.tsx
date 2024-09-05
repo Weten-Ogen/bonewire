@@ -4,7 +4,7 @@ import ProductCard from './productcard'
 
 const ProductGrid = ({products}:productgrid) => {
   return (
-    <article className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center  justify-center md:justify-evenly  gap-4 mt-5 p-2'>
+    <article className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center  justify-center md:justify-evenly  gap-4 mt-5 '>
       {products.map(item => {
         return (
             <ProductCard 

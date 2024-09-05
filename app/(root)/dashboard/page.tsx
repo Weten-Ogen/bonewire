@@ -10,23 +10,23 @@ import React from 'react'
 const page = (
 ) => {
   return (
-    <section className='pt-5 md:w-[95%] mx-auto'>
+    <section className='pt-5 md:w-[80%] md:mx-auto '>
       <Headers 
-       className=''
+       className='mt-5'
        content='We have the best kente product that suits your tastes'
-       contentClass='max-w-sm md:max-w-md text-2xl font-bold  p-2 md:p-0'
+       contentClass='max-w-sm md:max-w-lg text-2xl font-bold  p-2 md:p-0'
        subcontent=''
        subcontentClass=''
       />
-      <article className='mt-2'>
+      <article className='my-5'>
         <SearchBtn 
-        className="w-full md:w-[70%] md:flex items-center  md:gap-4  p-2 md:py-2 md:px-0 "
+        className="w-full md:flex  p-2 md:py-2 md:px-0 "
         />
 
       </article>
       <article className=' w-full mt-2'>
         <FilterLinks 
-        className='w-full  grid grid-cols-4  md:grid-cols-8 '
+        className='w-full  grid grid-cols-4  md:grid-cols-8 items-center  '
         filters={staticlist.filterlist}
         />
       </article>

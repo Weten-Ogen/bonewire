@@ -9,18 +9,23 @@ import Link from 'next/link'
 
 const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:productcardprops) => {
   return (
-    <div className='p-2 '>
-      <Card className='p-0  object-contain border-none'>
-        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative m-0 overflow-hidden border-none'>
+    <div className='p-2 h-[520px] overflow-hidden  '>
+      <Card
+      
+       className='p-0   object-contain outline-none bg-transparent  overflow-hidden'>
+        <CardContent className='flex flex-col object-contain  gap-2 p-0 relative bg-transparent m-0 overflow-hidden outline-none'>
+          <div className='w-full h-[200px] oveflow-hidden object-cotain'>
+
           <Image 
           src={imageurl}
           alt={label}
           width={200}
           height={200}
-          className='w-full rounded-lg aspect-square'
+          className='w-full rounded-lg  object-cover'
           />
-          <div className='p-2 flex flex-col gap-4 relative -top-10 z-1 bg-white shadow-lg '>
-            <div className="flex items-center justify-between space-y-2">
+          </div>
+          <article className='p-2 flex flex-col gap-2  bg-white shadow-lg h-full'>
+            <div className="flex items-center justify-between space-y-2 h-full">
             <CardTitle className='text-lg '>
               {label}
             </CardTitle>
@@ -31,10 +36,10 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
                 className='cursor-pointer'/>
             </div>
             </div>
-            <CardDescription className='px-1'>
+            <CardDescription className='px-1 line-clamp-2'>
               {content}
             </CardDescription>
-            <div className='flex flex-col gap-4 rounded-lg '>
+            <div className='flex flex-col gap-2 rounded-lg '>
               <div  className='flex items-center justify-between gap-4 '>
                 <p className='font-bold'>Name</p>
 
@@ -57,7 +62,7 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
             className='bg-yellow-500 rounded-full p-2'
             size={32}/>
           </Link>
-          </div>
+          </article>
         </CardContent>
       </Card>
     </div>
