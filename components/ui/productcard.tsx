@@ -25,11 +25,11 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
           />
           </div>
           <article className='p-2 flex flex-col gap-4 rounded-b-lg bg-white shadow-lg h-full'>
-            <div className="flex items-center justify-between space-y-2 h-full">
+            <div className="flex items-center justify-between space-y-2 h-full ">
             <CardTitle className='text-lg '>
               {label}
             </CardTitle>
-            <div className='flex items-center gap-2 bg-primary p-2 cursor-pointer'>
+            <div className='flex items-center gap-2 bg-primary p-2 cursor-pointer rounded-lg'>
              add to cart
                 <CirclePlusIcon 
                 size={32}
@@ -56,7 +56,7 @@ const ProductCard = ({content,gender,price,id,imageurl,label,tags,className}:pro
           </div>
           <Link 
           href={`/dashboard/${id}`} 
-          className='w-full my-3 p-2 flex items-center justify-center rounded-xl bg-primary  gap-4'>
+          className='w-full my-3 p-2 flex items-center justify-center rounded-lg bg-primary  gap-4'>
             <p className='tracking-wide'>read more</p>
             <ArrowDownIcon 
             className='bg-yellow-500 rounded-full p-2'
