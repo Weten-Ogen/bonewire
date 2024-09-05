@@ -10,7 +10,7 @@ import React from 'react'
 const page = (
 ) => {
   return (
-    <section className='pt-5 md:w-[80%] md:mx-auto '>
+    <section className='mt-2 md:w-[80%] md:mx-auto '>
       <Headers 
        className='mt-5'
        content='We have the best kente product that suits your tastes'
