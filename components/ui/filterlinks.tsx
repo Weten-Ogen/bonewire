@@ -11,13 +11,13 @@ const FilterLinks = ({filters,filterProducts,className}:filterlinksprops) => {
   
 
   return (
-    <div className={cn('gap-4',className)}>
+    <div className={cn('p-2',className)}>
       {filters && filters.map(item => {
         return (
             <Button 
             onClick={() => 
               filterProducts(item.label.toLowerCase())}
-            className='text-sm  font-extrabold` md:text-sm uppercase touchbtn '
+            className='text-sm  font-extrabold` md:text-sm uppercase touchbtn m-2 '
             >
                 {item.label}
             </Button>
