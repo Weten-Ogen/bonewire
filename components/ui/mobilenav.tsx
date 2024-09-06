@@ -10,10 +10,14 @@ import Image from 'next/image'
 import Logo from './logo'
 import { TypographyP } from '../typography/typoP'
 import staticlist from '@/constants/staticlist'
+import { UseCartStore } from '@/store/cartstore'
 
 
 const MobileNav = () => {
     const pathname = usePathname();
+    const {count} = UseCartStore((state) =>({
+        count: state.count
+    }))
     return ( 
     <div className='md:hidden bg-slate-100'>
         <Sheet>
@@ -40,13 +44,16 @@ const MobileNav = () => {
                             key={item.label + item.navicon} 
                             href={item.reff}>
                                 <div className={`${pathname === item.reff ? "text-primary opacity-100 text-lg" : "opacity-50 text-sm"} flex items-center my-10 gap-4 uppercase `}>
-                                    <Image
-                                    src={item.navicon}
-                                    width={18}
-                                    height={18}
-                                    alt={item.label}
-                                    className=''
-                                    />
+                                    <div className='relative'>
+                                    {item.label === "Cart" && <p className='absolute -top-3 -right-3'>{count}</p>}
+                                        <Image
+                                        src={item.navicon}
+                                        width={18}
+                                        height={18}
+                                        alt={item.label}
+                                        className=''
+                                        />
+                                    </div>
                                     <TypographyP  
                                     content={item.label}
                                     className=''
