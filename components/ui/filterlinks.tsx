@@ -7,11 +7,8 @@ import { UseDashboardStore } from '@/store/dashboardstore'
 
 
 const FilterLinks = ({filters,filterProducts,className}:filterlinksprops) => {
-  
-  
-
   return (
-    <div className={cn('p-2',className)}>
+    <div className={cn('',className)}>
       {filters && filters.map(item => {
         return (
             <Button 

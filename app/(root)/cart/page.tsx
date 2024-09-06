@@ -14,17 +14,17 @@ const page = () => {
     cart:state.cart
   }))
   return (
-    <section className='flex flex-col gap-4 pt-10'>
+    <section className='flex flex-col gap-4 mt-5'>
       <TypographyLarge content="Cart" className="text-xl text-center"/>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-4' >
-        {cart ? 
-        <div className=''>
-          {cart.map(item => {return(<CartCard key={item.id + item.imageurl} {...item}/>)})}
-        </div>
-        :<TypographyH4
-         content={"there are no items in the cart"}
-        className='flex items-center justify-center '/>
-          
+        {
+          cart.map(item => {
+            return (<CartCard
+            key={item.imageurl +item.id}
+            {...item}
+
+            />)
+          })
         } 
       </div>
     </section>

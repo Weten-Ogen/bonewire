@@ -26,7 +26,5 @@ export const UseDashboardStore = create<dashboardstoreprops>
       tag === "all" ?
       state.products.filter(product => product.tags !== tag):
       state.products.filter(product => product.tags === tag)}))    
-
  }
-
 }))

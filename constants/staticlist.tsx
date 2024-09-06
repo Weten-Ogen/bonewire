@@ -105,7 +105,7 @@ const products = [
         tags : 'kente',
         price: 2000,
         gender: "all",
-
+        count: 0    
     },
     {
         id: "23",
@@ -115,6 +115,7 @@ const products = [
         tags : 'kente',
         price: 3000,
         gender: "M",
+        count: 0
     },
     {
         id: "21",
@@ -124,6 +125,7 @@ const products = [
         tags : 'footwear',
         price: 2000,
         gender: "all",
+        count:0
     },
     {
         id: "4",
@@ -142,6 +144,7 @@ const products = [
         tags : 'wristband',
         price: 2000,
         gender: "all",
+        count:0
     },
     {
         id: "666",

@@ -16,7 +16,7 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
 }:imagewithtextprops) => {
   return (
     <div className={cn('',className)}>
-      <div className='flex flex-col gap-4   md:max-w-lg rounded-'>
+      <div className='flex flex-col gap-4   md:max-w-lg '>
         <TypographyH2 
         content={title}
         className='font-bold text-4xl font bold md:text-5xl '
@@ -47,13 +47,16 @@ const ImageWithText = ({imageurl,actionref,calltoaction,className,content,subcon
         }
         
       </div>
-      <Image 
-       src={imageurl}
-       alt={`${imageurl} image`}
-       width={500}
-       height={500}
-       className="mt-5 md:mt-0 aspect-square w-full  shadow-md shadow-yellow-500  object-cover rounded-lg "
-      />
+      <div className='mt-14 md:mt-0'>
+
+        <Image 
+        src={imageurl}
+        alt={`${imageurl} image`}
+        width={500}
+        height={500}
+        className="mt-5 md:mt-0 aspect-square w-full  shadow-md shadow-yellow-500  object-cover rounded-lg "
+        />
+      </div>
     </div>
   )
 }

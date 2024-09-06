@@ -111,7 +111,8 @@ interface product {
     tags : string,
     className?:string,
     price: number,
-    gender:string
+    gender:string,
+    count?:number
 } 
 interface  horizontalscrollviewprops {
     className?:string,
@@ -132,7 +133,8 @@ interface productcardprops {
     tags : string,
     className?:string,
     price: number,
-    gender:string  
+    gender:string,
+    count?:number,  
 }
 
 interface productgrid{
