@@ -147,3 +147,9 @@ interface cartstore {
     cart : product[] | []
     addTocart: (product) => void
 }
+
+// adminsidebar 
+interface adminsidebarprops {
+    className?:string,
+    
+}

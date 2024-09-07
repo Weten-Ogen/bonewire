@@ -127,7 +127,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function Component() {
+export function BarChartComp() {
   const [activeChart, setActiveChart] =
     React.useState<keyof typeof chartConfig>("desktop")
 
@@ -140,12 +140,12 @@ export function Component() {
   )
 
   return (
-    <Card>
+    <Card className="">
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
-          <CardTitle>Bar Chart - Interactive</CardTitle>
+          <CardTitle>Income // Expenditure</CardTitle>
           <CardDescription>
-            Showing total visitors for the last 3 months
+            Showing total orders and expense for the last 3 months
           </CardDescription>
         </div>
         <div className="flex">

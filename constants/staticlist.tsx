@@ -32,6 +32,51 @@ const  navlinklist:navlinklistprops[] = [
     }
 ]
 
+const  adminnavlinklist:navlinklistprops[] = [
+    {
+        label: ' Admin Dashboard',
+        reff : '/admin',
+        navicon: '/assets/icons/monitor.svg'
+    },
+    {
+        label: 'Orders',
+        reff : '/admin/orders',
+        navicon: '/assets/icons/home.svg'
+    },
+    {
+        label: 'Customers',
+        reff: '/admin/customers',
+        navicon: '/assets/icons/monitor.svg'
+    },
+    {
+        label: 'Forms',
+        reff: '/admin/forms',
+        navicon: '/assets/icons/cart.svg'
+    },
+    {
+        label: 'Home',
+        reff : '/',
+        navicon: '/assets/icons/home.svg'
+    },
+    {
+        label: 'Dashboard',
+        reff : '/dashboard',
+        navicon: '/assets/icons/home.svg'
+    },
+    {
+        label:'Admin',
+        reff:'/admin',
+        navicon: '/assets/icons/admin.svg'
+    },
+    {
+        label:'About',
+        reff: '/about',
+        navicon: '/assets/icons/aboutus.svg'
+
+    }
+]
+
+
 
 const filterlist  = [
     {
@@ -56,6 +101,24 @@ const filterlist  = [
         label:'purse'
     },
     
+]
+
+const totaldashboardinfo = [
+    {
+        end: 47,
+        label:"Total Orders",
+        
+    }, 
+    {
+        end: 324,
+        label: "Registered Users",
+        
+    },
+    {
+        end: 10000,
+        label:"Total Revenue",
+        prefix:"$"
+    }
 ]
 
 const fakeproducts = [
@@ -157,4 +220,4 @@ const products = [
     },
 ]
 
-export default {navlinklist,filterlist,fakeproducts,products}
+export default {navlinklist,filterlist,fakeproducts,products,adminnavlinklist,totaldashboardinfo}

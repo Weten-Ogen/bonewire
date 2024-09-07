@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../../globals.css";
+import Adminprovider from "@/components/providers/adminprovider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"],weight:"400" });
 
 export const metadata: Metadata = {
   title: "Bonewire",
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Adminprovider className="">
+            {children}
+          </Adminprovider>        
+        
+        </body>
     </html>
   );
 }
