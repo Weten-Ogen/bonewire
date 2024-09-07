@@ -1,5 +1,6 @@
 import AdminTotalCard from '@/components/ui/admintotalcards'
 import {  BarChartComp } from '@/components/ui/barchat'
+import { LineChartComp } from '@/components/ui/linechart'
 import staticlist from '@/constants/staticlist'
 import React from 'react'
 
@@ -19,8 +20,9 @@ const Admin = () => {
           />)
         })}
       </div>
-      <article className='mt-10'>
+      <article className='mt-10 grid  lg:grid-cols-2 gap-8 items-center'>
         <BarChartComp/>
+        <LineChartComp/>
       </article>
     </section>
   )
