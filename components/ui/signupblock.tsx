@@ -37,7 +37,7 @@ export function AuthSignin() {
         content={'bonewire'}
         className="text-3xl capitalize"
         />
-        <div className="flex items-center gap-8 w-full">
+        <div className="flex flex-col items-center gap-8 w-full">
 
             <CustomInput 
             control={formTypes.control}
@@ -93,7 +93,7 @@ export function AuthSignin() {
           </div>
           
           <p className="text-2xl  text-center uppercase"> or</p>
-          <div className="py-8 w-full">
+          <div className="py-4 w-full">
             <Button  className="text-lg capitalize w-full py-6">log in with google</Button>
           </div>
             
