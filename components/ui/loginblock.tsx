@@ -31,7 +31,7 @@ export function AuthLogin() {
   return ( 
     <div className="w-full lg:grid   lg:grid-cols-2 h-screen overflow-hidden relative">
      <Form {...formTypes}> 
-      <div className="flex flex-col items-center gap-4 justify-center w-[80%] mx-auto p-4">
+      <div className="flex flex-col items-center gap-4 justify-center w-full md:w-[80%] mx-auto p-4">
 
         <TypographyH1
         content={'bonewire'}
