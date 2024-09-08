@@ -35,7 +35,7 @@ export function AuthLogin() {
 
         <TypographyH1
         content={'bonewire'}
-        className=""
+        className="text-3xl capitalize"
         />
 
           <CustomInput 
