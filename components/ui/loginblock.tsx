@@ -45,7 +45,6 @@ export function AuthLogin() {
           placeholder="enter your name"
           />
           <CustomInput
-          key={"5933434u840842"} 
           control={formTypes.control}
           label="Password"
           name="password"
