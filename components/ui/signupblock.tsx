@@ -29,9 +29,9 @@ export function AuthSignin() {
     }
   })
   return ( 
-    <div className="w-full lg:grid   lg:grid-cols-2 h-screen overflow-hidden relative">
+    <div className="w-full lg:grid   lg:grid-cols-2 h-screen overflow-hidden ">
      <Form {...formTypes}> 
-      <div className="flex flex-col items-center gap-4 justify-center w-full md:w-[80%] mx-auto p-4">
+      <div className="flex flex-col items-center gap-4 justify-center w-full md:w-[80%] mx-auto px-4">
 
         <TypographyH1
         content={'bonewire'}
