@@ -49,7 +49,7 @@ export function AuthLogin() {
           control={formTypes.control}
           label="Password"
           name="password"
-          placeholder=""
+          placeholder="oware"
           />
           <div className="w-full ">
 
