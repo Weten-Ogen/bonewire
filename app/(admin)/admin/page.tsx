@@ -8,7 +8,7 @@ import { DataTable } from './data-table'
 import { columns, Payment } from './columns'
 
 
-async function getdata():Promise<Payment[]> { 
+export async function getdata():Promise<Payment[]> { 
   return  [
     {
       id: "1",
@@ -95,7 +95,7 @@ const Admin  = async() =>  {
           />)
         })}
       </div>
-      <article className='mt-20 grid  lg:grid-cols-2 gap-4 items-center'>
+      <article className='mt-20 grid lg:grid-cols-2 gap-4 items-center'>
         <BarChartComp/>
         <LineChartComp/>
       </article>

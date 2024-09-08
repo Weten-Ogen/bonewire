@@ -4,20 +4,23 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { TypographyH2 } from "../typography/typoh2"
+import { TypographyH1 } from "../typography/typoh1"
 
 export const description =
   "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image."
 
-export function Dashboard() {
+export function AuthLogin() {
   return (
-    <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
+    <div className="w-full lg:grid   lg:grid-cols-2 h-screen overflow-hidden">
       <div className="flex items-center justify-center py-12">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
-            <h1 className="text-3xl font-bold">Login</h1>
-            <p className="text-balance text-muted-foreground">
-              Enter your email below to login to your account
-            </p>
+            <TypographyH1 
+             content = " Bonewire"
+             className=""
+            />
+            
           </div>
           <div className="grid gap-4">
             <div className="grid gap-2">
@@ -50,7 +53,7 @@ export function Dashboard() {
           </div>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <Link href="#" className="underline">
+            <Link href="/auth/sign-up" className="underline">
               Sign up
             </Link>
           </div>
@@ -58,7 +61,7 @@ export function Dashboard() {
       </div>
       <div className="hidden bg-muted lg:block">
         <Image
-          src="/placeholder.svg"
+          src="https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/57B9C542-EA7C-4D77-B7E2-3596C349A113-3yQFYE4yA4cDmLRs1M0Ern7kujLY9y.jpeg"
           alt="Image"
           width="1920"
           height="1080"
