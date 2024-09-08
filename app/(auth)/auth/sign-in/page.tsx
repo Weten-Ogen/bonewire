@@ -3,9 +3,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <section className='p-4 md:p-0'>
       <AuthLogin />
-    </div>
+    </section>
   )
 }
 export default page
