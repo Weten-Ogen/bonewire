@@ -37,7 +37,7 @@ export function AuthSignin() {
         content={'bonewire'}
         className="text-3xl capitalize"
         />
-        <div className="flex flex-col items-center gap-8 w-full">
+        <div className=" md:flex items-center gap-8 w-full">
 
             <CustomInput 
             control={formTypes.control}
