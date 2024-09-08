@@ -19,7 +19,7 @@ const MobileSideBarNav = () => {
         count: state.count
     }))
     return ( 
-    <div className='md:hidden bg-slate-100'>
+    <div className='md:hidden bg-slate-100 ml-auto'>
         <Sheet>
         <SheetTrigger>
             <Image 

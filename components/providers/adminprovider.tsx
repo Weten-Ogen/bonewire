@@ -12,17 +12,19 @@ interface  adminprops {
 
 const Adminprovider = ({children,className}:adminprops) => {
   return (
-    <section className={cn("flex gap-8 ",className)}>
+    <section className={cn("flex md:gap-8",className)}>
       <AdminSideBar
       className='hidden md:block'
       />
-      <MobileSideBarNav 
-        
-      />
 
+        <div className=''>
+      <MobileSideBarNav 
+
+      />
       <div className='w-full ml-0 lg:ml-[300px] p-8' >
       {children}
 
+      </div>
       </div>
 
     </section>
