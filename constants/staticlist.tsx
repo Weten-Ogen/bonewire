@@ -34,10 +34,11 @@ const  navlinklist:navlinklistprops[] = [
 
 const  adminnavlinklist:navlinklistprops[] = [
     {
-        label: ' Admin Dashboard',
-        reff : '/admin',
-        navicon: '/assets/icons/monitor.svg'
+        label:'Admin',
+        reff:'/admin',
+        navicon: '/assets/icons/admin.svg'
     },
+    
     {
         label: 'Orders',
         reff : '/admin/orders',
@@ -62,11 +63,6 @@ const  adminnavlinklist:navlinklistprops[] = [
         label: 'Dashboard',
         reff : '/dashboard',
         navicon: '/assets/icons/home.svg'
-    },
-    {
-        label:'Admin',
-        reff:'/admin',
-        navicon: '/assets/icons/admin.svg'
     },
     {
         label:'About',
