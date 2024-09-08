@@ -49,11 +49,11 @@ export function AuthLogin() {
           control={formTypes.control}
           label="Password"
           name="password"
-          placeholder="oware"
+          placeholder="*****"
           />
           <div className="w-full ">
 
-          <Button className="w-full mt-5 py-6 text-lg capitalize">submit</Button>
+          <Button type="submit" className="w-full mt-5 py-6 text-lg capitalize">submit</Button>
           </div>
           
           <p className="text-2xl  text-center uppercase"> or</p>
