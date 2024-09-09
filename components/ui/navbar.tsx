@@ -42,7 +42,7 @@ const NavBar = ({className}:navbarprops) => {
             )
         })}
       </ul>
-      <div className=''>
+      <div className='flex items-center gap-2 flex-row-reverse '>
       <MobileNav 
        />
         <AvaTar 
