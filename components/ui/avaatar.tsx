@@ -10,13 +10,13 @@ const AvaTar = ({avatarimageclass,className,imageurl,username}:avatarprops) => {
       {
         imageurl && <AvatarImage 
         src={imageurl}
-        className={cn('rounded-full h-10 w-10 uppercase bg-primary font-bold shadow-lg',avatarimageclass)}
+        className={cn('rounded-full h-8 w-8 uppercase bg-primary font-bold shadow-lg',avatarimageclass)}
         /> 
 
     }
     {
       imageurl || <AvatarFallback 
-      className='rounded-full h-10 w-10 uppercase bg-primary font-bold shadow-lg' >
+      className='rounded-full h-8 w-8 uppercase bg-primary font-bold shadow-lg' >
           {username?.slice(0,1)}
       </AvatarFallback>
     }
