@@ -103,7 +103,7 @@ interface filterlinksprops {
 }
 
 // horizontal scrollview
-interface product {
+interface product  {
     id: string,
     imageurl: string,
     label:string,
@@ -114,11 +114,11 @@ interface product {
     gender:string,
     count?:number
 } 
+
 interface  horizontalscrollviewprops {
     className?:string,
     products: product[]
 }
-
 
 // cart 
 interface cartprops {
@@ -151,5 +151,4 @@ interface cartstore {
 // adminsidebar 
 interface adminsidebarprops {
     className?:string,
-    
 }

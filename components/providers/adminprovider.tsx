@@ -17,11 +17,11 @@ const Adminprovider = ({children,className}:adminprops) => {
       className='hidden md:block'
       />
 
-        <div className=''>
+        <div className='w-full ml-0 lg:ml-[300px]'>
       <MobileSideBarNav 
 
       />
-      <div className='w-full ml-0 lg:ml-[300px] p-8' >
+      <div className=' p-8' >
       {children}
 
       </div>

@@ -73,3 +73,14 @@ export const authFormSchema = (type: string) => z.object({
   email: z.string().email(),
   password: z.string().min(8),
 })
+
+export const productSchema = z.object({
+  // create a  product
+  label:  z.string().max(50),
+  imageurl:z.string(),
+  content: z.string(),
+  tags: z.string().optional(),
+  gender: z.string().optional(),
+  price : z.string(),
+  count: z.string().default('0')
+})
