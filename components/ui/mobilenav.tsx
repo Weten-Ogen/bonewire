@@ -26,7 +26,7 @@ const MobileNav = () => {
     <div className='md:hidden bg-slate-100'>
         <Sheet>
         <SheetTrigger className='flex items-center justify-between'>
-            {!session.data && 
+            {session.data === null && 
             <SignBtn/>}
             <Image 
             src={icons.menuicon}

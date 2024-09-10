@@ -56,7 +56,7 @@ const NavBar = ({className}:navbarprops) => {
               className=''
               username="marcus"
               />
-          {!session.data &&
+          {session.data === null &&
             <SignBtn/>
           }
         </div>
