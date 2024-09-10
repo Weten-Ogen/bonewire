@@ -6,10 +6,12 @@ import staticlist from '@/constants/staticlist'
 import NavLinks from './navlinks'
 import AvaTar from './avaatar'
 import MobileNav from './mobilenav'
+import { auth } from '@/auth'
 
 
-const NavBar = ({className}:navbarprops) => {
-  
+const NavBar = async({className}:navbarprops) => {
+  const  session = await auth()
+
 
   return (
     <nav className={cn('fixed w-full flex items-center bg-gray-100 justify-between z-50',className)}>
@@ -42,7 +44,7 @@ const NavBar = ({className}:navbarprops) => {
             )
         })}
       </ul>
-      {
+      {session &&
         
         <div className='flex items-center gap-2 flex-row-reverse '>
         <MobileNav 
