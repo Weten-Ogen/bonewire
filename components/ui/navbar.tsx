@@ -42,15 +42,18 @@ const NavBar = ({className}:navbarprops) => {
             )
         })}
       </ul>
-      <div className='flex items-center gap-2 flex-row-reverse '>
-      <MobileNav 
-       />
-        <AvaTar 
-        avatarimageclass=''
-        className=''
-        username="marcus"
+      {
+        
+        <div className='flex items-center gap-2 flex-row-reverse '>
+        <MobileNav 
         />
-      </div>
+          <AvaTar 
+          avatarimageclass=''
+          className=''
+          username="marcus"
+          />
+        </div>
+      }
     </nav>
   )
 }
