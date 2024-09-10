@@ -11,6 +11,8 @@ import Logo from './logo'
 import { TypographyP } from '../typography/typoP'
 import staticlist from '@/constants/staticlist'
 import { UseCartStore } from '@/store/cartstore'
+import { useSession } from 'next-auth/react'
+import SignBtn from './authbtn'
 
 
 const MobileNav = () => {
@@ -18,16 +20,23 @@ const MobileNav = () => {
     const {count} = UseCartStore((state) =>({
         count: state.count
     }))
+
+    const session = useSession()
     return ( 
     <div className='md:hidden bg-slate-100'>
         <Sheet>
         <SheetTrigger>
+            {
+            !session.data ? 
+            <SignBtn/>:
             <Image 
             src={icons.menuicon}
             alt={"menu icon"}
             height={30}
             width={30}
             />
+            }
+        
         </SheetTrigger>
         <SheetContent className='max-w-[70%]' side="left">
         <SheetClose asChild>
