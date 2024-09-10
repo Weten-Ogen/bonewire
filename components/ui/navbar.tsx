@@ -15,7 +15,7 @@ const NavBar = ({className}:navbarprops) => {
   console.log(session)
 
   return (
-    <nav className={cn('fixed w-full flex items-center bg-gray-100 justify-between z-50',className)}>
+    <div className={cn('fixed w-full flex items-center bg-gray-100 justify-between z-50',className)}>
       {/* 
       on desktops :
             - logo 
@@ -58,7 +58,7 @@ const NavBar = ({className}:navbarprops) => {
           />
         </div>
       }
-    </nav>
+    </div>
   )
 }
 
