@@ -45,9 +45,9 @@ const NavBar = ({className}:navbarprops) => {
             )
         })}
       </ul>
-      {!session.data ? 
+      {!session.data &&
         <SignBtn/>
-      : 
+      }
         <div className='flex items-center gap-2 flex-row-reverse '>
         <MobileNav 
         />
@@ -57,7 +57,7 @@ const NavBar = ({className}:navbarprops) => {
           username="marcus"
           />
         </div>
-      }
+      
     </div>
   )
 }
