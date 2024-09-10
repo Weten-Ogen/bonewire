@@ -14,8 +14,7 @@ interface  adminprops {
 const Adminprovider = ({children,className}:adminprops) => {
   return (
     <section className={cn("flex md:gap-8",className)}>
-      <AuthProvider>
-        <>
+      
         <AdminSideBar
         className='hidden md:block'
         />
@@ -29,8 +28,7 @@ const Adminprovider = ({children,className}:adminprops) => {
 
         </div>
         </div>
-        </>
-      </AuthProvider>
+        
 
     </section>
   )

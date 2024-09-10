@@ -1,30 +1,15 @@
-
-import { signIn, signOut } from '@/auth'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
+import { signIn } from '@/auth'
 import React from 'react'
-import { Button } from 'react-day-picker'
+import { Button } from './button'
 
-interface authBtn {
-    className?: string,
-    label : string,
-    type : string
-}
-
-const AuthBtn = ({label,type,className}:authBtn) => {
-  
+const SignBtn = () => {
   return (
-    <form className=''>
-      <Button className='' onClick={async () => {
-        if(type === "sign-in") {
-         await signIn("google",{redirectTo: "/dashboard"})
-        }
-         await signOut()
-      }}  type="submit">{label}</Button>
+    <form action ={ async() => {
+        await signIn("google",{redirectTo: '/dashboard'})
+    }}>
+      <Button type="submit">log in </Button>
     </form>
   )
 }
 
-
-
-export default AuthBtn
+export default SignBtn

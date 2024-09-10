@@ -6,12 +6,13 @@ import staticlist from '@/constants/staticlist'
 import NavLinks from './navlinks'
 import AvaTar from './avaatar'
 import MobileNav from './mobilenav'
-import { auth } from '@/auth'
+import { useSession } from 'next-auth/react'
+import SignBtn from './authbtn'
 
 
-const NavBar = async({className}:navbarprops) => {
-  const  session = await auth()
-
+const NavBar = ({className}:navbarprops) => {
+  const session = useSession()
+  console.log(session)
 
   return (
     <nav className={cn('fixed w-full flex items-center bg-gray-100 justify-between z-50',className)}>
@@ -44,8 +45,9 @@ const NavBar = async({className}:navbarprops) => {
             )
         })}
       </ul>
-      {session &&
-        
+      {!session.data ? 
+        <SignBtn/>
+      : 
         <div className='flex items-center gap-2 flex-row-reverse '>
         <MobileNav 
         />
