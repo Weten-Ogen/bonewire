@@ -45,17 +45,21 @@ const NavBar = ({className}:navbarprops) => {
             )
         })}
       </ul>
-      {!session.data &&
-        <SignBtn/>
-      }
-        <div className='flex items-center gap-2 flex-row-reverse '>
+
+      <div className='flex items-center gap-2 flex-row-reverse '>
         <MobileNav 
         />
-          <AvaTar 
-          avatarimageclass=''
-          className=''
-          username="marcus"
-          />
+        <div>
+
+              <AvaTar 
+              avatarimageclass=''
+              className=''
+              username="marcus"
+              />
+          {!session.data &&
+            <SignBtn/>
+          }
+        </div>
         </div>
       
     </div>
