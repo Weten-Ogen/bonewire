@@ -1,15 +1,23 @@
-"use client"
-import React from 'react'
-import {SessionProvider}  from 'next-auth/react'
-interface authprops {
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+
+
+export default function AuthProvider({
+  children,
+}: {
   children: React.ReactNode
-}
-const AuthProvider = ({children}:authprops) => {
+}) {
   return (
-    <SessionProvider>
-      {children}
-    </SessionProvider>
+    <ClerkProvider>
+      <>
+          
+          {children}
+      </>
+    </ClerkProvider>
   )
 }
-
-export default AuthProvider
