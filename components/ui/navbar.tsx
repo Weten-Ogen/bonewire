@@ -6,8 +6,7 @@ import staticlist from '@/constants/staticlist'
 import NavLinks from './navlinks'
 import AvaTar from './avaatar'
 import MobileNav from './mobilenav'
-import SignBtn from './authbtn'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 
 const NavBar = ({className}:navbarprops) => {

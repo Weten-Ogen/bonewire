@@ -11,7 +11,6 @@ import Logo from './logo'
 import { TypographyP } from '../typography/typoP'
 import staticlist from '@/constants/staticlist'
 import { UseCartStore } from '@/store/cartstore'
-import SignBtn from './authbtn'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 
 
