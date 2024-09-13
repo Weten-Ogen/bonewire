@@ -117,43 +117,6 @@ const totaldashboardinfo = [
     }
 ]
 
-const fakeproducts = [
-    {
-        id: "1",
-        imageurl: "/assets/images/bag1.jpg",
-        label:"School Bag",
-        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : 'bag',
-    },
-    {
-        id: "2",
-        imageurl: "/assets/images/footwear1.jpg",
-        label:"foot wear",
-        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : 'footwear',
-    },
-    {
-        id: "3",
-        imageurl: "/assets/images/ladybag1.jpg",
-        label:"lady purse",
-        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : 'purse',
-    },
-    {
-        id: "43",
-        imageurl: "/assets/images/purse1.jpg",
-        label:"Purse",
-        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : 'purse'
-    },
-    {
-        id: "52",
-        imageurl: "/assets/images/bands.jpg",
-        label:"wristBands",
-        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt est quis doloremque sequi deleniti, vitae consequuntur vero cumque pariatur voluptatibus?",
-        tags : 'wristband',
-    },
-]
 
 const products = [
     {
@@ -216,4 +179,4 @@ const products = [
     },
 ]
 
-export default {navlinklist,filterlist,fakeproducts,products,adminnavlinklist,totaldashboardinfo}
+export default {navlinklist,filterlist,products,adminnavlinklist,totaldashboardinfo}
