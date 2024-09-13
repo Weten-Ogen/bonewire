@@ -51,7 +51,6 @@ const NavBar = ({className}:navbarprops) => {
 
       </div>
       <div>
-
            <SignedOut>
               <SignInButton />
             </SignedOut>

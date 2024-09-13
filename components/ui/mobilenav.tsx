@@ -12,6 +12,7 @@ import { TypographyP } from '../typography/typoP'
 import staticlist from '@/constants/staticlist'
 import { UseCartStore } from '@/store/cartstore'
 import SignBtn from './authbtn'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 
 
 const MobileNav = () => {
@@ -25,6 +26,7 @@ const MobileNav = () => {
         <Sheet>
         <SheetTrigger className='flex items-center justify-between'>
 
+
             <Image 
             src={icons.menuicon}
             alt={"menu icon"}
@@ -35,10 +37,23 @@ const MobileNav = () => {
         <SheetContent className='max-w-[70%]' side="left">
         <SheetClose asChild>
             <nav className='flex flex-col  items-between gap-4 relative h-[95%]'>
-                <Logo 
-                className=''
-                label='Bonewire'
-                />
+                <div className='flex items-center justify-between gap-8'>
+
+                    <Logo 
+                    className=''
+                    label='Bonewire'
+                    />
+                    <div>
+                    <SignedOut>
+                    <SignInButton />
+                    </SignedOut>
+                    <SignedIn>
+                    <UserButton />
+                    </SignedIn>
+
+                    </div>
+
+                </div>
             
                 <div className='flex-1 items-center justify-center gap-2 mt-4'>
                     {staticlist.navlinklist.map(item => {
