@@ -25,14 +25,22 @@ const MobileNav = () => {
     <div className='md:hidden bg-slate-100'>
         <Sheet>
         <SheetTrigger className='flex items-center justify-between'>
-
-
-            <Image 
-            src={icons.menuicon}
-            alt={"menu icon"}
-            height={30}
-            width={30}
-            />
+            <div className='flex items-center '>
+            <>
+                    <SignedOut>
+                    <SignInButton />
+                    </SignedOut>
+                    <SignedIn>
+                    <UserButton />
+                    </SignedIn>
+            </>
+                <Image 
+                src={icons.menuicon}
+                alt={"menu icon"}
+                height={30}
+                width={30}
+                />
+            </div>
         </SheetTrigger>
         <SheetContent className='max-w-[70%]' side="left">
         <SheetClose asChild>
@@ -43,15 +51,7 @@ const MobileNav = () => {
                     className=''
                     label='Bonewire'
                     />
-                    <div>
-                    <SignedOut>
-                    <SignInButton />
-                    </SignedOut>
-                    <SignedIn>
-                    <UserButton />
-                    </SignedIn>
-
-                    </div>
+                    
 
                 </div>
             
