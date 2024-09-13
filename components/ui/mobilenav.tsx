@@ -30,15 +30,18 @@ const MobileNav = () => {
                     <SignInButton />
                     </SignedOut>
                     <SignedIn>
-                    <UserButton />
+                        <div className='flex items-center gap-8'>
+
+                        <UserButton />
+                            <Image 
+                            src={icons.menuicon}
+                            alt={"menu icon"}
+                            height={30}
+                            width={30}
+                            />
+                        </div>
                     </SignedIn>
             </>
-                <Image 
-                src={icons.menuicon}
-                alt={"menu icon"}
-                height={30}
-                width={30}
-                />
             </div>
         </SheetTrigger>
         <SheetContent className='max-w-[70%]' side="left">

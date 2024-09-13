@@ -49,7 +49,7 @@ const NavBar = ({className}:navbarprops) => {
         />
 
       </div>
-      <div>
+      <div className='hidden md:block'>
            <SignedOut>
               <SignInButton />
             </SignedOut>
