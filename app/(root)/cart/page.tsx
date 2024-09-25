@@ -13,6 +13,7 @@ const page = () => {
   const {cart} = UseCartStore((state) => ({
     cart:state.cart
   }))
+  
   return (
     <section className='flex flex-col gap-4 mt-5'>
       <TypographyLarge content="Cart" className="text-xl text-center"/>
