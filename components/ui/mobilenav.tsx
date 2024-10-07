@@ -11,7 +11,7 @@ import Logo from './logo'
 import { TypographyP } from '../typography/typoP'
 import staticlist from '@/constants/staticlist'
 import { UseCartStore } from '@/store/cartstore'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+
 
 
 const MobileNav = () => {
@@ -26,13 +26,10 @@ const MobileNav = () => {
         <SheetTrigger className='flex items-center justify-between'>
             <div className='flex items-center '>
             <>
-                    <SignedOut>
-                    <SignInButton />
-                    </SignedOut>
-                    <SignedIn>
+                    
                         <div className='flex items-center gap-8'>
 
-                        <UserButton />
+                        
                             <Image 
                             src={icons.menuicon}
                             alt={"menu icon"}
@@ -40,7 +37,7 @@ const MobileNav = () => {
                             width={30}
                             />
                         </div>
-                    </SignedIn>
+                
             </>
             </div>
         </SheetTrigger>

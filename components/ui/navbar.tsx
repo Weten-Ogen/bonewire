@@ -6,7 +6,7 @@ import staticlist from '@/constants/staticlist'
 import NavLinks from './navlinks'
 import AvaTar from './avaatar'
 import MobileNav from './mobilenav'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+
 
 
 const NavBar = ({className}:navbarprops) => {
@@ -50,13 +50,7 @@ const NavBar = ({className}:navbarprops) => {
 
       </div>
       <div className='hidden md:block'>
-           <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-        
+           
       </div>
     </div>
   )
