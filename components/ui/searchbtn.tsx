@@ -2,7 +2,7 @@
 import React from 'react'
 import { Input } from './input'
 import { Button } from './button'
-import TypographyBlockquote from '../typography/blockquote'
+import TypographyBlockquote from '@/components/typography/blockquote'
 
 
 const SearchBtn = () => {
