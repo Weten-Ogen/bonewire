@@ -1,10 +1,15 @@
 import { cn } from "@/lib/utils";
-import { typo } from "@/types/next";
+import React from "react";
 
-export function TypographyBlockquote({className,content}:typo) {
+
+interface TypographyBlockquoteprops {
+    className: string,
+    children : string
+}
+export function TypographyBlockquote(props:TypographyBlockquoteprops) {
     return (
-      <blockquote className={cn("  pl-6 italic",className)}>
-       {content}
+      <blockquote className={cn("mt-6 border-l-2 pl-6 italic",props.className)}>
+        {props.children}
       </blockquote>
     )
   }

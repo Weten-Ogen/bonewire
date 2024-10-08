@@ -1,27 +1,27 @@
-import { avatarprops } from '@/types/next'
+'use client'
 import React from 'react'
-import { Avatar, AvatarFallback, AvatarImage } from './avatar'
+import { Avatar } from './avatar'
+import { AvatarImage } from '@radix-ui/react-avatar'
+import avatarImage  from '@/public/asset/profile.png'
 import { cn } from '@/lib/utils'
 
-const AvaTar = ({avatarimageclass,className,imageurl,username}:avatarprops) => {
- 
-  return (
-    <Avatar className={cn('bg-yellow-500 rounded-full h-10 w-10 overflow-hidden',className)}>
-      {
-        imageurl && <AvatarImage 
-        src={imageurl}
-        className={cn('rounded-full h-8 w-8 uppercase bg-primary font-bold shadow-lg',avatarimageclass)}
-        /> 
+interface avatarIconprops{
+    className?: string,
+    imageurl?  : string,
 
-    }
-    {
-      imageurl || <AvatarFallback 
-      className='rounded-full h-8 w-8 uppercase bg-primary font-bold shadow-lg' >
-          {username?.slice(0,1)}
-      </AvatarFallback>
-    }
+}
+
+const AvatarIcon = (props:avatarIconprops) => {
+  return (
+    
+    <Avatar className={cn('bg-red-600 h-10 w-10 overflow-hidden rounded-full ',props.className)}>
+        <AvatarImage 
+         src={"/public/asset/profile.png"}
+         alt="avatar image"
+         className='object-cover w-full'
+        />
     </Avatar>
   )
 }
 
-export default AvaTar
+export default AvatarIcon

@@ -1,12 +1,13 @@
-import { cn } from "@/lib/utils";
-import { typo } from "@/types/next";
+import { cn } from "@/lib/utils"
 
-export function TypographySmall({content,className}:typo
-) {
-    return (
-      <small className={cn("text-sm font-medium leading-none",className)}>
-        {content}
-      </small>
-    )
+interface TypographyLargeprops {
+    children: string,
+    className: string
+}
+
+export function TypographyLarge(props:TypographyLargeprops) {
+    return <div className={cn("text-lg font-semibold",props.className)}>
+        {props.children}
+    </div>
   }
   

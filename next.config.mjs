@@ -1,15 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images :{
-        remotePatterns:[
-            {
-                protocol: "https",
-                hostname:"l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com",
-                pathname: "/**",
-                port: "",
-            }
-        ]
-    }
-};
+const nextConfig = {};
 
 export default nextConfig;

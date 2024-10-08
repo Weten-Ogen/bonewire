@@ -1,10 +1,14 @@
-import { cn } from "@/lib/utils";
-import { typo } from "@/types/next";
+import { cn } from "@/lib/utils"
 
-export function TypographyMuted({content,className}:typo) {
+interface TypographyMutedprops {
+    children: string,
+    className: string
+}
+
+export function TypographyMuted(props:TypographyMutedprops) {
     return (
-      <p className={cn("text-sm text-muted-foreground",className)}>
-        {content}
+      <p className={cn("text-sm text-muted-foreground", props.className)}>
+        {props.children}
         </p>
     )
   }

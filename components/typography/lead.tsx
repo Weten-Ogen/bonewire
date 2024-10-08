@@ -1,10 +1,13 @@
-import { cn } from "@/lib/utils";
-import { typo } from "@/types/next";
+import { cn } from "@/lib/utils"
 
-export function TypographyLead({content,className}:typo) {
+interface TypographyLeadprops {
+    children : string,
+    className: string
+}
+export function TypographyLead(props: TypographyLeadprops) {
     return (
-      <p className={cn("text-xl text-muted-foreground",className)}>
-        {content}
+      <p className={cn("text-xl text-muted-foreground",props.className)}>
+        {props.children}
       </p>
     )
   }

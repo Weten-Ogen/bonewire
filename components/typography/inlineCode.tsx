@@ -1,10 +1,14 @@
-import { cn } from "@/lib/utils";
-import { typo } from "@/types/next";
+import { cn } from "@/lib/utils"
 
-export function TypographyInlineCode({content,className}:typo) {
+interface TypographyInlineCodeprops {
+    className :string,
+    children: string
+}
+
+export function TypographyInlineCode(props:TypographyInlineCodeprops) {
     return (
-      <code className={cn("relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",className)}>
-       {content}
+      <code className={cn("relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",props.className)}>
+        {props.children}
       </code>
     )
   }

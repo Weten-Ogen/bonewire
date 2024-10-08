@@ -1,24 +1,24 @@
-import { searchbtnprops } from '@/types/next'
+"use client"
 import React from 'react'
-import { Button } from './button'
 import { Input } from './input'
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
-import icons from '@/constants/icons'
-import { SearchIcon } from 'lucide-react'
+import { Button } from './button'
+import { TypographyLarge } from '../typography/large'
+import { TypographyBlockquote } from '../typography/blockquote'
 
-const SearchBtn = ({className}:searchbtnprops) => {
+const SearchBtn = () => {
   return (
-    <div className={cn('relative',className)}>
+    <div>
+    <TypographyBlockquote className='text-xl py-4'>
+        Buy all your product here,
+        Feel free to add to Cart here.
+        All products are made just for.
+    </TypographyBlockquote>
+    <div className='flex items-center  gap-2 m-2'>
       <Input 
-      
-      className='py-6 border border-yellow-500 text-md  hover:ring-black   md:px-4 w-full '
-      placeholder='search for any kente product ....'
-      type="text"/>
-      <SearchIcon 
-      size={32}
-      className='absolute top-4  right-4 md:right-2 bg-yellow-500 p-2 rounded-full cursor-pointer'/>
-      
+       placeholder='search for all products here ...'      
+      />
+      <Button  className='w-40'>Search</Button>
+    </div>
     </div>
   )
 }
