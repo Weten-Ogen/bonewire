@@ -2,8 +2,8 @@
 import React from 'react'
 import { Input } from './input'
 import { Button } from './button'
-import { TypographyLarge } from '../typography/large'
-import { TypographyBlockquote } from '../typography/blockquote'
+import TypographyBlockquote from '../typography/blockquote'
+
 
 const SearchBtn = () => {
   return (

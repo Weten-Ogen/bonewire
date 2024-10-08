@@ -6,7 +6,7 @@ interface TypographyBlockquoteprops {
     className: string,
     children : string
 }
-export function TypographyBlockquote(props:TypographyBlockquoteprops) {
+const  TypographyBlockquote =(props:TypographyBlockquoteprops) => {
     return (
       <blockquote className={cn("mt-6 border-l-2 pl-6 italic",props.className)}>
         {props.children}
@@ -14,3 +14,5 @@ export function TypographyBlockquote(props:TypographyBlockquoteprops) {
     )
   }
   
+
+export default TypographyBlockquote
