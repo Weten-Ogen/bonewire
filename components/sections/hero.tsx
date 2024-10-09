@@ -7,7 +7,7 @@ import { TypographyP } from '../typography/p'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import Links from '../ui/Links'
-
+import { ChevronRight, Info } from 'lucide-react'
 
 
 const Hero = () => {
@@ -31,13 +31,17 @@ const Hero = () => {
                     href={'/products'}
                     text='Order Now'
                     className='w-full'
+                    
+                    type="default"
                     textClass='text-xl  '
 
                     />
                     <Links
                     href='/about'
                     text='About Us'
+                    
                     className='w-full mr-2'
+                    type="default"
                     textClass='text-xl '
                     />
                 </div>

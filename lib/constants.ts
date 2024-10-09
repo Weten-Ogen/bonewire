@@ -1,34 +1,48 @@
+import React from "react"
+import {Home,ShoppingCart,ShoppingBag, User, Info, Shield} from 'lucide-react'
 const navlinks = [
     {
         label: 'Home',
         href: '/',
-        imageurl: ''
+        imageurl: '',
+        icon : Home,
 
     },
     {
         label: 'Products',
         href: '/products',
-        imageurl: ''
+        imageurl: '',
+        icon : ShoppingBag
 
     },
     {
         label: 'Cart',
         href: '/cart',
-        imageurl: ''
+        imageurl: '',
+        icon: ShoppingCart
 
     },
     {
         label: 'Admin',
         href: '/admin',
-        imageurl: ''
+        imageurl: '',
+        icon: Shield
 
+    },
+    {
+        label : "Profile",
+        href : "/profile",
+        imageurl: '',
+        icon: User
     },
     {
         label: 'About',
         href: '/about',
-        imageurl: ''
+        imageurl: '',
+        icon: Info
 
     },
+
 ]
 
 export {

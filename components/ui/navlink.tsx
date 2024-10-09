@@ -12,16 +12,20 @@ interface navlinksprops{
 const NavLinks = (props:navlinksprops) => {
   return (
     <nav className={cn('',props.className)}>
-      <ul className="flex items-center gap-2 p-2">
+      <ul className="flex items-center ">
         {
             navlinks.map(item => {
                 return (
+                <div className='flex items-center gap-0 '>
+                    <item.icon  />
                     <Links 
-                    className=''
+                    className='uppercase'
+                    type="link"
                     key= {item.label}
                     href={item.href}
                     text={item.label}
                     />
+                </div>
                 )
             })
         }
