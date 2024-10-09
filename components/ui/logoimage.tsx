@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
-import HeroImg from '@/public/asset/icon.png'
+// import HeroImg from '@/public/asset/icon.png'
 interface logoimageprops{
     className: string,
     imageurl? :string
@@ -16,7 +16,7 @@ const LogoImage = (props:logoimageprops) => {
     width={40}
     height={40}
       className='object-cover h-auto' 
-      src={HeroImg}
+      src={'/public/images/icon.png'}
       alt={`${props.imageurl }image`}
       />
       <p className='text-2xl italic font-bold'>Bonewire</p>

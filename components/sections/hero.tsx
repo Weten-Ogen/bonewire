@@ -20,7 +20,7 @@ const Hero = () => {
                 </TypographyH2>
                 <TypographyP className='text-2xl '>
                     Your home of quality kente products.
-                    We have everything you ever need form a kente piece . 
+                    We have everything you ever need form a kente piece. 
                 </TypographyP>
                 <TypographyLead className='text-lg'>
                     Quality is Assured 

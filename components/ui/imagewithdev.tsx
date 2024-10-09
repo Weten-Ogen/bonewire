@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
-import HeroImg from '@/public/asset/hero.png'
+// import HeroImg from '@/public/asset/hero.png'
 
 interface imagewithdevprops{
     className?: string,
@@ -15,7 +15,7 @@ interface imagewithdevprops{
 const ImageWithDev =(props:imagewithdevprops) => (
   <div className={cn('max-w-[600px] w-[100%] h-auto relative',props.className)}>
     <Image
-      src={HeroImg}
+      src={"/public/images/hero.png"}
       alt={`${props.imageurl} image`}
       className={props.imageclass}      
       width={props.imagewidth ??800}                    
