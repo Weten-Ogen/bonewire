@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from './ui/card'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { Button } from './ui/button'
 import { TypographyMuted } from './typography/muted'
 import Link from 'next/link'
@@ -12,7 +12,7 @@ interface productcardprops{
 className?: string,
 id:string,   
 label:string,
-imageUrl:string,
+imageUrl:string | StaticImageData,
 price: number ,
 description:string
 }

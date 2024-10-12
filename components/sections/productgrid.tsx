@@ -5,7 +5,7 @@ import { StaticImageData } from 'next/image'
 interface productprops {
     id:string,   
     label:string,
-    imageUrl:StaticImageData,
+    imageUrl:StaticImageData | string,
     price: number ,
     description:string
 }
