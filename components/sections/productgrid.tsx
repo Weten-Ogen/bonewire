@@ -1,10 +1,11 @@
 import React from 'react'
 import ProductCard from '../productcard'
 import { cn } from '@/lib/utils'
+import { StaticImageData } from 'next/image'
 interface productprops {
     id:string,   
     label:string,
-    imageUrl:string,
+    imageUrl:StaticImageData,
     price: number ,
     description:string
 }
