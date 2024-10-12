@@ -2,8 +2,8 @@ import { cn } from "@/lib/utils"
 import React from "react"
 
 interface TypographyPprops{
-    children : string,
-    className: string,
+    children : string | number,
+    className?: string,
 }
 export function TypographyP(props: TypographyPprops) {
     return (

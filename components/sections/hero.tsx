@@ -8,12 +8,13 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import Links from '../ui/Links'
 import { ChevronRight, Info } from 'lucide-react'
-
+import HeroImg from '@/public/images/hero1.jpg'
 
 const Hero = () => {
+    const imagelink = "/public/images/hero.png"
   return (
-    <section id="#hero" className='min-h-screen md:h-screen  md:overflow-hidden  mt-20 '>
-        <div className='p-4  md:p-0 md:flex md:items-center md:w-[70%] md:h-[60vh] mx-auto'>
+    <section id="#hero" className='min-h-screen md:h-screen  md:overflow-hidden  mt-20 p-4 '>
+        <div className='p-4  md:p-0 md:flex md:items-center md:w-[70%] md:h-[60vh] mx-auto gap-10'>
             <article className='flex flex-col  gap-5'>
                 <TypographyH2 className='text-4xl '>
                     Kente Mall
@@ -48,8 +49,9 @@ const Hero = () => {
                 
             </article>
             <ImageWithDev
-            imageurl='/public/asset/hero.png'
-            className='mt-10'
+        
+            imageurl={HeroImg || imagelink} 
+            className='mt-10 rounded-lg'
             imagewidth={400}
             imageheight={400}                
             />

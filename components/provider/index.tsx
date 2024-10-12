@@ -8,6 +8,8 @@ interface providerprops {
 
 
 const Provider = (props: providerprops) => {
+
+
   return (
     <div className=''> 
       <NavBar/>

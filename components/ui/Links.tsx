@@ -15,8 +15,9 @@ interface linksprops {
 }
 const Links = (props:linksprops) => {
   return (
-    <Link 
-    className={`${cn('',props.className)} ${buttonVariants({variant:`${props?.type || "default"}`})} `} 
+    <Link className={`${cn('',props.className)} 
+      ${buttonVariants({variant:`${props?.type || "default"}`})} `
+    } 
     href={props.href}>
     <p className={cn('',props.textClass)}> 
     {props.text}

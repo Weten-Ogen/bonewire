@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Cart = () => {
+const page = () => {
   return (
     <div>
-      
+      Product Table
     </div>
   )
 }
 
-export default Cart
+export default page

@@ -1,5 +1,9 @@
 import React from "react"
-import {Home,ShoppingCart,ShoppingBag, User, Info, Shield} from 'lucide-react'
+import {Home,ShoppingCart,ShoppingBag, User, Info, Shield, LucideEdit3} from 'lucide-react'
+import AhenemaImg from '/public/images/ahenema1.jpg'
+import KenteImg  from  '/public/images/kente1.jpg'
+import footwear from '/public/images/ladiesfootwear1.jpg'
+
 const navlinks = [
     {
         label: 'Home',
@@ -27,7 +31,6 @@ const navlinks = [
         href: '/admin',
         imageurl: '',
         icon: Shield
-
     },
     {
         label : "Profile",
@@ -45,6 +48,60 @@ const navlinks = [
 
 ]
 
+
+const filterlist= [
+    {
+     label: "all"
+    },
+    {
+    label: "Kente"
+    },
+    {
+    label: "sash"
+    },
+    {
+    label: "accessories"
+    },
+    {
+    label: "foot wears"
+    }
+]
+
+const fakedata = [
+   {
+    id:"1",   
+    label:"Black ahenema",
+    imageUrl:AhenemaImg,
+    price: 400.5 ,
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias "
+  },
+  {
+    id:"2",   
+    label:"defferoto",
+    imageUrl:KenteImg,
+    price: 5050 ,
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias "
+  },
+  {
+    id:"3",   
+    label:"fetuds",
+    imageUrl:footwear,
+    price: 60030,
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias "
+  },
+  {
+    id:"4",   
+    label:"meaosn",
+    imageUrl:AhenemaImg,
+    price: 4000,
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias"
+  },
+  
+  
+]
+
 export {
-    navlinks
+    navlinks,
+    filterlist,
+    fakedata
 }

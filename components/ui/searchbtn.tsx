@@ -7,11 +7,12 @@ import { Button } from './button'
 const SearchBtn = () => {
   return (
     <>
-    <div className='flex items-center  gap-2 m-2'>
+    <div className='grid md:grid-cols-2 items-center gap-4 p-2'>
       <Input 
+      className='text-md p-2'
        placeholder='search for all products here ...'      
        />
-      <Button  className='w-40'>Search</Button>
+      <Button  className='w-full md:w-40'>Search</Button>
     </div>
     </>
   )

@@ -16,12 +16,12 @@ const NavLinks = (props:navlinksprops) => {
         {
             navlinks.map(item => {
                 return (
-                <div className='flex items-center gap-0 '>
+                <div key={item.label} className='flex items-center gap-0 '>
                     <item.icon  />
                     <Links 
                     className='uppercase'
                     type="link"
-                    key= {item.label}
+                    
                     href={item.href}
                     text={item.label}
                     />
