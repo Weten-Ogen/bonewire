@@ -16,8 +16,7 @@ interface productpageprops {
 
 const ProductPage = (props:productpageprops) => {
     const {id} = props.params
-    const product = fakedata.filter(item => id === item.id)
-    const singleobject = product[0]
+    
 
     return (
     <section className='mt-12 h-screen overflow-hidden'>
@@ -33,14 +32,14 @@ const ProductPage = (props:productpageprops) => {
     <div className='p-4 flex flex-col items-start gap-5'>
         <div className='flex items-center justify-between w-full'>
         <TypographyLarge className='uppercase text-2xl'>
-            {singleobject.label}
+        o
         </TypographyLarge>
         <TypographyP className='text-lg bg-orange-500 rounded-sm p-2'>
-        {singleobject.price}
+        g
         </TypographyP>
         </div>
         <TypographyP className=''>
-            {singleobject.description}
+            g
         </TypographyP>
     </div>
     <div className='text-lg  p-4'>
