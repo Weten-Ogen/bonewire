@@ -17,22 +17,19 @@ const NavBar = () => {
       className='hidden lg:flex'
       />
       </div>
-      <div>
-
-          {
-              auth ? 
+      <div className='flex items-center flex-row-reverse  gap-1'>
           <SideBar>
               <AvatarIcon 
               className=''
               imageurl='/public/images/profile.png'
               />
           </SideBar>
-          : 
+           
           <SignInBtn
           text='log in'
           className='capitalize text-md'
           />
-          }
+          
       </div>
     </section>
   )

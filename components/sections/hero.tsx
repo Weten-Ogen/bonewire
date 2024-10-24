@@ -10,6 +10,7 @@ import Links from '../ui/Links'
 import { ChevronRight, Info } from 'lucide-react'
 import HeroImg from '@/public/images/hero1.jpg'
 
+
 const Hero = () => {
     const imagelink = "/public/images/hero.png"
   return (

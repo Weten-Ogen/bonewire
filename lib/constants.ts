@@ -1,5 +1,5 @@
 import React from "react"
-import {Home,ShoppingCart,ShoppingBag, User, Info, Shield, LucideEdit3} from 'lucide-react'
+import {Home,ShoppingCart,ShoppingBag, User, Info, Shield, LucideEdit3, ChartArea, User2, Users, FileText, Plus, Edit} from 'lucide-react'
 import AhenemaImg from '/public/images/ahenema1.jpg'
 import KenteImg  from  '/public/images/kente1.jpg'
 import footwear from '/public/images/ladiesfootwear1.jpg'
@@ -100,8 +100,33 @@ const fakedata = [
   
 ]
 
+const admincard = [
+    {
+        label: "Orders",
+        icon:  FileText ,
+        href: 'admin/orders'
+    },
+    {
+        label: "Add Product",
+        icon: Plus,
+        href :"admin/add"
+    },
+    {
+        label: "Charts",
+        icon: ChartArea,
+        href: 'admin/chart'
+    },
+    {
+        label: "Users",
+        icon:  Users,
+        href: 'admin/users'
+    },
+    
+]
+
 export {
     navlinks,
     filterlist,
-    fakedata
+    fakedata,
+    admincard
 }
