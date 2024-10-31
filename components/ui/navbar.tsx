@@ -12,11 +12,7 @@ const NavBar = () => {
     <section className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full  md:h-[8vh] z-10'>
       <LogoImage
       className=''/>
-      <div>
-      <NavLinks
-      className='hidden lg:flex'
-      />
-      </div>
+      
       <div className='flex items-center flex-row-reverse  gap-1'>
           <SideBar>
               <AvatarIcon 

@@ -18,8 +18,8 @@ interface admincardprops {
 
 const AdminCards = (props: admincardprops) => {
   return (
-    <div className={cn('',props.className)}>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
+    <div className={cn('p-8',props.className)}>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
         {
           admincard.map(item => {
             return (

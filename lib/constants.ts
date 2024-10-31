@@ -73,28 +73,32 @@ const fakedata = [
     label:"Black ahenema",
     imageUrl:AhenemaImg,
     price: 400.5 ,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias "
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias ",
+    tag:"bag"
   },
   {
     id:"2",   
     label:"defferoto",
     imageUrl:KenteImg,
     price: 5050 ,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias "
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias ",
+    tag:"kente"
   },
   {
     id:"3",   
     label:"fetuds",
     imageUrl:footwear,
     price: 60030,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias "
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias ",
+    tag: "footwear"
   },
   {
     id:"4",   
     label:"meaosn",
     imageUrl:AhenemaImg,
     price: 4000,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias"
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit ipsa nam mollitia alias",
+    tag: "clothes"
   },
   
   
@@ -109,12 +113,12 @@ const admincard = [
     {
         label: "Add Product",
         icon: Plus,
-        href :"admin/add"
+        href :"admin/form/newproduct"
     },
     {
         label: "Charts",
         icon: ChartArea,
-        href: 'admin/chart'
+        href: 'admin/charts'
     },
     {
         label: "Users",

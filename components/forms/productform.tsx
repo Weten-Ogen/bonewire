@@ -13,7 +13,8 @@ interface productprops {
   label:string
   imageUrl:string,
   price:number,
-  description:string
+  description:string,
+  tag:string
 }
 
 interface productformprops {
@@ -28,12 +29,13 @@ const ProductForm = (props:productformprops) => {
       label: "",
       imageUrl: "",
       description: "",
-      price: 0
+      price: 0,
+      tag: ""
     }
   })  
   return (
     <Form {...form}>
-      <form className='flex flex-col gap-5 md:w-[65%] md:mx-auto'>
+      <form className='flex flex-col mt-5 md:mt-0 gap-5 md:w-[65%] md:mx-auto'>
       <CustomProductFormField 
        control={form.control}
        name="label"
@@ -61,6 +63,13 @@ const ProductForm = (props:productformprops) => {
        label="Description"
        placeholder="Enter the product name."
        type="textarea"
+       />
+       <CustomProductFormField 
+       control={form.control}
+       name="tag"
+       label="Tag"
+       placeholder="Enter the product tag."
+       type="textinput"
        />
        <div className='w-full mt-10'>
         <Button className='w-full'>Submit</Button>
