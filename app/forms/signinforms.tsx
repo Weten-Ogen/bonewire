@@ -70,7 +70,7 @@ const SignInForm = () => {
         <div>
         <Link href="/signup" 
         className='text-muted-foreground  cursor-pointer'>
-        Click here to Sign Up
+        
         </Link>
       </div>
         <div className='w-full'>

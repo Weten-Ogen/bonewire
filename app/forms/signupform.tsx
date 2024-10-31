@@ -111,7 +111,7 @@ const SignUpForm = () => {
             />
             <Link href="/signin" 
         className='text-muted-foreground cursor-pointer'>
-    
+            Click here to Sign in
         </Link>
           <div className='mt-5 w-full'>
             <Button  className='w-full uppercase font-bold text-lg p-4' type="submit">submit</Button>
