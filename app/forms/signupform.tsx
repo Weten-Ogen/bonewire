@@ -46,12 +46,11 @@ const SignUpForm = () => {
 
         if(res?.data?.id) {
           toast.success(res.message)
-          console.log("login in ")
           const result = await loginUser({
             password: values.password,
             email: values.email
           })
-
+          console.log(result)
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
             
