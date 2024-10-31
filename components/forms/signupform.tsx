@@ -17,8 +17,7 @@ const SignUpForm = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email:"",
-            firstName:"",
-            lastName:"",
+            name: "",
             password:"",
             country:""
         }
@@ -36,17 +35,12 @@ const SignUpForm = () => {
             name="email"
             placeholder="Enter your email"
             />
+            
             <CustomAuthField 
             control={authform.control}
-            label='First Name'
-            name='firstName'
-            placeholder='Enter your First Name.'
-            />
-            <CustomAuthField 
-            control={authform.control}
-            label='Last Name'
-            name='lastName'
-            placeholder='Enter your email'
+            label='Name'
+            name='name'
+            placeholder='Enter your Name'
             />
             <CustomAuthField 
             control={authform.control}
