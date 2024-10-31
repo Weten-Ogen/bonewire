@@ -10,10 +10,12 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { registerUser } from '@/actions/register'
 import { loginUser } from '@/actions/login'
+import { toast } from 'sonner'
 
 const formSchema = AuthFormSchema('sign-up')
 
 const SignUpForm = () => {
+    const [loading, setLoading ] = React.useState(false)
     const authform = useForm <z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -25,11 +27,14 @@ const SignUpForm = () => {
       }
     )
     const onSubmit  =  async(data:FieldValues) => {
-      const result = await registerUser(data)
+      setLoading(prev => !prev)
+      await registerUser(data)
+      setLoading(prev => !prev)
+      toast.success('registration successful')
     }
     return <div className=' '>
     <Form {...authform}>
-        <form action={onSubmit} className='flex flex-col  gap-8 md:w-[65%] mx-auto ' onSubmit={authform.handleSubmit(onSubmit)}>
+        <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto ' onSubmit={authform.handleSubmit(onSubmit)}>
             <CustomAuthField 
             control={authform.control}
             label="Email"
