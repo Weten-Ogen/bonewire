@@ -60,7 +60,7 @@ const SignUpForm = () => {
         Click here to Log In
         </Link>
           <div className='mt-5 w-full'>
-            <Button className='w-full uppercase font-bold' type="submit">submit</Button>
+            <Button className='w-full uppercase font-bold p-4' type="submit">submit</Button>
           </div>
         </form>
     </Form>
