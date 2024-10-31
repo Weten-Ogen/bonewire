@@ -30,7 +30,8 @@ const SignUpForm = () => {
             name: "",
             password:"",
             country:"",
-            contactNumber: ""
+            contactNumber: "",
+            address : ""
         }
       }
     )
@@ -53,7 +54,7 @@ const SignUpForm = () => {
 
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
-            router.push("/")
+            await router.push("/")
             
           }
         }
@@ -80,6 +81,12 @@ const SignUpForm = () => {
             control={authform.control}
             label='Name'
             name='name'
+            placeholder='Enter your Name'
+            />
+            <CustomAuthField 
+            control={authform.control}
+            label='Address'
+            name='address'
             placeholder='Enter your Name'
             />
             <CustomAuthField 
