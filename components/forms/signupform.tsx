@@ -8,9 +8,10 @@ import {z} from 'zod'
 import { Form } from '../ui/form' 
 import { Button } from '../ui/button'
 import Link from 'next/link'
-import { registerUser } from '@/actions/register'
-import { loginUser } from '@/actions/login'
+import { registerUser } from '@/app/actions/register'
+import { loginUser } from '@/app/actions/login'
 import { toast } from 'sonner'
+import { Loader2 } from 'lucide-react'
 
 const formSchema = AuthFormSchema('sign-up')
 
@@ -33,8 +34,11 @@ const SignUpForm = () => {
       toast.success('registration successful')
     }
     return <div className=' '>
+        {loading ? 
+        <Loader2 className='animate-spin '/>
+        :
     <Form {...authform}>
-        <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto ' onSubmit={authform.handleSubmit(onSubmit)}>
+          <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto ' onSubmit={authform.handleSubmit(onSubmit)}>
             <CustomAuthField 
             control={authform.control}
             label="Email"
@@ -66,10 +70,11 @@ const SignUpForm = () => {
         Click here to Log In
         </Link>
           <div className='mt-5 w-full'>
-            <Button className='w-full uppercase font-bold p-4' type="submit">submit</Button>
+            <Button disabled={loading}  className='w-full uppercase font-bold text-lg p-4' type="submit">submit</Button>
           </div>
         </form>
     </Form>
+        }
     </div>
 
 }

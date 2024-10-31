@@ -8,7 +8,7 @@ import CustomAuthField from '../ui/customauthfield'
 import { Button } from '../ui/button'
 import {z} from 'zod'
 import Link from 'next/link'
-import { loginUser } from '@/actions/login'
+import { loginUser } from '@/app/actions/login'
 
 const formSchema = AuthFormSchema('sign-in')
 
