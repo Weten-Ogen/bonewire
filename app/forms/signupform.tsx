@@ -20,9 +20,9 @@ const formSchema = AuthFormSchema('sign-up')
 
 const SignUpForm = () => {
     
-    const [loading, setLoading ] = React.useState(false)
     const router =  useRouter();
-
+    const [loading, setLoading ] = React.useState(false)
+    const [errror , SetError] = React.useState("")
     const authform = useForm <z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -37,13 +37,11 @@ const SignUpForm = () => {
     )
   
     const OnSubmit = async(values: any) =>{
-      
-        setLoading(prev => !prev)
-        
-        const res = await registerUser(values)
-        
-        setLoading(prev => !prev)
 
+        setLoading(prev => !prev)
+        const res = await registerUser(values)
+        setLoading(prev => !prev)
+        
         if(res?.data?.id) {
           toast.success(res.message)
           const result = await loginUser({
@@ -53,10 +51,10 @@ const SignUpForm = () => {
           console.log(result)
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
+            router.push("/")
+            router.refresh()
             
           }
-          router.push("/")
-          router.refresh()
         }
       
     }

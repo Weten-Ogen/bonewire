@@ -15,7 +15,7 @@ export const loginUser = async (data: FieldValues) => {
     }
   );
 
-  const userInfo = res.json();
-  console.log(userInfo)
+  const userInfo = await  res.json();
+  
   return userInfo;
 };

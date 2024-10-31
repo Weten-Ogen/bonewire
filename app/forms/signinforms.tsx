@@ -34,7 +34,10 @@ const SignInForm = () => {
 
   const OnSubmit = async(values:any) =>{
     try {
+      setLoading(prev=> !prev)
       const res = await loginUser(values)
+      setLoading(prev => !prev)
+      console.log(res)
       if(res?.data?.accessToken) {
         toast.success(res.message);
         storeUserInfo({accessToken:res?.data?.accessToken});
@@ -51,7 +54,7 @@ const SignInForm = () => {
   
   
   return (
-    <>
+    <div>
     {loading ?  
     <Loader2 
     size={72}
@@ -89,7 +92,7 @@ const SignInForm = () => {
         </div>
       </form>
     </Form>}
-      </>
+      </div>
   )
 }
 
