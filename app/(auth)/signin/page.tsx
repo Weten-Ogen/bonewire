@@ -4,6 +4,8 @@ import { TypographyMuted } from '@/components/typography/muted'
 import LogoImage from '@/components/ui/logoimage'
 import React from 'react'
 
+
+
 const page = () => {
   return (
     <section  className='w-full p-8'>

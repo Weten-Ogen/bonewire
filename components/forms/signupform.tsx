@@ -1,13 +1,14 @@
 "use client"
 import React from 'react'
 import CustomAuthField from '../ui/customauthfield'
-import { useForm } from 'react-hook-form'
+import { FieldValues, useForm } from 'react-hook-form'
 import { AuthFormSchema } from '.'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {z} from 'zod'
 import { Form } from '../ui/form' 
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { registerUser } from '@/actions/register'
 
 const formSchema = AuthFormSchema('sign-up')
 
@@ -23,8 +24,8 @@ const SignUpForm = () => {
         }
       }
     )
-    const onSubmit  =  async(data: z.infer<typeof formSchema>) => {
-      console.log(data)
+    const onSubmit  =  async(data:FieldValues) => {
+      const result = await registerUser(data)
     }
     return <div className=' '>
     <Form {...authform}>
