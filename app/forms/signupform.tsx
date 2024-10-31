@@ -36,7 +36,7 @@ const SignUpForm = () => {
     )
   
     const OnSubmit = async(values: any) =>{
-      try {
+      
         setLoading(prev => !prev)
         
         const res = await registerUser(values)
@@ -57,9 +57,7 @@ const SignUpForm = () => {
             
           }
         }
-      } catch (err) {
-        console.log(err)
-      }
+      
     }
 
     return <div className=' '>
