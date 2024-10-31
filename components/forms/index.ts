@@ -15,5 +15,6 @@ export const ProductFormSchema = () => z.object({
   label : z.string().min(3),
   imageUrl: z.string(),
   price : z.coerce.number(),
-  description: z.string().min(5).max(350)
+  description: z.string().min(5).max(350),
+  tag: z.string()
 })
