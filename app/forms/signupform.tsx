@@ -54,7 +54,8 @@ const SignUpForm = () => {
 
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
-            await router.push("/")
+            router.push("/")
+            router.refresh()
             
           }
         }
