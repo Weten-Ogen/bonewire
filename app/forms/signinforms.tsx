@@ -13,6 +13,7 @@ import { storeUserInfo } from '@/app/actions/authservice'
 import {  useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { login } from '@/app/actions'
+import { Loader2 } from 'lucide-react'
 
 
 const formSchema = AuthFormSchema('sign-in')
@@ -50,6 +51,12 @@ const SignInForm = () => {
   
   
   return (
+    <>
+    {loading ?  
+    <Loader2 
+    size={72}
+    className='animate-spin flex items-center justify-center mt-20'/>
+    :
     <Form {...form}>
       <form 
       className='flex flex-col mt-10 gap-5 md:w-[65%] mx-auto'
@@ -81,7 +88,8 @@ const SignInForm = () => {
         </Button>
         </div>
       </form>
-    </Form>
+    </Form>}
+      </>
   )
 }
 

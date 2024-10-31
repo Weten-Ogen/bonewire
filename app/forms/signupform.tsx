@@ -65,8 +65,8 @@ const SignUpForm = () => {
     return <div className=' '>
         {loading ? 
         <Loader2 
-        className='animate-spin ' 
-        size={48}/>
+        className='animate-spin flex items-center justify-center ' 
+        size={72}/>
         :
     <Form {...authform}>
           <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto '
