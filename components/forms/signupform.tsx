@@ -9,6 +9,7 @@ import { Form } from '../ui/form'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import { registerUser } from '@/actions/register'
+import { loginUser } from '@/actions/login'
 
 const formSchema = AuthFormSchema('sign-up')
 
@@ -28,7 +29,7 @@ const SignUpForm = () => {
     }
     return <div className=' '>
     <Form {...authform}>
-        <form className='flex flex-col  gap-8 md:w-[65%] mx-auto ' onSubmit={authform.handleSubmit(onSubmit)}>
+        <form action={onSubmit} className='flex flex-col  gap-8 md:w-[65%] mx-auto ' onSubmit={authform.handleSubmit(onSubmit)}>
             <CustomAuthField 
             control={authform.control}
             label="Email"
