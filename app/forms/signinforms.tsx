@@ -1,18 +1,27 @@
 "use client"
 import React from 'react'
-import { Form } from '../ui/form'
+import { Form } from '@/components/ui/form'
 import { AuthFormSchema } from '.'
 import { FieldValues, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import CustomAuthField from '../ui/customauthfield'
-import { Button } from '../ui/button'
+import CustomAuthField from '@/components/ui/customauthfield'
+import { Button } from '@/components/ui/button'
 import {z} from 'zod'
 import Link from 'next/link'
 import { loginUser } from '@/app/actions/login'
+import { storeUserInfo } from '@/app/actions/authservice'
+import {  useRouter } from 'next/navigation'
+import { toast } from 'sonner'
+import { login } from '@/app/actions'
+
 
 const formSchema = AuthFormSchema('sign-in')
 
-const SignInForm = () => {
+const SignInForm = () => {  
+  const router = useRouter()
+  const [loading , setLoading] = React.useState(false);
+  const [error , setError] = React.useState("")
+  
   
   const form = useForm <z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -21,8 +30,21 @@ const SignInForm = () => {
       password: ""
     }
   })
-  const handlelogin = async(values:FieldValues) =>{
-    const res = await loginUser(values)
+
+  const OnSubmit = async(values:any) =>{
+    try {
+      const res = await loginUser(values)
+      if(res?.data?.accessToken) {
+        toast.success(res.message);
+        storeUserInfo({accessToken:res?.data?.accessToken});
+        router.push("/");
+        
+      }else{
+        setError(res.message);
+      }
+    } catch (err) {
+      console.log(err)
+    }
 
   }
   
@@ -31,7 +53,7 @@ const SignInForm = () => {
     <Form {...form}>
       <form 
       className='flex flex-col mt-10 gap-5 md:w-[65%] mx-auto'
-      onSubmit={form.handleSubmit(handlelogin)}
+      onSubmit={form.handleSubmit(OnSubmit)}
       >
         <CustomAuthField 
          control={form.control}
@@ -52,7 +74,11 @@ const SignInForm = () => {
         </Link>
       </div>
         <div className='w-full'>
-        <Button type="submit" className='w-full mt-10'>Submit</Button>
+        <Button 
+        type="submit"
+        className='w-full mt-10'>
+          Submit
+        </Button>
         </div>
       </form>
     </Form>

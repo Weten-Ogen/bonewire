@@ -1,12 +1,12 @@
 "use client"
 import React from 'react'
-import { Form } from '../ui/form'
+import { Form } from '../../components/ui/form'
 import { ProductFormSchema } from '.'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {z} from 'zod'
-import CustomProductFormField from '../ui/customproductform'
-import { Button } from '../ui/button'
+import CustomProductFormField from '../../components/ui/customproductform'
+import { Button } from '../../components/ui/button'
 
 interface productprops {
   id:string,    

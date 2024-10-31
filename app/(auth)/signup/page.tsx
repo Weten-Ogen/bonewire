@@ -1,4 +1,4 @@
-import SignUpForm from '@/components/forms/signupform'
+import SignUpForm from '@/app/forms/signupform'
 import { TypographyH2 } from '@/components/typography/h2'
 import LogoImage from '@/components/ui/logoimage'
 import Image from 'next/image'

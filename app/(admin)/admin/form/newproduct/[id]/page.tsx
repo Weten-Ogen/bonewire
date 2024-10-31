@@ -1,4 +1,4 @@
-import ProductForm from '@/components/forms/productform'
+import ProductForm from '@/app/forms/productform'
 import { TypographyH2 } from '@/components/typography/h2'
 import React from 'react'
 

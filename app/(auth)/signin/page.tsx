@@ -1,4 +1,4 @@
-import SignInForm from '@/components/forms/signinforms'
+import SignInForm from '@/app/forms/signinforms'
 import { TypographyH2 } from '@/components/typography/h2'
 import { TypographyMuted } from '@/components/typography/muted'
 import LogoImage from '@/components/ui/logoimage'

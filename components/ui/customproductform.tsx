@@ -5,7 +5,7 @@ import { Input } from './input'
 import { Textarea } from './textarea'
 import {z} from 'zod'
 import { Control, FieldPath } from 'react-hook-form'
-import { ProductFormSchema } from '../forms'
+import { ProductFormSchema } from '../../app/forms'
 
 const formSchema = ProductFormSchema()
 interface customfieldprops {
