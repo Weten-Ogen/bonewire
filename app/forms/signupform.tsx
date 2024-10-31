@@ -29,7 +29,8 @@ const SignUpForm = () => {
             email:"",
             name: "",
             password:"",
-            country:""
+            country:"",
+            contactNumber: ""
         }
       }
     )
@@ -85,6 +86,12 @@ const SignUpForm = () => {
             />
             <CustomAuthField 
             control={authform.control}
+            label='Contact'
+            name='contactNumber'
+            placeholder='Enter your Phone Number'
+            />
+            <CustomAuthField 
+            control={authform.control}
             label='Country'
             name='country'
             placeholder='Enter your email'
@@ -98,7 +105,7 @@ const SignUpForm = () => {
             />
             <Link href="/signin" 
         className='text-muted-foreground cursor-pointer'>
-        Click here to Log In
+    
         </Link>
           <div className='mt-5 w-full'>
             <Button  className='w-full uppercase font-bold text-lg p-4' type="submit">submit</Button>

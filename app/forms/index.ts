@@ -3,8 +3,10 @@ import {z} from 'zod'
 
 export const AuthFormSchema = (type:string) => z.object({
   name: type === 'sign-in' ? z.string().optional() : z.string().min(3),
+
   country: type === 'sign-in' ? z.string().optional() : z.string().min(3),
   email: z.string().email(),
+  contactNumber: z.string().min(10),
   password: z.string().min(8)
 })
 
