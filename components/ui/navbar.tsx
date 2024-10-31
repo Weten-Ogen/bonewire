@@ -15,7 +15,10 @@ const NavBar = () => {
       
       <div className='flex items-center flex-row-reverse  gap-1'>
           <SideBar>
-              <p></p>
+              <AvatarIcon 
+              className=''
+              imageurl='/public/images/profile.png'
+              />
           </SideBar>
            
           <SignInBtn
