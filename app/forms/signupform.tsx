@@ -41,7 +41,7 @@ const SignUpForm = () => {
         setLoading(prev => !prev)
         
         const res = await registerUser(values)
-        console.log(res)
+        
         setLoading(prev => !prev)
 
         if(res?.data?.id) {
@@ -54,10 +54,10 @@ const SignUpForm = () => {
 
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
-            router.push("/")
-            router.refresh()
             
           }
+          router.push("/")
+          router.refresh()
         }
       
     }
