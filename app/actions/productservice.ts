@@ -13,7 +13,9 @@ export const getProducts = async(payload:any) => {
 }
 
 export const createProduct = async(payload:any) => {
-   
+    const product = await fetchData(payload);
+
+    return product
 
 }
 

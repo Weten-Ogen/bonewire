@@ -1,5 +1,5 @@
 import React from "react"
-import {Home,ShoppingCart,ShoppingBag, User, Info, Shield, LucideEdit3, ChartArea, User2, Users, FileText, Plus, Edit} from 'lucide-react'
+import {Home,ShoppingCart,ShoppingBag, User, Info, Shield, LucideEdit3, ChartArea, User2, Users, FileText, Plus, Edit, Image} from 'lucide-react'
 import AhenemaImg from '/public/images/ahenema1.jpg'
 import KenteImg  from  '/public/images/kente1.jpg'
 import footwear from '/public/images/ladiesfootwear1.jpg'
@@ -109,6 +109,11 @@ const admincard = [
         label: "Orders",
         icon:  FileText ,
         href: 'admin/orders'
+    },
+    {
+        label: "Images",
+        icon: Image,
+        href: "admin/form/file"
     },
     {
         label: "Add Product",

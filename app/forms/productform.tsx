@@ -7,6 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import {z} from 'zod'
 import CustomProductFormField from '../../components/ui/customproductform'
 import { Button } from '../../components/ui/button'
+import { createProduct, getProduct } from '../actions/productservice'
+import { useRouter } from 'next/navigation'
 
 interface productprops {
   id:string,    
@@ -19,10 +21,12 @@ interface productprops {
 
 interface productformprops {
   data?:productprops[] 
+
 }
 
 const formSchema = ProductFormSchema()
 const ProductForm = (props:productformprops) => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues:{
@@ -33,9 +37,20 @@ const ProductForm = (props:productformprops) => {
       tag: ""
     }
   })  
+  const handleproductsubmit = async(values:any) =>{
+      const res = await createProduct({
+        method: "POST",
+        values:values,
+        url: "/products/create"
+      })
+      if(res.message){
+        router.push('/admin/form/newproduct')
+      }
+  }
   return (
     <Form {...form}>
-      <form className='flex flex-col mt-5 md:mt-0 gap-5 md:w-[65%] md:mx-auto'>
+      <form className='flex flex-col mt-5 md:mt-0 gap-5 md:w-[65%] md:mx-auto'
+      onSubmit={form.handleSubmit(handleproductsubmit)}>
       <CustomProductFormField 
        control={form.control}
        name="label"
@@ -72,7 +87,7 @@ const ProductForm = (props:productformprops) => {
        type="textinput"
        />
        <div className='w-full mt-10'>
-        <Button className='w-full'>Submit</Button>
+        <Button type="submit" className='w-full'>Submit</Button>
        </div>
 
       </form>
