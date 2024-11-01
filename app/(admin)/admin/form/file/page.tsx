@@ -8,15 +8,14 @@ export default async function Page() {
   return (
     <div className="grid grid-cols-3 gap-4">
       {response.blobs.map((blob) => (
-        <div key={blob.pathname} >
-          
+        <div key={blob.pathname} className='w-full' >
           <Image 
           src={blob.downloadUrl}
           width={200}
           height={200}
           alt={blob.pathname}
           />
-          <p>pathname : <br/>
+          <p className='text-wrap'>pathname : <br/>
             {blob.downloadUrl}
           </p>
         </div>
