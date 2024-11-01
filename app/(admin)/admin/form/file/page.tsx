@@ -17,7 +17,7 @@ export default async function Page() {
           alt={blob.pathname}
           />
           <p>pathname : <br/>
-            {blob.pathname}
+            {blob.downloadUrl}
           </p>
         </div>
       ))}

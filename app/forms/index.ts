@@ -4,6 +4,7 @@ export const AuthLoginSchema = () => z.object({
   email: z.string().email(),
   password: z.string().min(8)
 })
+
 export const AuthFormSchema = (type:string) => z.object({
   name:z.string().optional(),
   country:z.string().optional(),
