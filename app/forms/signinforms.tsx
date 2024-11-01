@@ -12,7 +12,6 @@ import { loginUser } from '@/app/actions/login'
 import { storeUserInfo } from '@/app/actions/authservice'
 import {  useRouter } from 'next/navigation'
 import { toast } from 'sonner'
-import { login } from '@/app/actions'
 import { Loader2 } from 'lucide-react'
 
 
@@ -37,12 +36,14 @@ const SignInForm = () => {
       setLoading(prev=> !prev)
       const res = await loginUser(values)
       setLoading(prev => !prev)
+
       if (res?.data?.accessToken) {
         toast.success(res.message);
         storeUserInfo({accessToken:res?.data?.accessToken});
         router.push("/");
         router.refresh()       
-      }else{
+      }
+      else{
         setError(res.message);
       }
   }
@@ -53,7 +54,7 @@ const SignInForm = () => {
     {loading ?  
     <Loader2 
     size={72}
-    className='animate-spin flex items-center justify-center mt-20'/>
+    className='animate-spin text-4xl flex items-center justify-center mt-20'/>
     :
     <Form {...form}>
       <form 
@@ -82,7 +83,7 @@ const SignInForm = () => {
         <Button 
         type="submit"
         className='w-full mt-5 text-lg p-4'>
-          Submit
+          Log in
         </Button>
         </div>
       </form>

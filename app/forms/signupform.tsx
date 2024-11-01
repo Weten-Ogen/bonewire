@@ -42,7 +42,7 @@ const SignUpForm = () => {
         const res = await registerUser(values)
         
         setLoading(prev => !prev)
-        
+
         if(res?.data?.id) {
           toast.success(res.message)
           
@@ -109,7 +109,7 @@ const SignUpForm = () => {
             />
             <Link href="/signin" 
         className='text-muted-foreground cursor-pointer'>
-            Click here to Sign in
+            Click here to Sign into your account
         </Link>
           <div className='mt-5 w-full'>
             <Button  className='w-full uppercase font-bold text-lg p-4' type="submit">submit</Button>
