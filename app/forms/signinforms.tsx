@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { Form } from '@/components/ui/form'
-import { AuthFormSchema } from '.'
+import { AuthFormSchema, AuthLoginSchema } from '.'
 import { FieldValues, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import CustomAuthField from '@/components/ui/customauthfield'
@@ -13,9 +13,10 @@ import { storeUserInfo } from '@/app/actions/authservice'
 import {  useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { Loader2 } from 'lucide-react'
+import CustomAuthLoginField from '@/components/ui/customauthloginField'
 
 
-const formSchema = AuthFormSchema('sign-in')
+const formSchema = AuthLoginSchema()
 
 const SignInForm = () => {  
   const router = useRouter();
@@ -23,7 +24,7 @@ const SignInForm = () => {
   const [error , setError] = React.useState("")
   
   
-  const form = useForm <z.infer<typeof formSchema>>({
+  const authform = useForm <z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
@@ -31,44 +32,48 @@ const SignInForm = () => {
     }
   })
 
-  const OnSubmit = async(values:any) =>{
-  
-      setLoading(prev=> !prev)
-      const res = await loginUser(values)
+  const handleLogin = async(values:any) => {
       setLoading(prev => !prev)
-
-      if (res?.data?.accessToken) {
-        toast.success(res.message);
+      const res = await loginUser({
+        email: values.email,
+        password: values.password
+      });
+      
+      authform.reset()
+      setLoading(prev => !prev)
+      if(res?.data?.accessToken) {
+        
         storeUserInfo({accessToken:res?.data?.accessToken});
-        router.push("/");
-        router.refresh()       
+        router.push("/")
+        router.refresh()
       }
-      else{
-        setError(res.message);
-      }
+      
   }
+ 
   
   
-  return (
-    <div>
-    {loading ?  
-    <Loader2 
-    size={72}
-    className='animate-spin text-4xl flex items-center justify-center mt-20'/>
+  return( 
+  <>
+    {loading 
+    ?  
+    <div className="w-full">
+      <Loader2 
+      size={72}
+      className='animate-spin  text-4xl flex items-center justify-center mt-20'/>
+    </div>
     :
-    <Form {...form}>
-      <form 
-      className='flex flex-col mt-10 gap-5 md:w-[65%] mx-auto'
-      onSubmit={form.handleSubmit(OnSubmit)}
+    <Form {...authform}>
+      <form className='flex flex-col mt-10 gap-5 md:w-[65%] mx-auto'
+      onSubmit={authform.handleSubmit(handleLogin)}
       >
-        <CustomAuthField 
-         control={form.control}
+        <CustomAuthLoginField 
+         control={authform.control}
          name="email"
          label="Email"
          placeholder='Enter your Email'
         />
-        <CustomAuthField
-        control={form.control}
+        <CustomAuthLoginField
+        control={authform.control}
         name='password'
         label="Password"
         placeholder='Enter your Password'
@@ -78,17 +83,17 @@ const SignInForm = () => {
         className='text-muted-foreground  cursor-pointer'>
         click here to sign up for an account.
         </Link>
-      </div>
-        <div className='w-full'>
-        <Button 
-        type="submit"
-        className='w-full mt-5 text-lg p-4'>
-          Log in
-        </Button>
         </div>
-      </form>
+        <div className='mt-5 w-full '>
+            <Button  
+            type='submit'
+            className='w-full cursor-pointer p-4' 
+            >
+              log in 
+            </Button>
+      </div>                                                     </form>
     </Form>}
-      </div>
+  </>
   )
 }
 

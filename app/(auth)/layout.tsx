@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../(root)/globals.css";
+import "../../app/globals.css";
 
 export const metadata: Metadata = {
   title: "Bonewire",
@@ -12,12 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <main className="">
+    
+        <div className="">
          {children}
-        </main>
-      </body>
-    </html>
+        </div>
   );
 }

@@ -4,11 +4,11 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './form
 import { Textarea } from './textarea'
 import { Control, FieldPath } from 'react-hook-form'
 import {z} from 'zod'
-import { AuthFormSchema } from '../../app/forms'
+import { AuthLoginSchema } from '@/app/forms'
 import { Input } from './input'
 
 
-const formSchema =  AuthFormSchema('sign-up')
+const formSchema =  AuthLoginSchema()
 
 interface customfieldprops {
     control: Control<z.infer<typeof formSchema>>,
@@ -19,7 +19,7 @@ interface customfieldprops {
   }
 
 
-const CustomAuthField = (props:customfieldprops) => {
+const CustomAuthLoginField = (props:customfieldprops) => {
   return(
     <FormField
       control={props.control}
@@ -42,4 +42,4 @@ const CustomAuthField = (props:customfieldprops) => {
             <FormMessage className="form-message text-red-500 mt-2" />
           </FormItem>)}
     />)}
-export default CustomAuthField
+export default CustomAuthLoginField

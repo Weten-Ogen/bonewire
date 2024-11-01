@@ -23,6 +23,7 @@ const SignUpForm = () => {
     const router =  useRouter();
     const [loading, setLoading ] = React.useState(false)
     const [errror , SetError] = React.useState("")
+    
     const authform = useForm <z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -44,13 +45,13 @@ const SignUpForm = () => {
         setLoading(prev => !prev)
 
         if(res?.data?.id) {
-          toast.success(res.message)
+          
           
           const result = await loginUser({
             password: values.password,
             email: values.email
           })
-          
+          authform.reset()
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
             router.push("/")
@@ -61,13 +62,15 @@ const SignUpForm = () => {
     }
 
     return <div className=' '>
-        {loading ? 
-        <Loader2 
-        className='animate-spin flex items-center justify-center ' 
-        size={72}/>
+        {loading ?
+        <div className='w-full'>
+          <Loader2 
+          className='animate-spin flex items-center justify-center ' 
+          size={72}/>
+        </div> 
         :
     <Form {...authform}>
-          <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto '
+          <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto'
            onSubmit={authform.handleSubmit(OnSubmit)}>
             <CustomAuthField 
             control={authform.control}
@@ -107,12 +110,12 @@ const SignUpForm = () => {
             name='password'
             placeholder='Enter your password'
             />
-            <Link href="/signin" 
-        className='text-muted-foreground cursor-pointer'>
-            Click here to Sign into your account
-        </Link>
+              <Link href="/signin" 
+              className='text-muted-foreground cursor-pointer'>
+              Click here to Sign into your account
+            </Link>
           <div className='mt-5 w-full'>
-            <Button  className='w-full uppercase font-bold text-lg p-4' type="submit">submit</Button>
+            <Button  className='w-full uppercase font-bold text-lg p-4' type="submit">sign up</Button>
           </div>
         </form>
     </Form>

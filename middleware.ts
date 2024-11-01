@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 export default async function middleware(req: any) {
   const authToken = req.headers.authorization;
+  console.log(req)
   
 
   if (!authToken) {
@@ -11,5 +12,5 @@ export default async function middleware(req: any) {
 }
 
 export const config = {
-  matcher: ["/cart","/admin","/profile"],
+  matcher: ["/cart","/profile"],
 };

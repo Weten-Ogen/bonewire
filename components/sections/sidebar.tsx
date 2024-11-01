@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Sheet,SheetClose,SheetContent,SheetTrigger,SheetPortal,SheetHeader,SheetTitle } from '../ui/sheet'
 import LogoImage from '../ui/logoimage'
 import { Button } from '../ui/button'
@@ -8,6 +8,7 @@ import NavLinks from '../ui/navlink'
 import { LogOut, Menu } from 'lucide-react'
 import { TypographyH2 } from '../typography/h2'
 import Link from 'next/link'
+import { getUserInfo } from '@/app/actions/authservice'
 
 interface mobilenavprops{
     children:React.ReactElement
@@ -15,6 +16,13 @@ interface mobilenavprops{
 
 
 const SideBar = (props:mobilenavprops) => {
+  const handleRole =() => {
+    const user  = getUserInfo();
+    console.log(user)
+  }
+  useEffect(() => {
+    handleRole()
+  })
   return (
     <Sheet>
       <SheetTrigger className='cursor-pointer' asChild>

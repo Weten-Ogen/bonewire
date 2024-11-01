@@ -1,17 +1,16 @@
-import "../(root)/globals.css"
+import "../../../app/globals.css"
+
 export default function AdminLayout({
     children,
   }: Readonly<{
     children: React.ReactNode;
   }>) {
     return (
-      <html>
-      <body>
-        <main>
-        {children}
-        </main>
-      </body>
-      </html>
+        <div>
+
+          {children}
+        </div>
+        
         
     )
   }

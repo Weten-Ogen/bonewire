@@ -16,7 +16,9 @@ const SignInBtn = (props: signinbtnprops) => {
     href="/signin" 
     className={cn(`capitalize ${
  buttonVariants({variant:"outline"})}`,props.className)}>
-      {props.text}
+      <p>
+        {props.text}
+      </p>
     </Link>
   )
 }
