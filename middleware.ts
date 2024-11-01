@@ -1,15 +1,16 @@
 import { NextResponse } from "next/server";
-import { getUserInfo } from "./app/actions/authservice";
 
 export default async function middleware(req: any) {
-  const userInfo = await getUserInfo()  
+  const authToken = req.headers.authorization;
+  console.log(authToken)
+  
 
-  if (!userInfo.email && !userInfo.role ) {
+  if (!authToken) {
     return NextResponse.redirect(new URL("/signin", req.url));
   }
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/cart","/admin","/profile"],
+  matcher: ["/cart","/profile"],
 };
