@@ -19,7 +19,7 @@ import { Loader2 } from 'lucide-react'
 const formSchema = AuthFormSchema('sign-in')
 
 const SignInForm = () => {  
-  const router = useRouter()
+  const router = useRouter();
   const [loading , setLoading] = React.useState(false);
   const [error , setError] = React.useState("")
   
@@ -33,23 +33,18 @@ const SignInForm = () => {
   })
 
   const OnSubmit = async(values:any) =>{
-    try {
+  
       setLoading(prev=> !prev)
       const res = await loginUser(values)
       setLoading(prev => !prev)
-      console.log(res)
-      if(res?.data?.accessToken) {
+      if (res?.data?.accessToken) {
         toast.success(res.message);
         storeUserInfo({accessToken:res?.data?.accessToken});
         router.push("/");
-        router.refresh()        
+        router.refresh()       
       }else{
         setError(res.message);
       }
-    } catch (err) {
-      console.log(err)
-    }
-
   }
   
   
@@ -86,7 +81,7 @@ const SignInForm = () => {
         <div className='w-full'>
         <Button 
         type="submit"
-        className='w-full mt-10'>
+        className='w-full mt-5 text-lg p-4'>
           Submit
         </Button>
         </div>

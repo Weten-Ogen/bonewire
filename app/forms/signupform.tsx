@@ -40,20 +40,21 @@ const SignUpForm = () => {
 
         setLoading(prev => !prev)
         const res = await registerUser(values)
+        
         setLoading(prev => !prev)
         
         if(res?.data?.id) {
           toast.success(res.message)
+          
           const result = await loginUser({
             password: values.password,
             email: values.email
           })
-          console.log(result)
+          
           if(result?.data?.accessToken) {
             storeUserInfo({accessToken : result?.data?.accessToken});
             router.push("/")
             router.refresh()
-            
           }
         }
       
@@ -85,7 +86,7 @@ const SignUpForm = () => {
             control={authform.control}
             label='Address'
             name='address'
-            placeholder='Enter your Name'
+            placeholder='Enter your address'
             />
             <CustomAuthField 
             control={authform.control}
@@ -97,7 +98,7 @@ const SignUpForm = () => {
             control={authform.control}
             label='Country'
             name='country'
-            placeholder='Enter your email'
+            placeholder='Enter your country'
             />
 
             <CustomAuthField 

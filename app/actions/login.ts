@@ -1,6 +1,5 @@
 "use server";
 import { FieldValues } from "react-hook-form";
-import { revalidatePath } from "next/cache";
 
 export const loginUser = async (data: FieldValues) => {
   const res = await fetch(
