@@ -8,6 +8,7 @@ import { Control, FieldPath } from 'react-hook-form'
 import { ProductFormSchema } from '../../app/forms'
 
 const formSchema = ProductFormSchema()
+
 interface customfieldprops {
     control: Control<z.infer<typeof formSchema>>,
     name: FieldPath<z.infer<typeof formSchema>>,

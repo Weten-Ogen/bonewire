@@ -59,7 +59,7 @@ const SignInForm = () => {
     <div className="w-full">
       <Loader2 
       size={72}
-      className='animate-spin  text-4xl flex items-center justify-center mt-20'/>
+      className='animate-spin flex text-4xl w-[95%] mx-auto items-center justify-center mt-20'/>
     </div>
     :
     <Form {...authform}>

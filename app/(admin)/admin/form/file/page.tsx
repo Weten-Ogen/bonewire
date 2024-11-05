@@ -1,9 +1,9 @@
+
 import { list } from '@vercel/blob';
 import Image from 'next/image';
-import Link from 'next/link';
  
 export default async function Page() {
-  const response = await list();
+  const response = await list({limit: 250});
  
   return (
     <div className="grid grid-cols-3 gap-4">

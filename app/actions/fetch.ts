@@ -1,5 +1,6 @@
 "use server"
 
+
 interface payloadprops {
     route: string,
     method: string
@@ -8,12 +9,15 @@ interface payloadprops {
 
 
 export async function fetchData({route,method,values }:payloadprops) {
+    
     const res = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/${route}`,
         {
             method: `${method}`,
             headers:{
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "cache":"no-store"
+                
             },
             body:JSON.stringify(values)
         }

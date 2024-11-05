@@ -1,14 +1,15 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { Form } from '../../components/ui/form'
 import { ProductFormSchema } from '.'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {z} from 'zod'
 import CustomProductFormField from '../../components/ui/customproductform'
-import { Button } from '../../components/ui/button'
-import { createProduct, getProduct } from '../actions/productservice'
+import { Button } from '@/components/ui/button'
+import { createProduct } from '../actions/productservice'
 import { useRouter } from 'next/navigation'
+import { Loader2 } from 'lucide-react'
 
 interface productprops {
   id:string,    
@@ -25,9 +26,14 @@ interface productformprops {
 }
 
 const formSchema = ProductFormSchema()
+
 const ProductForm = (props:productformprops) => {
+  
+  const [loading, setLoading] = useState(false)
+  const [error ,  setError] = useState("")
   const router = useRouter();
-  const form = useForm<z.infer<typeof formSchema>>({
+  
+  const productform = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues:{
       label: "",
@@ -37,62 +43,76 @@ const ProductForm = (props:productformprops) => {
       tag: ""
     }
   })  
-  const handleproductsubmit = async(values:any) =>{
-      const res = await createProduct({
+
+  const OnSubmit = async(values:any) => {
+    setLoading(prev=> !prev)  
+    const res = await createProduct({
+        route: "/products/create",
         method: "POST",
-        values:values,
-        url: "/products/create"
+        values
       })
-      if(res.message){
-        router.push('/admin/form/newproduct')
-      }
+  
+     setLoading(prev => !prev)
+     productform.reset()
+      router.push('/admin/form/newproduct')
+      router.refresh()
+      
   }
-  return (
-    <Form {...form}>
+  return (<div className='w-full'>{
+    loading ?
+    <div className='w-full flex items-center justify-center mt-20 '>
+      <Loader2
+      size={72}
+      className="animate-spin "/>  
+    </div>:
+      <Form {...productform}>
       <form className='flex flex-col mt-5 md:mt-0 gap-5 md:w-[65%] md:mx-auto'
-      onSubmit={form.handleSubmit(handleproductsubmit)}>
+      onSubmit={productform.handleSubmit(OnSubmit)}>
+      
       <CustomProductFormField 
-       control={form.control}
+       control={productform.control}
        name="label"
        label="Product Name"
        placeholder="Enter the product name."
        type="textinput"
        />
        <CustomProductFormField 
-       control={form.control}
+       control={productform.control}
        name="imageUrl"
        label="Image URL"
        placeholder="Enter the image path."
        type="textinput"
        />
        <CustomProductFormField 
-       control={form.control}
+       control={productform.control}
        name="price"
        label="Price"
        placeholder="Enter the Price."
        type="textinput"
        />      
        <CustomProductFormField 
-       control={form.control}
+       control={productform.control}
        name="description"
        label="Description"
        placeholder="Enter the product name."
        type="textarea"
        />
        <CustomProductFormField 
-       control={form.control}
+       control={productform.control}
        name="tag"
        label="Tag"
        placeholder="Enter the product tag."
        type="textinput"
        />
        <div className='w-full mt-10'>
-        <Button type="submit" className='w-full'>Submit</Button>
+        <Button 
+        type="submit" 
+        className='w-full p-4 text-lg'>Submit</Button>
        </div>
-
       </form>
-      
     </Form>
+    }
+    </div>
   )
 }
 

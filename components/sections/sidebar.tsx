@@ -8,7 +8,8 @@ import NavLinks from '../ui/navlink'
 import { LogOut, Menu } from 'lucide-react'
 import { TypographyH2 } from '../typography/h2'
 import Link from 'next/link'
-import { getUserInfo } from '@/app/actions/authservice'
+import { getUserInfo, removeUser } from '@/app/actions/authservice'
+import { useRouter } from 'next/navigation'
 
 interface mobilenavprops{
     children:React.ReactElement
@@ -16,13 +17,15 @@ interface mobilenavprops{
 
 
 const SideBar = (props:mobilenavprops) => {
-  const handleRole =() => {
-    const user  = getUserInfo();
-    console.log(user)
+  const router = useRouter()
+  const userInfo = getUserInfo();
+  
+  const logout = () => {
+    removeUser()
+    router.push('/signin')
+    router.refresh()
   }
-  useEffect(() => {
-    handleRole()
-  })
+
   return (
     <Sheet>
       <SheetTrigger className='cursor-pointer' asChild>
@@ -30,8 +33,10 @@ const SideBar = (props:mobilenavprops) => {
         size={32}
         />
       </SheetTrigger>
+
       <SheetContent side={'left'} className=' w-full  md:w-[400px] sm:w-[540px] ' >
-      <div className='flex items-center'>
+
+      <div className='flex items-center relative '>
         <LogoImage
         className=''
         imageurl=''
@@ -52,9 +57,19 @@ const SideBar = (props:mobilenavprops) => {
           )
         })}
       </div>
-      <div className='flex gap-4 items-center justify-between w-full'>
-        <p className=''>log out</p>
-        <LogOut/>
+      <div className='flex gap-4 items-center justify-between w-[90%] mx-auto absolute bottom-0  p-4 '>
+        <p className='text-wrap'>
+          {userInfo?.email ||  "Guest"} 
+        </p>
+        <div className='flex gap-2'>
+          <SheetClose asChild>
+          <Button onClick={logout} className='flex items-center gap-2'>
+          <p className=''>Log out</p>
+          <LogOut/>
+          </Button>
+          </SheetClose>
+
+        </div>
       </div>
       
       </SheetContent>

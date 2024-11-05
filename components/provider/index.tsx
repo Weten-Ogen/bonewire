@@ -11,10 +11,12 @@ const Provider = (props: providerprops) => {
 
 
   return (
-    <div className=''> 
+    <section className=''> 
       <NavBar/>
-      {props.children}
-    </div>
+      <div className=''>
+        {props.children}
+      </div>
+    </section>
   )
 }
 
