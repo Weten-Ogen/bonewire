@@ -12,7 +12,7 @@ import Link from 'next/link'
 const NavBar = () => {
     const userloggedin = isLoggedIn()
     return (
-    <div className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full  md:h-[8vh] z-10'>
+    <section className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full  md:h-[8vh] z-10'>
 
       <LogoImage
       className=''/>
@@ -20,9 +20,14 @@ const NavBar = () => {
       <div  className='flex items-center gap-1 p-2'>        
         <div>
           {userloggedin ? 
+            <>
             <AvatarIcon className='uppercase'/>
-            : 
-            <Link href="/signin">log in</Link>
+            </>
+            :
+            <Link href="/signin">
+              log in
+            </Link>
+           
           }
         </div>
         <SideBar>
@@ -31,7 +36,7 @@ const NavBar = () => {
             />
         </SideBar>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -19,6 +19,7 @@ interface mobilenavprops{
 const SideBar = (props:mobilenavprops) => {
   const router = useRouter()
   const userInfo = getUserInfo();
+  const filternavlinks = navlinks.filter(item => item.label !== "Admin" )
   
   const logout = () => {
     removeUser()
@@ -39,12 +40,14 @@ const SideBar = (props:mobilenavprops) => {
       <div className='flex items-center relative '>
         <LogoImage
         className=''
-        imageurl=''
+        
         />
         <TypographyH2 className='text-lg f'>
           Bonewire
         </TypographyH2>
       </div>
+      {
+        userInfo?.role !== "user" ?
       <div className='flex flex-col  gap-4 mt-5 pl-4'>
         {navlinks.map(item => {
           return (
@@ -57,6 +60,21 @@ const SideBar = (props:mobilenavprops) => {
           )
         })}
       </div>
+      :
+      <div className='flex flex-col  gap-4 mt-5 pl-4'>
+        {filternavlinks.map(item => {
+          return (
+            <SheetClose  asChild key={item.label}>
+            <Link href={item.href}  className='flex gap-4 p-2 '>
+              <item.icon/>
+              <p className='uppercase'>{item.label}</p>
+            </Link>
+            </SheetClose> 
+          )
+        })}
+      </div>
+
+      }
       <div className='flex gap-4 items-center justify-between w-[90%] mx-auto absolute bottom-0  p-4 '>
         <p className='text-wrap'>
           {userInfo?.email ||  "Guest"} 
@@ -68,7 +86,6 @@ const SideBar = (props:mobilenavprops) => {
           <LogOut/>
           </Button>
           </SheetClose>
-
         </div>
       </div>
       

@@ -22,8 +22,8 @@ interface admincardprops {
 const AdminCards = (props: admincardprops) => {
   const router = useRouter();
   const userInfo = getUserInfo()
-  if(!userInfo) {
-     router.push('/signin')
+  if((userInfo?.role  !== "admin") ) {
+     router.push('/')
      router.refresh()
   }
   return (

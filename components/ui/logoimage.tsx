@@ -14,13 +14,15 @@ const LogoImage = (props:logoimageprops) => {
     <Link href="/" className={cn('flex cursor-pointer items-end gap-2',props.className
     )}
     >
+      <>
     <Image
-    width={40}
-    height={40}
+      width={40}
+      height={40}
       className='object-cover h-auto' 
       src={HeroImg }
       alt={`${props.imageurl }image`}
       />
+      </>
     </Link>
   )
 }
