@@ -1,5 +1,6 @@
 import Advertisement from "@/components/sections/advertisement";
 import Hero from "@/components/sections/hero";
+import HeroStatement from "@/components/ui/herostatement";
 import ImageWithBackGround from "@/components/ui/imagebackground";
 
 
@@ -10,7 +11,8 @@ export default function Home() {
        heading="Kente Mall"
        subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
         />  
-       <Advertisement/> 
+        <HeroStatement className="h-[80vh] p-4 flex items-center justify-center "/>
+       
    </section>
   );
 }
