@@ -26,7 +26,7 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
       width={800}
       height={800}
       />
-      <div className='absolute  z-10 text-white bg-black/60 inset-0 mt-20'>
+      <div className='absolute  z-10 text-white bg-black/50 inset-0 mt-20'>
 
       <div className='absolute max-w-md bottom-40 flex flex-col  gap-5 p-4'>
         <h2 className='text-5xl'>
