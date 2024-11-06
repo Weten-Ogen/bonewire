@@ -20,7 +20,7 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
   return (
     <div className={cn('relative h-screen w-full overflow-hidden object-contain',props.className)}>
       <Image
-      className='w-full object-cover '
+      className='w-full h-screen object-cover '
       src={HeroImage}
       alt={props.heading}
       width={800}
