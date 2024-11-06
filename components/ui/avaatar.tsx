@@ -12,7 +12,8 @@ interface avatarIconprops{
 const AvatarIcon = (props:avatarIconprops) => {
   const userinfo = getUserInfo()
   
-  return (<Avatar className={cn('border h-10 w-10 overflow-hidden rounded-full uppercase',props.className)}>
+  return (<Avatar 
+    className={ cn('border h-10 w-10 overflow-hidden rounded-full uppercase',props.className)}>
         <AvatarFallback className=''>
           {userinfo?.email.charAt(0)}
         </AvatarFallback>
