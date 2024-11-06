@@ -10,6 +10,9 @@ const Imagegrid = (props:any) => {
  const [loading,setLoading] = useState(false) 
  const getMore = async() => {
     const more = await fetchmoreimages(props.result)
+    const filteredmore = more.blobs.filter(image => image.pathname.endsWith(".mp4") === false)
+    setData((prev:any) => [...prev , filteredmore])
+    return
  }
  useEffect(() =>{
   setData(props.images)
