@@ -1,6 +1,7 @@
 "use server"
 import { del } from "@vercel/blob"
 import { list } from "@vercel/blob"
+import { revalidatePath } from "next/cache"
 const token ="vercel_blob_rw_l8YHwWsVKn8VKuaa_oXaXXm60iyBVV85qcNfGAUAUHOJixT"
 
 export const fetchmoreimages = async(response:any)  => {
@@ -11,6 +12,7 @@ export const fetchmoreimages = async(response:any)  => {
       return images
 }
 
-export const delimage = async(image:any) => {
-    return del(image.url, {token:token})
+export cons delimage = async(image:any) => {
+    await del(image.url, {token:token})
+    revalidatePath('/admin/form/file')
 } 
