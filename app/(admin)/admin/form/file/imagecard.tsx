@@ -1,10 +1,13 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
-
+import { del } from "@vercel/blob"
+import { Button } from '@/components/ui/button'
 
 const ImageCard = (props:any) => {
-  return (
+    const token ="vercel_blob_rw_l8YHwWsVKn8VKuaa_oXaXXm60iyBVV85qcNfGAUAUHOJixT"
+    
+    return (
     <>
     <div className=''>
       <Image 
@@ -14,10 +17,12 @@ const ImageCard = (props:any) => {
           alt={props.pathname}
           />
           <p className='text-wrap'>
-            pathname 
             {props.downloadUrl}
           </p>
-        
+
+        <Button onClick={() => del(props.url,{
+            token:token,
+        })}>delete</Button>
     </div>
 </>
   )

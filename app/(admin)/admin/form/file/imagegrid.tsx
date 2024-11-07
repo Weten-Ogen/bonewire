@@ -21,7 +21,7 @@ const Imagegrid = (props:any) => {
 
 
  return (
-    <section className="flex flex-col gap-4 p-8">
+    <section className="flex flex-col gap-4 p-8 mx-auto">
         <div  className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center ' >
         {data.map((image:any) => <ImageCard  
         key={image.pathname + image.blob}
