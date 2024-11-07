@@ -18,15 +18,15 @@ interface imagewithbgprops {
 
 const ImageWithBackGround = (props:imagewithbgprops) => {
   return (
-    <div className={cn('relative -z-10 h-screen w-full  object-contain',props.className)}>
+    <div className={cn('relative -z-10 h-[85vh] overflow-hidden w-full  ',props.className)}>
       <Image
-      className='w-full h-screen object-cover '
+      className='w-full  h-[85vh] object-cover '
       src={HeroImage}
       alt={props.heading}
       width={800}
       height={800}
       />
-      <div className='absolute  z-10 text-white bg-black/50 inset-0 mt-20'>
+      <div className='absolute  z-10 text-white bg-black/50 inset-0 pt-20'>
 
       <div className='absolute max-w-md bottom-40 flex flex-col  gap-5 p-4'>
         <h2 className='text-5xl'>
