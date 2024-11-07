@@ -8,6 +8,6 @@ export default async function Page() {
   const images = response.blobs.filter(image => image.pathname.endsWith(".mp4") === false)
 
   return (
-    <Imagegrid result={response} images={images}/>
+    <Imagegrid response={response} images={images}/>
   );
 }
