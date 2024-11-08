@@ -6,9 +6,9 @@ export default function AdminLayout({
     children: React.ReactNode;
   }>) {
     return (
-        <div className="mt-40">
+        <section className="mt-40">
           {children}
-        </div>
+        </section>
         
         
     )

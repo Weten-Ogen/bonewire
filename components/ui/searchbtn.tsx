@@ -11,7 +11,7 @@ interface searchprops{
 const SearchBtn = (props:searchprops) => {
   return (
     
-    <div className={cn('   md:flex  items-center mt-10  gap-4 w-[90%] mx-auto',props.className)}>
+    <div className={cn('   md:flex  items-center pt-2 md:pt-5  gap-4  md:mx-auto',props.className)}>
       <Input 
       className='text-md w-full p-8 my-4 text-white'
        placeholder='search for all products here ...'      

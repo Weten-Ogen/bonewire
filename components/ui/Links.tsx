@@ -19,9 +19,8 @@ const Links = (props:linksprops) => {
       ${buttonVariants({variant:`${props?.type || "default"}`})} `
     } 
     href={props.href}>
-    <p className={cn('',props.textClass)}> 
+    
     {props.text}
-    </p>
     </Link>
   )
 }

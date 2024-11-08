@@ -12,7 +12,7 @@ import Link from 'next/link'
 const NavBar = () => {
     const userloggedin = isLoggedIn()
     return (
-    <section className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full  md:h-[8vh] z-10'>
+    <section className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full h-[7vh] md:h-[6vh] z-50'>
       <LogoImage
       className=''/>
 

@@ -10,10 +10,13 @@ import { HeroCarousel } from "@/components/ui/testimonialcarousel";
 export default function Home() {
   return (
    <section className="">
+      <div className="-z-10">
+
        <ImageWithBackGround 
        heading="Kente Mall"
        subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
         />  
+        </div>
         <HeroInfo className=""/>
         <HeroStatement className="h-[70vh] md:h-[50vh] mt-24  flex items-center justify-center pt-20 bg-black text-white "/>
         <HeroCarousel/>

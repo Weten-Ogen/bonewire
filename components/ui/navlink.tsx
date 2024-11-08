@@ -17,7 +17,9 @@ const NavLinks = (props:navlinksprops) => {
             navlinks.map(item => {
                 return (
                 <div key={item.label} className='flex items-center gap-0 '>
+                  <div>
                     <item.icon  />
+                  </div>
                     <Links 
                     className='uppercase'
                     type="link"

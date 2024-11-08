@@ -18,6 +18,8 @@ const HeroCarouComp = (props:comprops) => {
       <div className="p-1 ">
               <Card className="">
                 <CardContent className="flex flex-col aspect-square items-center gap-5 w-full">
+                  <div>
+
                   <CardTitle className='uppercase '>{props.name}</CardTitle>
                   <div className='w-full h-[60vh] overflow-hidden rounded-lg bg-inherit'>
                     <Image 
@@ -29,6 +31,7 @@ const HeroCarouComp = (props:comprops) => {
                     />
                   </div>
                   <CardDescription>{props.comment}</CardDescription>
+                  </div>
                 </CardContent>
               </Card>
             </div>

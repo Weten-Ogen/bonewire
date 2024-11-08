@@ -14,8 +14,8 @@ const AvatarIcon = (props:avatarIconprops) => {
 
   return (
   <Avatar 
-    className={ cn('border h-10 w-10 overflow-hidden rounded-full uppercase',props.className)}>
-        <AvatarFallback className=''>
+    className={ cn('border h-8 w-8 overflow-hidden rounded-full uppercase bg-yellow-500',props.className)}>
+        <AvatarFallback className='bg-yellow-500 font-bold p-1'>
           {userinfo?.email.charAt(0)}
         </AvatarFallback>
     </Avatar>

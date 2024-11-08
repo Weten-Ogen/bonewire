@@ -21,7 +21,7 @@ const CartItemCard = (props:cartitemcardprops) => {
   return (
     <div className={cn("w-full  md:w-[80%] md:mx-auto shadow-lg ",props.className)} >
       <Card className='w-full'>
-        <CardContent className=' grid grid-cols-1 col-span-full  gap-4 md:flex md:items-center  md:gap-2 justify-between'>
+        <CardContent className=' grid grid-cols-1   gap-4 md:flex md:items-center  md:gap-2 justify-between'>
          <div className='flex justify-between md:justify-start  gap-2 p-2 w-full m-2'>
           <div className='w-[80px]  md:w-[100px] h-[120px] bg-black overflow-hidden rounded-lg'>
             <Image 
@@ -39,9 +39,8 @@ const CartItemCard = (props:cartitemcardprops) => {
           <CardDescription>
               {props.price}
           </CardDescription>
-          </div >
-         </div>
-          <div className='grid grid-cols-1 md:flex md: items-center  md:flex-col gap-4 w-full'>
+          </div>
+          <form className='grid grid-cols-1 md:flex md: items-center  md:flex-col gap-4 w-full'>
             <Button variant="outline" 
             className='w-full'>
               Remove
@@ -50,6 +49,7 @@ const CartItemCard = (props:cartitemcardprops) => {
             className='w-full '>
               Pay
             </Button>
+          </form>
           </div>
         </CardContent>
       </Card>
