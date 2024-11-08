@@ -18,13 +18,12 @@ const NavBar = () => {
 
       <div  className='flex items-center gap-1 p-2'>        
         <div>
-          {userloggedin ? 
-            <>
+          { userloggedin &&
             <AvatarIcon className='uppercase'/>
-            </>
-            :
+          }{
+            !userloggedin  &&
             <Link href="/signin">
-              log in
+              <span>log in</span>
             </Link>
            
           }
@@ -33,6 +32,7 @@ const NavBar = () => {
             <AvatarIcon 
             className=''
             />
+          
         </SideBar>
       </div>
     </section>

@@ -35,7 +35,9 @@ const SideBar = (props:mobilenavprops) => {
         />
       </SheetTrigger>
 
-      <SheetContent side={'left'} className=' w-full  md:w-[400px] sm:w-[540px] ' >
+      <SheetContent 
+      side={'left'} 
+      className=' w-full  md:w-[400px] sm:w-[540px] ' >
 
       <div className='flex items-center relative '>
         <LogoImage
@@ -53,7 +55,9 @@ const SideBar = (props:mobilenavprops) => {
           return (
             <SheetClose  asChild key={item.label}>
             <Link href={item.href}  className='flex gap-4 p-2 '>
+              <div>
               <item.icon/>
+              </div>
               <p className='uppercase'>{item.label}</p>
             </Link>
             </SheetClose> 
@@ -66,7 +70,9 @@ const SideBar = (props:mobilenavprops) => {
           return (
             <SheetClose  asChild key={item.label}>
             <Link href={item.href}  className='flex gap-4 p-2 '>
+              <div>
               <item.icon/>
+              </div>
               <p className='uppercase'>{item.label}</p>
             </Link>
             </SheetClose> 

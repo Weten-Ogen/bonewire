@@ -16,8 +16,7 @@ export async function fetchData({route,method,values }:payloadprops) {
             method: `${method}`,
             headers:{
                 "Content-Type": "application/json",
-                "cache":"no-store"
-                
+                "cache":"no-store" 
             },
             body:JSON.stringify(values)
         }
@@ -28,3 +27,5 @@ export async function fetchData({route,method,values }:payloadprops) {
 
 
 }
+
+
