@@ -134,9 +134,44 @@ const admincard = [
 ]
 
 
+const testimonials = [
+    {
+        name: "Keren Kumi",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0323-goCLQ6pLnifHoOERUQkIS7oF8LkGqF.jpg?download=1",
+        comment:"Your home of quality products, giving you the Ghana culture vibes and luxury of kente products"
+    },
+    {
+        name: "Amos Opoku",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0316-NO9PlUTOlhslVmi55lgYcCvmz6p8Xa.jpg?download=1",
+        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products"
+    },
+    {
+        name: "Andre Tate",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0317-fL8Glydzy7w5sv7XEfiI49patDNViB.jpg?download=1",
+        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+    },
+    {
+        name: "Rebecca Akuffo Addo",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0329-nYKCrMk0RLw1BaIEYxEnYcxEVhKs9v.jpg?download=1",
+        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+    },
+    {
+        name: "Samira Bawumia",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0325-TQHrLKHmwQYAtPiLuGuVVMktVkK8zg.jpg?download=1",
+        comment:"Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+    },
+    {
+        name: "Jack Lorre",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0323-goCLQ6pLnifHoOERUQkIS7oF8LkGqF.jpg?download=1",
+        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+    },
+]
+
+
 export {
     navlinks,
     filterlist,
     fakedata,
-    admincard
+    admincard,
+    testimonials
 }

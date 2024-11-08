@@ -18,9 +18,9 @@ interface imagewithbgprops {
 
 const ImageWithBackGround = (props:imagewithbgprops) => {
   return (
-    <div className={cn('relative -z-10 h-[85vh] overflow-hidden w-full  ',props.className)}>
+    <div className={cn('relative -z-10 h-[85vh] md:h-screen overflow-hidden w-full  ',props.className)}>
       <Image
-      className='w-full  h-[85vh] object-cover '
+      className='w-full  h-[85vh] md:h-screen object-cover '
       src={HeroImage}
       alt={props.heading}
       width={800}

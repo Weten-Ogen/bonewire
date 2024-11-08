@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-
+import { testimonials } from "@/lib/constants"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -9,24 +9,20 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import HeroCarouComp from "./herocaroucomp"
 
 export function HeroCarousel() {
   return (
-    <div>
-
-    <Carousel className="w-full h-[60vh] max-w-sm">
-      <CarouselContent className="-ml-1">
-        {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-2xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
+    <div className="w-full h-screen object-contain ">
+    <Carousel className="w-full   max-w-sm md:w-full mx-auto md:max-w-[90%]">
+      <CarouselContent className="w-full h-screen p-4">
+        {testimonials.map(item => {
+          return <HeroCarouComp
+          className="md:w-[300px] h-[300px]" 
+          key={item.name}  
+          {...item}
+          />
+        })}
       </CarouselContent>
 
     </Carousel>

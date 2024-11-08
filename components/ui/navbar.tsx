@@ -13,7 +13,6 @@ const NavBar = () => {
     const userloggedin = isLoggedIn()
     return (
     <section className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full  md:h-[8vh] z-10'>
-
       <LogoImage
       className=''/>
 
