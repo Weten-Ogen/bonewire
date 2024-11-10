@@ -6,6 +6,7 @@ import SideBar from '../sections/sidebar'
 import { isLoggedIn } from '@/app/actions/authservice'
 import { Button } from './button'
 import Link from 'next/link'
+import NavBarLinks from './navbarlinks'
 
 
 
@@ -16,6 +17,7 @@ const NavBar = () => {
       <LogoImage
       className=''/>
 
+      <NavBarLinks className="hidden md:flex md:items-center  gap-4 "/>
       <div  className='flex items-center gap-1 p-2'>        
         <div>
           { userloggedin &&
@@ -32,7 +34,6 @@ const NavBar = () => {
             <AvatarIcon 
             className=''
             />
-          
         </SideBar>
       </div>
     </section>

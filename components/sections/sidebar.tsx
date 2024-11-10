@@ -28,7 +28,7 @@ const SideBar = (props:mobilenavprops) => {
   }
 
   return (
-    <Sheet>
+    <Sheet >
       <SheetTrigger className='cursor-pointer' asChild>
         <Menu 
         size={32}
