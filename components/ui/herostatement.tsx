@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import { TypographyLarge } from '../typography/small'
 import { cn } from '@/lib/utils'
-import TypographyBlockquote from '../typography/blockquote'
+import { TypographyBlockquote } from '../typography/blockquote'
+
 
 interface heroprops {
     className: string
