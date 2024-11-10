@@ -8,8 +8,8 @@ interface comprops {
 
 export function TypographyBlockquote(props:comprops) {
   return (
-    <p className={cn("mt-6 border-l-2 pl-6 italic",props.className)}>
+    <blockquote className={cn("mt-6 border-l-2 pl-6 italic",props.className)}>
       {props.children}
-    </p>
+    </blockquote>
   )
 }

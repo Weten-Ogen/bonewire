@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { TypographyBlockquote } from '../typography/blockquote'
+import { TypographyBlockquote } from '../typography/block'
+
 
 
 
