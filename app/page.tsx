@@ -18,7 +18,7 @@ export default function Home() {
         />  
         </div>
         <HeroInfo className=""/>
-        <HeroStatement className="h-[70vh] md:h-[50vh] mt-24  flex items-center justify-center pt-20 bg-black text-white "/>
+        <HeroStatement className="h-[60vh] md:h-[60vh] mt-24  flex items-center justify-center  bg-black text-white "/>
         <HeroCarousel/>
         <HeroProduct className=""/>
 
