@@ -31,7 +31,7 @@ const NavBar = () => {
           }
         </div>
         <SideBar>
-            <AvatarIcon 
+              <AvatarIcon 
             className=''
             />
         </SideBar>
