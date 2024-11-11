@@ -19,10 +19,10 @@ interface cartitemcardprops {
 
 const CartItemCard = (props:cartitemcardprops) => {
   return (
-    <div className={cn("w-full  md:w-[80%] md:mx-auto shadow-lg ",props.className)} >
+    <div className={cn("w-full  shadow-black shadow-sm ",props.className)} >
       <Card className='w-full'>
-        <CardContent className=' grid grid-cols-1   gap-4 md:flex md:items-center  md:gap-2 justify-between'>
-         <div className='flex justify-between md:justify-start  gap-2 p-2 w-full m-2'>
+        <CardContent className='p-2'>
+         <div className='flex items-start gap-5'>
           <div className='w-[80px]  md:w-[100px] h-[120px] bg-black overflow-hidden rounded-lg'>
             <Image 
             className='object-cover w-full h-full rounded-lg'
@@ -32,25 +32,27 @@ const CartItemCard = (props:cartitemcardprops) => {
             height={500}
             />
           </div>
-          <div className='flex flex-col items-start gap-3 p-2'>
+          <div className='w-full flex flex-col items-center gap-4'>
+          <div className='flex  items-center  gap-8'>
             <CardTitle className='uppercase text-lg  '>
               {props.label}
             </CardTitle>
-          <CardDescription>
-              {props.price}
+          <CardDescription className=''>
+              $ {props.price}
           </CardDescription>
-          </div>
-          <form className='grid grid-cols-1 md:flex md: items-center  md:flex-col gap-4 w-full'>
-            <Button variant="outline" 
-            className='w-full'>
-              Remove
-            </Button>
+         </div>
+          <div className='w-full flex items-center justify-between gap-2'>
             <Button 
-            className='w-full '>
-              Pay
+            className='w-full font-bold uppercase'>
+              pay
             </Button>
-          </form>
+            <Button variant="destructive" 
+            className='w-full uppercase font-bold'>
+              delete
+            </Button>
           </div>
+        </div>
+        </div>
         </CardContent>
       </Card>
     </div>

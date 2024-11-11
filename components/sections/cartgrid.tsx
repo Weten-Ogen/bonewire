@@ -1,6 +1,7 @@
 import React from 'react'
 import CartItemCard from '../ui/cartitemcard'
 import { StaticImageData } from 'next/image'
+import { cn } from '@/lib/utils'
 interface cartItem {
     id:string,   
     label:string,
@@ -17,7 +18,7 @@ interface cartgridprops{
 const CartGrid = (props:cartgridprops) => {
   return (
     <div
-     className='flex flex-col gap-4'>{
+     className={cn('',props.className)}>{
         props.data.map(item => {
           return (
             <CartItemCard
