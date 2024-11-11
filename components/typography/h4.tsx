@@ -3,7 +3,7 @@ import React from "react"
 
 
 interface TypographyH4props {
-    children : string,
+    children : any,
     className: string
 }
 export function TypographyH4(props:TypographyH4props) {

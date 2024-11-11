@@ -17,7 +17,7 @@ interface productgridprops{
 const ProductGrid = (props: productgridprops) => {
   return (
     
-      <div className={cn('',props.className)}>
+      <div className={cn('p-4',props.className)}>
         {props.data.map(item => {
             return(
                 <ProductCard 

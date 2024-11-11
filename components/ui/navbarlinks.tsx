@@ -13,7 +13,7 @@ interface compprops {
 const NavBarLinks = (props:compprops) => {
     const pathName = usePathname()
     const userInfo = getUserInfo();
-    const usernavlinks = navlinks.filter(item => item.label.toLowerCase() !== "admin");
+    const usernavlinks = navlinks.filter(item => item.label !== "Admin");
 
     return (
     <div className={cn('',props.className)}>

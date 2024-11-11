@@ -7,6 +7,9 @@ import Image, { StaticImageData } from 'next/image'
 import { Button } from './ui/button'
 import { TypographyMuted } from './typography/muted'
 import Link from 'next/link'
+import { TypographyH3 } from './typography/h3'
+import { TypographyP } from './typography/p'
+import { TypographyH4 } from './typography/h4'
 
 interface productcardprops{
 className?: string,
@@ -19,39 +22,40 @@ description:string
 
 const ProductCard = (props:productcardprops) => {
   return (
-    <Link href={`products/${props.id}`} 
-    className={cn('mt-5 cursor-pointer p-4',props.className)}>
-      <Card>
+    <div className={cn('shadow-sm shadow-black',props.className)}>
+      <Card className="rounded-lg">
         <CardContent className='flex flex-col gap-4 items-center p-0'>
-            <div className="w-full h-[200px] overflow-hidden bg-red-500">
+            <div className="w-full h-[200px] overflow-hidden bg-red-500 rounded-t-lg">
                 <Image 
-                className='object-cover h-auto w-full'
+                className='object-cover rounded-t-lg  w-full'
                 src={props.imageUrl}
                 width={500}
                 height={500}
                 alt={`${props.label} image`}
                 />
             </div>
-            <div>
-            <CardTitle className=''>
+            <div className="flex flex-col  gap-3 tracking-wide">
+            <div className='flex items-center justify-between p-2 '>
+          <Link href={`products/${props.id}`} 
+
+          className="">
+            <CardTitle className='text-yellow-500 cursor-pointer font-bold underline uppercase '>
                 {props.label}
             </CardTitle>
-            <CardDescription className='line-clamp-3'>
+            </Link>
+            <TypographyH4 className="text-lg">$ {props.price}</TypographyH4>
+            </div>
+            <CardDescription className='line-clamp-3 leading-normal px-2 text-center'>
                 {props.description}
             </CardDescription>
-            <div className='flex mt-2 p-2 items-center justify-between'>
-            <TypographyMuted className=''>
-                {props.price.toString()}
-            </TypographyMuted>
             </div>
-            </div>
-            <CardFooter className='w-full '>
-                <Button className='w-full '>add to cart</Button>
+            <CardFooter className='w-full p-2'>
+                <Button className='w-full duration-300 p-4 ease-out hover:-translate-y-0.5'>add to cart</Button>
             </CardFooter>
         </CardContent>
         
       </Card>
-    </Link>
+  </div>
   )
 }
 
