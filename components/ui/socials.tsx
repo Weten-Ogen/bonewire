@@ -38,7 +38,7 @@ const Socials = (props:socialprops) => {
       </Link>
       <Link 
       target='_blank'
-      href="https://www.tiktok.com/Bonewire.shop"
+      href="https://www.tiktok.com/@Bonewire.shop"
       className=''>
         <Image 
         width={50}
