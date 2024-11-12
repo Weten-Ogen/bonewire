@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button'
 import { createProduct } from '../actions/productservice'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 interface productprops {
   id:string,    
@@ -56,6 +57,7 @@ const ProductForm = (props:productformprops) => {
      productform.reset()
       router.push('/admin/form/newproduct')
       router.refresh()
+      toast("Successfully added a new product.")
       
   }
   return (<div className='w-full'>{

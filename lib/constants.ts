@@ -121,6 +121,11 @@ const admincard = [
         href :"admin/form/newproduct"
     },
     {
+        label: "Products",
+        icon: ShoppingBag,
+        href :"admin/products"
+    },
+    {
         label: "Charts",
         icon: ChartArea,
         href: 'admin/charts'

@@ -45,6 +45,7 @@ const SignInForm = () => {
         storeUserInfo({accessToken:res?.data?.accessToken});
         router.push("/")
         router.refresh()
+        toast('Sign In Successfully')
       }
       
   }

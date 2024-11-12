@@ -29,3 +29,20 @@ export async function fetchData({route,method,values }:payloadprops) {
 }
 
 
+export async function  getproducts() {
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/products`,
+        {
+            method: "GET",
+            headers:{
+                "Content-Type": "application/json",
+                "cache":"no-cache"
+            }
+            
+
+        }
+    )
+
+    const requestedData = await res.json();
+    return requestedData;    
+}

@@ -56,6 +56,7 @@ const SignUpForm = () => {
             storeUserInfo({accessToken : result?.data?.accessToken});
             router.push("/")
             router.refresh()
+            toast('Signed up  Successfully')
           }
         }
       
