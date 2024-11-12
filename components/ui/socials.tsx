@@ -39,7 +39,7 @@ const Socials = (props:socialprops) => {
       </Link>
       <Link 
       target='_blank'
-      href="https://www.x.com/@bonewire.shop"
+      href="https://www.x.com/@Bonewire_shop"
       className=''>
         <Image 
         width={32}

@@ -17,7 +17,6 @@ import { storeUserInfo } from '@/app/actions/authservice'
 
 const formSchema = AuthFormSchema('sign-up')
   
-
 const SignUpForm = () => {
     
     const router =  useRouter();
@@ -88,7 +87,7 @@ const SignUpForm = () => {
             />
             <CustomAuthField 
             control={authform.control}
-            label='Address'
+            label='Address (region,city,street)'
             name='address'
             placeholder='Enter your address'
             />

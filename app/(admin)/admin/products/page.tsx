@@ -6,7 +6,7 @@ import React from 'react'
 
 
 const Products = async () => {
-  const productsdata=  await getproducts()
+  const productsdata= await getproducts()
 
   return (
     <section className="p-8">
