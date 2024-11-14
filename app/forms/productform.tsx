@@ -59,7 +59,7 @@ const ProductForm = (props:productformprops) => {
   }
   return (<div className='w-full'>{
     loading ?
-    <div className='w-full flex items-center justify-center mt-20 '>
+    <div className='w-full flex items-center justify-center  '>
       <Loader2
       size={72}
       className="animate-spin "/>  
