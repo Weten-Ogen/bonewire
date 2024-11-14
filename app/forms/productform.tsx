@@ -7,10 +7,11 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import {z} from 'zod'
 import CustomProductFormField from '../../components/ui/customproductform'
 import { Button } from '@/components/ui/button'
-import { createProduct } from '../actions/productservice'
+
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
+import { createProduct } from '../actions/fetch'
 
 interface productprops {
   id:string,    
@@ -47,11 +48,7 @@ const ProductForm = (props:productformprops) => {
 
   const OnSubmit = async(values:any) => {
     setLoading(prev=> !prev)  
-    const res = await createProduct({
-        route: "/products/create",
-        method: "POST",
-        values
-      })
+    const res = await createProduct(values)
   
      setLoading(prev => !prev)
      productform.reset()

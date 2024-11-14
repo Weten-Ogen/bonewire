@@ -9,7 +9,7 @@ import { TypographyLead } from '@/components/typography/lead';
 
 const Profile = () => {
   const user = getUserInfo()
-
+  
   return (
     <div className='mt-24 md:mt-14  h-[90vh] '>
       <div className='relative bg-black'>

@@ -46,3 +46,42 @@ export async function  getproducts() {
     const requestedData = await res.json();
     return requestedData;    
 }
+
+
+
+export async function  getproductsbyid(id:string) {
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/${id}`,
+        {
+            method: "GET",
+            headers:{
+                "Content-Type": "application/json",
+                "cache":"no-cache"
+            }
+            
+
+        }
+    )
+
+    const requestedData = await res.json();
+    return requestedData;    
+}
+
+
+export async function  createProduct(values:any) {
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/products/create`,
+        {
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json",
+                "cache":"no-cache"
+            },
+            body:JSON.stringify(values)
+
+        }
+    )
+
+    const requestedData = await res.json();
+    return requestedData;    
+}

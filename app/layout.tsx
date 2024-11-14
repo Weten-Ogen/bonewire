@@ -31,11 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >    
-      <Toaster 
-      richColors 
-      className="z-50"
-      position="bottom-right"
-      />
+          <Toaster 
+          richColors 
+          className="z-30"
+          position="top-center"
+          />
           <Provider>
             {children}
           </Provider>
