@@ -33,7 +33,7 @@ export default function RootLayout({
       >    
           <Toaster 
           richColors 
-          className="z-30"
+          className="z-[100]"
           position="top-center"
           />
           <Provider>
