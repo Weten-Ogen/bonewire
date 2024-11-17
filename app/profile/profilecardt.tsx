@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import profileImage from '@/public/images/profile.png'
 import { cn } from '@/lib/utils'
 import { getUserInfo } from '../actions/authservice'
-import { getproductsbyid, getUserById } from '../actions/fetch'
+import { getuserbyid } from '../actions/fetch'
 import { toast } from 'sonner'
 
 interface compprops {
@@ -17,21 +17,31 @@ interface compprops {
 const ProfileCard = (props:compprops) => {
     const [user, setUser] = useState<any>()
     const [id, setId]  = useState<any>()
-    
+    const [membdate, setMembdate] = useState<any>()
     const getId = () => {
       const userId = getUserInfo()
       setId((prev:any) => prev = userId?.id)
     }
 
-    const getProduct = async() => {
-      const user = await getUserById(id)
-      console.log(user)
-
+    const getuser = async() => {
+      const user = await getuserbyid(id)
+      setUser((prev:any)=> prev = user.data)
+      const newdate = new Date(user.createdAt)
+     
     }
-    useEffect(() => {},[])
 
+    useEffect(() =>{
+      getId()
+    },[])
+    useEffect(() => {
+        getuser()
+    },[id])
 
-    
+    if(!user){
+      return <div>
+        your need to login in first
+      </div>
+    }
     return (
     <div className={cn('h-[90vh]',props.className)}>
     <div className='relative bg-black'>
@@ -45,26 +55,40 @@ const ProfileCard = (props:compprops) => {
     </div>
     <div className='flex flex-col p-8'>
       <div className=' flex items-center gap-4'>
-      <TypographyLarge className='text-2xl'>Name</TypographyLarge>
-      <TypographyLead className='text-xl'>afjojo</TypographyLead>
-      </div>
-      <div className=' flex items-center gap-4'>
       <TypographyLarge className='text-2xl'>Email</TypographyLarge>
       <TypographyLead className='text-xl'>
-        fdajejo
+        {user.email}
+      </TypographyLead>
+      </div>
+      <div className=' flex items-center gap-4'>
+      <TypographyLarge className='text-2xl'>Name</TypographyLarge>
+      <TypographyLead className='text-xl'>
+        {user.name}
       </TypographyLead>
       </div>
 
       <div className=' flex items-center gap-4'>
+      <TypographyLarge className='text-2xl'>contact</TypographyLarge>
+      <TypographyLead className='text-xl'>
+        {user.contact}
+      </TypographyLead>
+      </div>
+
+      <div className=' flex items-center gap-4'> 
       <TypographyLarge className='text-2xl'>Country</TypographyLarge>
       <TypographyLead className='text-xl'>
-        asdhfeo
+        {user.country}
       </TypographyLead>
       </div>
-
+      <div className=' flex items-center gap-4'>
+      <TypographyLarge className='text-2xl'>address</TypographyLarge>
+      <TypographyLead className='text-xl'>
+        {user.address}
+      </TypographyLead>
+      </div>
       <div className=' flex items-center gap-4'>
       <TypographyLarge className='text-2xl'>Membership</TypographyLarge>
-      <TypographyLead className='text-xl'>user name</TypographyLead>
+      <TypographyLead className='text-xl'>00</TypographyLead>
       </div>
 
     </div>

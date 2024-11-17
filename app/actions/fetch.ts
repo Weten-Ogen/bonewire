@@ -1,5 +1,7 @@
 "use server"
 
+import { revalidatePath } from "next/cache";
+
 
 interface payloadprops {
     route: string,
@@ -18,7 +20,6 @@ export async function fetchData({route,method,values }:payloadprops) {
                 "Content-Type": "application/json",
             },
             cache:"no-store", 
-
             body:JSON.stringify(values)
         }
     )
@@ -38,12 +39,12 @@ export async function  getproducts() {
             headers:{
                 "Content-Type": "application/json",
             },
-            cache:"no-cache",
-            next:{revalidate: 5 }
+            cache:"no-cache"
     
         }
     )
 
+    revalidatePath('/products')
     const requestedData = await res.json();
     return requestedData;    
 }
@@ -77,7 +78,6 @@ export async function  createProduct(values:any) {
                 "Content-Type": "application/json",
             },
             cache:"no-cache",
-            next: {revalidate: 30},
             body:JSON.stringify(values)
 
         }
@@ -87,7 +87,7 @@ export async function  createProduct(values:any) {
     return requestedData;    
 }
 
-export async function  getUserById(id:any) {
+export async function  getuserbyid(id:string) {
     const res = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/user/${id}`,
         {
@@ -95,8 +95,7 @@ export async function  getUserById(id:any) {
             headers:{
                 "Content-Type": "application/json",
             },
-            cache:"no-cache",
-            next: {revalidate: 30}
+            cache:"no-cache"
         }
     )
 
