@@ -29,7 +29,7 @@ const ProductGrid = (props: productgridprops) => {
 
   const getproduct = async() => {
         const fetcheddata = await getproducts()
-        console.log(fetcheddata)
+
         setProducts((prev:any) => [prev,...fetcheddata?.data])
   }
 
