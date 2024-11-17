@@ -36,7 +36,7 @@ const ProductGrid = (props: productgridprops) => {
   useEffect(() => {
     getId()
     getproduct()
-  },[id])
+  },[])
 
     return (
       <div className={cn('p-4 ',props.className)}>

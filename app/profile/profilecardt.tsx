@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import profileImage from '@/public/images/profile.png'
 import { cn } from '@/lib/utils'
 import { getUserInfo } from '../actions/authservice'
-import { getUserById } from '../actions/fetch'
+import { getproductsbyid, getUserById } from '../actions/fetch'
 import { toast } from 'sonner'
 
 interface compprops {
@@ -17,22 +17,20 @@ interface compprops {
 const ProfileCard = (props:compprops) => {
     const [user, setUser] = useState<any>()
     const [id, setId]  = useState<any>()
-
     
-    
-    const fetchdata = async() => {
-        const useer = getUserInfo()
-        setId((prev:any) => useer?.id)
-        const data = await getUserById(id)
-        console.log(data)
-        if(!data.success) {
-            toast('check your internet connectivity')
-        }
+    const getId = () => {
+      const userId = getUserInfo()
+      setId((prev:any) => prev = userId?.id)
     }
 
-    useEffect(() => {
-        fetchdata()
-    })
+    const getProduct = async() => {
+      const user = await getUserById(id)
+      console.log(user)
+
+    }
+    useEffect(() => {},[])
+
+
     
     return (
     <div className={cn('h-[90vh]',props.className)}>
