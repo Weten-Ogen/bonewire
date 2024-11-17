@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import LogoImage from './logoimage'
 import AvatarIcon from './avaatar'
 import SideBar from '../sections/sidebar'
@@ -10,21 +10,22 @@ import NavBarLinks from './navbarlinks'
 
 
 
-const NavBar = () => {
-    const userloggedin = isLoggedIn()
+const NavBar = () => {  
+  const [userloggedIn , setUserloggedIn]  = useState<boolean |undefined>(isLoggedIn()) 
     return (
-    <section className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full h-[7vh] md:h-[6vh] z-50'>
+    <div className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full h-[7vh] md:h-[6vh] z-50'>
+
       <LogoImage
       className=''/>
 
       <NavBarLinks className="hidden md:flex md:items-center  gap-4 "/>
-      <div  className='flex items-center gap-1 p-2'>        
-        <div>
-          { userloggedin &&
+      <div  className='flex items-center gap-1 p-4'>        
+        <div className=''>
+          { userloggedIn &&
             <AvatarIcon className='uppercase'/>
           }{
-            !userloggedin  &&
-            <Link href="/signin">
+            !userloggedIn  &&
+            <Link href="/auth/signin">
               <span>log in</span>
             </Link>
            
@@ -36,7 +37,7 @@ const NavBar = () => {
             />
         </SideBar>
       </div>
-    </section>
+    </div>
   )
 }
 

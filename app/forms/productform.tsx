@@ -13,6 +13,7 @@ import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
 import { createProduct } from '../actions/fetch'
 
+
 interface productprops {
   id:string,    
   label:string
@@ -54,7 +55,9 @@ const ProductForm = (props:productformprops) => {
      productform.reset()
       router.push('/admin/form/newproduct')
       router.refresh()
-      toast("Successfully added a new product.")
+      toast("Product has been created" ,{
+        description: ""
+      })
       
   }
   return (<div className='w-full'>{
@@ -65,7 +68,7 @@ const ProductForm = (props:productformprops) => {
       className="animate-spin "/>  
     </div>:
       <Form {...productform}>
-      <form className='flex flex-col mt-5 md:mt-0 gap-5 md:w-[65%] md:mx-auto'
+      <form className='flex flex-col   gap-6 md:w-[80%] md:mx-auto border p-4 md:p-16 rounded-lg shadow-sm  bg-yellow-500'
       onSubmit={productform.handleSubmit(OnSubmit)}>
       
       <CustomProductFormField 
@@ -103,10 +106,11 @@ const ProductForm = (props:productformprops) => {
        placeholder="Enter the product tag."
        type="textinput"
        />
-       <div className='w-full mt-10'>
+       <div className='w-full pt-5 md:pt-8 '>
         <Button 
-        type="submit" 
-        className='w-full p-4 text-lg'>Submit</Button>
+        type="submit"
+        variant="outline" 
+        className='w-full p-4 md:p-6 text-xl uppercase font-bold'>Submit</Button>
        </div>
       </form>
     </Form>

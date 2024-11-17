@@ -5,10 +5,10 @@ import React from 'react'
 
 const page = () => {
   return (
-    <section className=''>
+    <div className=''>
       {/* various call to action on the admin page */}
       <AdminCards/>
-    </section>
+    </div>
   )
 }
 

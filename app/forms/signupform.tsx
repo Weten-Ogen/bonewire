@@ -70,7 +70,7 @@ const SignUpForm = () => {
         </div> 
         :
     <Form {...authform}>
-          <form  className='flex flex-col  gap-8 md:w-[65%] mx-auto'
+          <form  className='flex flex-col  gap-8 md:w-[80%] mx-auto p-4 md:p-12 bg-yellow-400 rounded-lg border  shadow-lg'
            onSubmit={authform.handleSubmit(OnSubmit)}>
             <CustomAuthField 
             control={authform.control}
@@ -110,12 +110,14 @@ const SignUpForm = () => {
             name='password'
             placeholder='Enter your password'
             />
-              <Link href="/signin" 
-              className='text-muted-foreground cursor-pointer'>
+              <Link href="/auth/signin" 
+              className=' cursor-pointer'>
               Click here to Sign into your account
             </Link>
           <div className='mt-5 w-full'>
-            <Button  className='w-full uppercase font-bold text-lg p-4' type="submit">sign up</Button>
+            <Button 
+            variant="outline"
+            className='w-full uppercase font-bold text-lg py-6 px-4 b' type="submit">sign up</Button>
           </div>
         </form>
     </Form>

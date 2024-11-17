@@ -63,7 +63,7 @@ const SignInForm = () => {
     </div>
     :
     <Form {...authform}>
-      <form className='flex flex-col mt-10 gap-5 md:w-[65%] mx-auto'
+      <form className='flex overflow-hidden flex-col p-4 bg-yellow-500 rounded-lg md:p-16 gap-8 shadow-lg md:w-[80%] mx-auto'
       onSubmit={authform.handleSubmit(handleLogin)}
       >
         <CustomAuthLoginField 
@@ -79,15 +79,16 @@ const SignInForm = () => {
         placeholder='Enter your Password'
         />
         <div>
-        <Link href="/signup" 
-        className='text-muted-foreground  cursor-pointer'>
+        <Link href="/auth/signup" 
+        className='cursor-pointer'>
         click here to sign up for an account.
         </Link>
         </div>
-        <div className='mt-5 w-full '>
+        <div className='pt-3 w-full '>
             <Button  
+            variant="outline"
             type='submit'
-            className='w-full cursor-pointer p-4' 
+            className='w-full cursor-pointer py-6 px-4 uppercase' 
             >
               log in 
             </Button>

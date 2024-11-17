@@ -16,8 +16,9 @@ export async function fetchData({route,method,values }:payloadprops) {
             method: `${method}`,
             headers:{
                 "Content-Type": "application/json",
-                "cache":"no-store" 
             },
+            cache:"no-store", 
+
             body:JSON.stringify(values)
         }
     )
@@ -36,10 +37,10 @@ export async function  getproducts() {
             method: "GET",
             headers:{
                 "Content-Type": "application/json",
-                "cache":"no-cache"
-            }
-            
-
+            },
+            cache:"no-cache",
+            next:{revalidate: 5 }
+    
         }
     )
 
@@ -51,15 +52,14 @@ export async function  getproducts() {
 
 export async function  getproductsbyid(id:string) {
     const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/${id}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/products/${id}`,
         {
             method: "GET",
             headers:{
                 "Content-Type": "application/json",
-                "cache":"no-cache"
-            }
-            
-
+            },
+            cache:"no-cache",
+        
         }
     )
 
@@ -75,10 +75,28 @@ export async function  createProduct(values:any) {
             method: "POST",
             headers:{
                 "Content-Type": "application/json",
-                "cache":"no-cache"
             },
+            cache:"no-cache",
+            next: {revalidate: 30},
             body:JSON.stringify(values)
 
+        }
+    )
+
+    const requestedData = await res.json();
+    return requestedData;    
+}
+
+export async function  getUserById(id:any) {
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/user/${id}`,
+        {
+            method: "GET",
+            headers:{
+                "Content-Type": "application/json",
+            },
+            cache:"no-cache",
+            next: {revalidate: 30}
         }
     )
 

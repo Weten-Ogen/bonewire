@@ -26,7 +26,7 @@ const CustomAuthLoginField = (props:customfieldprops) => {
       name={props.name}
       render={({ field }) => (
         <FormItem className="">
-          <FormLabel className="font-bold text-xl">
+          <FormLabel className="font-bold text-xl ">
             {props.label}
           </FormLabel>
           <div className="flex w-full flex-col">
@@ -34,12 +34,12 @@ const CustomAuthLoginField = (props:customfieldprops) => {
                 <Input 
                   {...field}
                   placeholder={props.placeholder}
-                  className="py-4"
+                  className="py-6 px-4 bg-white"
                   type={props.name === "email"  ?  "text" : props.name === "password" ? "password" : "text"}
                 />
             </FormControl>
           </div>
-            <FormMessage className="form-message text-red-500 mt-2" />
+            <FormMessage className="form-message text-red-500 mt-2 text-md" />
           </FormItem>)}
     />)}
 export default CustomAuthLoginField

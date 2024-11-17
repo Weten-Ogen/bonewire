@@ -1,14 +1,12 @@
 import SignInForm from '@/app/forms/signinforms'
 import { TypographyH2 } from '@/components/typography/h2'
-import { TypographyMuted } from '@/components/typography/muted'
 import LogoImage from '@/components/ui/logoimage'
 import React from 'react'
 
 
-
 const page = () => {
   return (
-    <section  className='w-full p-8'>
+    <div  className='w-full pt-16 px-4 py-6'>
       <div className='flex flex-col items-center gap-4'>
         <LogoImage 
         className=''
@@ -22,7 +20,7 @@ const page = () => {
       <SignInForm 
       />
       
-    </section>
+    </div>
   )
 }
 

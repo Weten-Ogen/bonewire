@@ -34,12 +34,12 @@ const CustomAuthField = (props:customfieldprops) => {
                 <Input 
                   {...field}
                   placeholder={props.placeholder}
-                  className="py-4"
+                  className="py-6 px-4 bg-white"
                   type={props.name === "email"  ?  "text" : props.name === "password" ? "password" : "text"}
                 />
             </FormControl>
           </div>
-            <FormMessage className="form-message text-red-500 mt-2" />
+            <FormMessage className="form-message text-red-500 mt-2 text-md" />
           </FormItem>)}
     />)}
 export default CustomAuthField

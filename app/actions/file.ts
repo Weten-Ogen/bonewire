@@ -12,7 +12,3 @@ export const fetchmoreimages = async(response:any)  => {
       return images
 }
 
-export const delimage = async(image:any) => {
-    await del(image.url, {token:token})
-    revalidatePath('/admin/form/file')
-} 

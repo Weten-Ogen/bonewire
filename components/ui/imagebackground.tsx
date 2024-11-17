@@ -2,7 +2,6 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
-import { TypographyH2 } from '../typography/h2'
 import { TypographyH4 } from '../typography/h4'
 import { TypographyMuted } from '../typography/muted'
 import HeroImage from '@/public/images/hero.png'
@@ -20,6 +19,7 @@ interface imagewithbgprops {
 
 const ImageWithBackGround = (props:imagewithbgprops) => {
   const router = useRouter();
+  
   const redirectToProducts = () => {
     router.push("/products")
     router.refresh()
@@ -34,21 +34,26 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
       width={800}
       height={800}
       />
+
       <div className='absolute  z-10 text-white bg-black/50 inset-0 pt-20'>
 
       <div className='absolute max-w-md bottom-40 flex flex-col z-20 gap-5 p-4'>
         <h2 className='text-5xl'>
             {props.heading}
         </h2>
+        <div>
         {
-            props.subHeading && 
-            <TypographyH4 className='text-2xl'>
+          props.subHeading && 
+          <TypographyH4 className='text-2xl'>
             {props.subHeading}
-        </TypographyH4>
+           </TypographyH4>
         }
+        </div>
+        <div>
         {props.message &&
          <TypographyMuted className=''>{props.message}</TypographyMuted>
         }
+        </div>
         <Button
         onClick={redirectToProducts} 
         className='w-full z-20 p-4 cursor-pointer  uppercase'>Order now</Button>

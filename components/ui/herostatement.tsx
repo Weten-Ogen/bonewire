@@ -12,18 +12,21 @@ interface heroprops {
 }
 const HeroStatement = (props:heroprops) => {
   return (
-    <section id="productsection" className={cn('h-[70vh] relative w-full  ',props.className)}>
-      <div className='w-full  h-[40vh] p-4'>
+    <div 
+    className={cn('bg-black h-[70vh] w-full my-10 md:my-20 mt-10 relative ',props.className)}>
+      
+
+      <div className='w-full   h-[40vh] p-4'>
         <video width='800' className='w-full h-[60vh]' height="800"  
         muted 
         autoPlay 
         loop >
           <source 
           src="https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/hero-cz5Q8VVWebkyiN3FgvDiunqjYFhR3o.mp4" 
-           type="video/mp4"/>
+          type="video/mp4"/>
         </video>
       </div>
-      <div className="z-20 absolute inset-0 bg-black/50 w-full h-full p-8 flex items-center justify-center ">
+      <div className="z-20 absolute inset-0 w-full p-8 flex items-center justify-center ">
 
       <TypographyBlockquote className='text-md md:text-lg md:max-w-2xl'>
         Bonewire is the Leading Ecommerce platform that makes you experience Ghana through culture.All products are hand-made the african way. Africans take pride in their culture because of the blood and tears invested in the process. 
@@ -32,7 +35,8 @@ const HeroStatement = (props:heroprops) => {
         Take pride in your Identity with us.
       </TypographyBlockquote>
       </div>
-    </section>
+
+    </div>
   )
 }
 

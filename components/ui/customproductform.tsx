@@ -24,23 +24,22 @@ const CustomProductFormField = (props:customfieldprops) => {
      name={props.name}
      render={({field}) => {
          return <FormItem className='flex flex-col '>
-      <FormLabel>{props.label}</FormLabel>
+      <FormLabel className="text-xl font-bold">{props.label}</FormLabel>
       <FormControl>
         {
          props.type === "textinput" ? 
          <Input 
-         className=''
+         className="bg-white py-6 px-4"
          placeholder={props.placeholder}
          {...field}
          />:
          <Textarea 
-         className=''
+         className='bg-white py-6 px-4'
          {...field}
          placeholder={props.placeholder}
-         />
-        }
+         />}
       </FormControl>
-      <FormMessage className=""/>
+      <FormMessage className="mt-2 text-md"/>
       </FormItem>
      }}
     />

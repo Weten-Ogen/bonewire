@@ -22,18 +22,19 @@ interface admincardprops {
 const AdminCards = (props: admincardprops) => {
   const router = useRouter();
   const userInfo = getUserInfo()
+  
   if((userInfo?.role  !== "admin") ) {
      router.push('/')
      router.refresh()
   }
   return (
-    <div className={cn('p-2 ',props.className)}>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-[80%] mx-auto '>
+    <div className={cn('p-2',props.className)}>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-[90%] mx-auto '>
         {admincard.map(item => {
             return (
-              <Link href={item.href} key={item.label}> 
+              <Link className='hover:-translate-y-0.5 hover:ease-out hover:duration-500' href={item.href} key={item.label}> 
               <Card>
-                <CardContent className='flex flex-col items-center'>
+                <CardContent className='flex flex-col items-center shadow-sm shadow-black'>
                   <div className='p-8'>
                     <item.icon  size={72}/>
                   </div>

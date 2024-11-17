@@ -6,8 +6,8 @@ interface TypographyLargeprops {
 }
 
 export function TypographyLarge(props:TypographyLargeprops) {
-    return <div className={cn("text-lg font-semibold",props.className)}>
+    return <p className={cn("text-lg font-semibold",props.className)}>
         {props.children}
-    </div>
+    </p>
   }
   

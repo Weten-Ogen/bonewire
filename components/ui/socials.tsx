@@ -48,6 +48,7 @@ const Socials = (props:socialprops) => {
         alt="x icon"
         />
       </Link>
+      
       <Link 
       target='_blank'
       href="https://www.tiktok.com/@Bonewire.shop"

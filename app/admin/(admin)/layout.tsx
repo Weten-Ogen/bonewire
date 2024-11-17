@@ -1,4 +1,4 @@
-import "../globals.css"
+
 
 export default function AdminLayout({
     children,
@@ -6,9 +6,9 @@ export default function AdminLayout({
     children: React.ReactNode;
   }>) {
     return (
-        <section className="mt-40">
+        <main className="mt-16">
           {children}
-        </section>
+        </main>
         
         
     )

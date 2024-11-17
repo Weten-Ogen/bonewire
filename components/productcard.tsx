@@ -21,11 +21,13 @@ description:string
 }
 
 const ProductCard = (props:productcardprops) => {
+  const calprice  = Math.ceil(props.price / 16.50)  + 50
+
   return (
-    <div className={cn('shadow-sm shadow-black',props.className)}>
-      <Card className="rounded-lg">
-        <CardContent className='flex flex-col gap-4 items-center p-0'>
-            <div className="w-full h-[200px] overflow-hidden bg-red-500 rounded-t-lg">
+    <div className={cn(' rounded-t-lg shadow-lg',props.className)}>
+      <Card className="rounded-t-lg">
+        <CardContent className='flex flex-col gap-4 items-center rounded-t-lg p-0'>
+            <div className="w-full h-[200px] overflow-hidden  rounded-t-lg">
                 <Image 
                 className='object-cover rounded-t-lg  w-full'
                 src={props.imageUrl}
@@ -35,17 +37,16 @@ const ProductCard = (props:productcardprops) => {
                 />
             </div>
             <div className="flex flex-col  gap-3 tracking-wide">
-            <div className='flex items-center justify-between p-2 '>
+            <div className='flex items-center gap-4 flex-wrap justify-between  p-2 '>
           <Link href={`products/${props.id}`} 
-
           className="">
             <CardTitle className='text-yellow-500 cursor-pointer font-bold underline uppercase '>
                 {props.label}
             </CardTitle>
-            </Link>
-            <TypographyH4 className="text-lg">$ {props.price}</TypographyH4>
+         </Link>
+            <TypographyH4 className="text-lg">$ {calprice}</TypographyH4>
             </div>
-            <CardDescription className='line-clamp-3 leading-normal px-2 text-center'>
+            <CardDescription className='line-clamp-3 leading-normal px-1 text-center'>
                 {props.description}
             </CardDescription>
             </div>

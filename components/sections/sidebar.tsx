@@ -23,15 +23,16 @@ const SideBar = (props:mobilenavprops) => {
   
   const logout = () => {
     removeUser()
-    router.push('/signin')
+    router.push('/auth/signin')
     router.refresh()
   }
 
   return (
-    <Sheet >
+    <Sheet>
       <SheetTrigger className='cursor-pointer' asChild>
         <Menu 
         size={32}
+        className='h-10 w-10'
         />
       </SheetTrigger>
 
@@ -48,9 +49,10 @@ const SideBar = (props:mobilenavprops) => {
           Bonewire
         </TypographyH2>
       </div>
+      <div>
       {
         userInfo?.role !== "user" ?
-      <div className='flex flex-col  gap-4 mt-5 pl-4'>
+        <div className='flex flex-col  gap-4 mt-5 pl-4'>
         {navlinks.map(item => {
           return (
             <SheetClose  asChild key={item.label}>
@@ -80,7 +82,8 @@ const SideBar = (props:mobilenavprops) => {
         })}
       </div>
 
-      }
+}
+</div>
       <div className='flex gap-4 items-center justify-between w-[90%] mx-auto absolute bottom-0  p-4 '>
         <p className='text-wrap'>
           {userInfo?.email ||  "Guest"} 

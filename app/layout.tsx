@@ -30,16 +30,17 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >    
-          <Toaster 
-          richColors 
-          className="z-[100] absolute top-0 "
-          position="top-center"
-          />
-          <Provider>
-            {children}
-          </Provider>
-        
+      > 
+      <main>
+        <Toaster 
+        richColors
+        position="top-center"
+        className="text-lg capitalize"
+        />
+        <Provider>
+          {children}
+        </Provider>
+      </main>   
       </body>
     </html>
   );

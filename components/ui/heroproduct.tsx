@@ -9,12 +9,12 @@ interface heroproductprops {
 
 const HeroProduct = (props:heroproductprops) => {
   return (
-    <section 
+    <div 
     id="heroproduct" 
     className={cn('flex justify-center w-full bg-black h-[50vh] p-8',props.className)}
     >
      <SearchBtn className=""/>
-    </section>
+    </div>
   )
 }
 

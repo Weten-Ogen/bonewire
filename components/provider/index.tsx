@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
-import NavBar from '../ui/navbar'
+import NavBar from '../ui/navbar';
+
 
 interface providerprops {
     children : React.ReactNode,
@@ -8,15 +9,13 @@ interface providerprops {
 
 
 const Provider = (props: providerprops) => {
-
-
   return (
-    <main className=''> 
+    <section className=''> 
       <NavBar/>
       <div className=''>
         {props.children}
       </div>
-    </main>
+    </section>
   )
 }
 
