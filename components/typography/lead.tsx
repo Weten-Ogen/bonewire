@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 interface TypographyLeadprops {
     children : string,
-    className: string
+    className: any
 }
 export function TypographyLead(props: TypographyLeadprops) {
     return (
