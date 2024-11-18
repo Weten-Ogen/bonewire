@@ -90,10 +90,10 @@ const SideBar = (props:mobilenavprops) => {
         </p>
         <div className='flex gap-2'>
           <SheetClose asChild>
-          <Button onClick={logout} className='flex items-center gap-2'>
+          <p onClick={logout} className='flex items-center gap-2'>
           <p className=''>Log out</p>
           <LogOut/>
-          </Button>
+          </p>
           </SheetClose>
         </div>
       </div>
