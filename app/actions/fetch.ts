@@ -39,7 +39,7 @@ export async function  getproducts() {
             headers:{
                 "Content-Type": "application/json",
             },
-            cache:"no-cache"
+            cache:"no-store"
     
         }
     )
@@ -59,11 +59,11 @@ export async function  getproductsbyid(id:string) {
             headers:{
                 "Content-Type": "application/json",
             },
-            cache:"no-cache",
+            cache:"no-store",
         
         }
     )
-
+    revalidatePath(`/product/${id}`)
     const requestedData = await res.json();
     return requestedData;    
 }
@@ -77,7 +77,7 @@ export async function  createProduct(values:any) {
             headers:{
                 "Content-Type": "application/json",
             },
-            cache:"no-cache",
+            cache:"no-store",
             body:JSON.stringify(values)
 
         }
@@ -95,7 +95,7 @@ export async function  getuserbyid(id:string) {
             headers:{
                 "Content-Type": "application/json",
             },
-            cache:"no-cache"
+            cache:"no-store"
         }
     )
 

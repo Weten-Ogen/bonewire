@@ -141,35 +141,21 @@ const admincard = [
 
 const testimonials = [
     {
-        name: "Keren Kumi",
-        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0323-goCLQ6pLnifHoOERUQkIS7oF8LkGqF.jpg?download=1",
-        comment:"Your home of quality products, giving you the Ghana culture vibes and luxury of kente products"
+        name: "Mr. Amos Opoku",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/WhatsApp%20Image%202024-11-17%20at%2005.56.23_1032923b-tIdBnvANYaeQ4P97B3ETLtlwOLweuE.jpg",
+        comment:"Get value on each money spent here. Bonewire serviced my wedding garment as y'all can see.Luxury with value.It been almost a year and some month and my kente never gets old."
     },
     {
-        name: "Amos Opoku",
-        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0316-NO9PlUTOlhslVmi55lgYcCvmz6p8Xa.jpg?download=1",
-        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products"
+        name: "Mr. Annor Opoku",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/WhatsApp%20Image%202024-11-17%20at%2007.53.34_7213d0fd-uap3RaPp2F0r8ahCJxzhcio8QVT4GO.jpg",
+        comment: "I know Bonewire got you covered when it about traditional african wear or goods. I am a regular here and tested first hand customer service for such great products."
     },
     {
-        name: "Andre Tate",
-        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0317-fL8Glydzy7w5sv7XEfiI49patDNViB.jpg?download=1",
-        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+        name: "Mrs. Rebecca Opoku",
+        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/WhatsApp%20Image%202024-11-17%20at%2005.56.45_5c7d5bf9-0bc5TaOewSKqUx0G7oSleRzn5cQK5O.jpg",
+        comment: "I will rephrase and say it takes Bonewire to tango in your clothings .They always on whatsapp to assit you, delivers on time making you feel like royealty. You are the boss on Bonewire. "
     },
-    {
-        name: "Rebecca Akuffo Addo",
-        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0329-nYKCrMk0RLw1BaIEYxEnYcxEVhKs9v.jpg?download=1",
-        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
-    },
-    {
-        name: "Samira Bawumia",
-        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0325-TQHrLKHmwQYAtPiLuGuVVMktVkK8zg.jpg?download=1",
-        comment:"Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
-    },
-    {
-        name: "Jack Lorre",
-        imageUrl:"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/images/IMG-20241008-WA0323-goCLQ6pLnifHoOERUQkIS7oF8LkGqF.jpg?download=1",
-        comment: "Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
-    },
+    
 ]
 
 

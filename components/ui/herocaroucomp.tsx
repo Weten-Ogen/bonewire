@@ -17,7 +17,7 @@ const HeroCarouComp = (props:comprops) => {
     <CarouselItem className={cn("pl-1 md:basis-1/2 md:basic-1/3  border  shadow-xl shadow-yellow-500  w-full ",props.className)}>
       <div className="p-1 ">
               <Card className="">
-                <CardContent className="flex flex-col aspect-square relative items-center gap-5 w-full">
+                <CardContent className="flex flex-col aspect-square relative items-center gap-4 w-full">
                   <div>
 
                   <div className='w-full h-full overflow-hidden rounded-lg absolute inset-0 '>
@@ -29,7 +29,7 @@ const HeroCarouComp = (props:comprops) => {
                     alt={`${props.name} image`}
                     />
                   </div>
-                  <div className='absolute bg-black/65 p-8 md:p-16 w-full h-full flex flex-col items-center gap-10 inset-0 text-white'>
+                  <div className='absolute bg-black/65 p-4 md:p-16 w-full h-full flex flex-col items-center gap-5  inset-0 text-white'>
                   <CardTitle className='uppercase text-white text-2xl'>{props.name}</CardTitle>
 
                   <CardDescription className='text-gray-400

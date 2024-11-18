@@ -10,7 +10,7 @@ interface searchzoneprops {
 const SearchZone = (props:searchzoneprops) => {
   return (
     <section className={cn('',props.classsName)}>
-      <SearchBtn className=''/>
+      <SearchBtn className='md:flex md:items-center '/>
     </section>
   )
 }
