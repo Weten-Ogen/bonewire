@@ -44,7 +44,6 @@ export async function  getproducts() {
         }
     )
 
-    revalidatePath('/products')
     const requestedData = await res.json();
     return requestedData;    
 }
@@ -63,7 +62,7 @@ export async function  getproductsbyid(id:string) {
         
         }
     )
-    revalidatePath(`/product/${id}`)
+
     const requestedData = await res.json();
     return requestedData;    
 }
