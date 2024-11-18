@@ -44,12 +44,11 @@ const ProductPage = async(props:productpageprops) => {
         {product.data.label}
         </TypographyH2>
         <div className='flex items-center gap-2  flex-wrap'>
-        
         <TypographyLead className='text-lg '>
          GHC {product.data.price}
         </TypographyLead>
         <TypographyLead className='text-lg '>
-        ($ {calprice})
+        `(${calprice})`
         </TypographyLead>
         </div>
         </div>

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 interface TypographyInlineCodeprops {
     className :string,
-    children: string
+    children: any
 }
 
 export function TypographyInlineCode(props:TypographyInlineCodeprops) {
