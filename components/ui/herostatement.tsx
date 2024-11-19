@@ -17,9 +17,11 @@ const HeroStatement = (props:heroprops) => {
       
 
       <div className='w-full   h-[40vh] p-4'>
-        <video width='800' className='w-full h-[60vh]' height="800"  
+        <video width='800' 
+        className='w-full h-[60vh]'
+         height="auto"  
         muted 
-        autoPlay 
+        autoPlay
         loop >
           <source 
           src="https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/hero-cz5Q8VVWebkyiN3FgvDiunqjYFhR3o.mp4" 

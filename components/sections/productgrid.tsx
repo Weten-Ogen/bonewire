@@ -19,28 +19,10 @@ interface productgridprops{
     data : productprops[]  
 }
 const ProductGrid = (props: productgridprops) => {
-  const [products , setProducts] = useState<any>([])
-  const [id, setId] = useState<any>()
-
-  const getId = () => {
-        const myid = getUserInfo()
-        setId((prev:any)=> prev = myid?.id)
-  }
-
-  const getproduct = async() => {
-        const fetcheddata = await getproducts()
-
-        setProducts((prev:any) => [prev,...fetcheddata?.data])
-  }
-
-  useEffect(() => {
-    getId()
-    getproduct()
-  },[])
-
+  
     return (
       <div className={cn('p-4 ',props.className)}>
-        {products && products.map((item:any )=> {
+        {props.data && props.data.map((item:any )=> {
             return(
                 <ProductCard 
                 key ={item.id} 

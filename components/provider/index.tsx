@@ -10,12 +10,12 @@ interface providerprops {
 
 const Provider = (props: providerprops) => {
   return (
-    <section className=''> 
+    <div className=''> 
       <NavBar/>
       <div className=''>
         {props.children}
       </div>
-    </section>
+    </div>
   )
 }
 

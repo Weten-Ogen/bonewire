@@ -53,11 +53,9 @@ const ProductForm = (props:productformprops) => {
   
      setLoading(prev => !prev)
      productform.reset()
-      router.push('/admin/form/newproduct')
+      router.push('/products')
       router.refresh()
-      toast("Product has been created" ,{
-        description: ""
-      })
+      toast("Product has been created")
       
   }
   return (<div className='w-full'>{

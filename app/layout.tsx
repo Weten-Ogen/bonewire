@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Provider from "@/components/provider";
+
 import { Toaster } from "sonner";
+import Provider from "@/components/provider";
 
 
 const geistSans = localFont({
@@ -37,9 +38,9 @@ export default function RootLayout({
         position="top-center"
         className="text-lg capitalize"
         />
-        <Provider>
+        
           {children}
-        </Provider>
+        
       </main>   
       </body>
     </html>

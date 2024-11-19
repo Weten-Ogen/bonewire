@@ -1,4 +1,3 @@
-import Advertisement from "@/components/sections/advertisement"
 import HeroInfo from "@/components/ui/heroinfo";
 import HeroProduct from "@/components/ui/heroproduct";
 import HeroStatement from "@/components/ui/herostatement";
