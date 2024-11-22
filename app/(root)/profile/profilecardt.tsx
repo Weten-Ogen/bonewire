@@ -5,10 +5,10 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import profileImage from '@/public/images/profile.png'
 import { cn } from '@/lib/utils'
-import { getUserInfo } from '../actions/authservice'
+import { getUserInfo } from '@/app/actions/authservice'
+import { getuserbyid } from '@/app/actions/fetch'
 
-import { toast } from 'sonner'
-import { getuserbyid } from '../actions/fetch'
+
 
 interface compprops {
     className?: string,
