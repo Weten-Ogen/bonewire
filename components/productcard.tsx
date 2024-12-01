@@ -44,7 +44,10 @@ const ProductCard = (props:productcardprops) => {
                 {props.label}
             </CardTitle>
          </Link>
+            <div className='flex items-center gap-2'>
             <TypographyH4 className="text-lg">$ {calprice}</TypographyH4>
+            <TypographyMuted className=''>({props.price})</TypographyMuted>
+            </div>
             </div>
             <CardDescription className='line-clamp-3 leading-normal px-1 text-center'>
                 {props.description}

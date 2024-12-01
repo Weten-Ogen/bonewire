@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
+import { getUserInfo } from '@/app/actions/authservice';
 
 
 
-const Profile = () => {
+const Profile = async() => {
 
   return (
-    <div>
+    <div className="">
       
     </div>
   )
