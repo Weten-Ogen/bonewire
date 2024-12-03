@@ -20,13 +20,6 @@ const navlinks = [
 
     },
     {
-        label: 'Cart',
-        href: '/cart',
-        imageurl: '',
-        icon: ShoppingCart
-
-    },
-    {
         label: 'Admin',
         href: '/admin',
         imageurl: '',
@@ -54,7 +47,7 @@ const filterlist= [
      label: "all"
     },
     {
-    label: "Kente"
+    label: "kente"
     },
     {
     label: "sash"
@@ -63,7 +56,7 @@ const filterlist= [
     label: "accessories"
     },
     {
-    label: "foot wears"
+    label: "footwear"
     }
 ]
 
@@ -157,6 +150,7 @@ const testimonials = [
     },
     
 ]
+"https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/WhatsApp%20Video%202024-12-01%20at%2010.37.45_12d88489-FmhBhtGywQRvp3QQIF0XQOVsO1Zk2y.mp4"
 
 
 export {
