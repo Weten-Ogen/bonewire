@@ -21,7 +21,7 @@ const ProductCard = ({products}:cardprops) => {
     }
 
     return (
-    <div className='bg-slate-200 '>
+    <div className=' '>
         <div className="w-full h-[60vh] md:h-[80vh] overflow-hidden object-contain">
             <Image 
             src={products.imageUrl}
