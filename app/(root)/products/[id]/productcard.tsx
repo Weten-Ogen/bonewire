@@ -28,7 +28,7 @@ const ProductCard = ({products}:cardprops) => {
             alt={`${products.label} icon`}
             width={1000}
             height={1000}
-            className='w-full  object-cover'
+            className='w-full  object-cover bg-black/80'
             />
         </div>
         <div className='p-6 md:p-8'>
