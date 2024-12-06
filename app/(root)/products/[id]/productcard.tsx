@@ -21,7 +21,7 @@ const ProductCard = ({products}:cardprops) => {
     }
 
     return (
-    <div className='mt-20'>
+    <div className='mt-16'>
         <div className="w-full h-[60vh] md:h-[80vh] overflow-hidden object-contain">
             <Image 
             src={products.imageUrl}
