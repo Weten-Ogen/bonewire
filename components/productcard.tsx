@@ -24,9 +24,12 @@ const ProductCard = (props:productcardprops) => {
   const calprice  = Math.ceil(props.price / 16.50)  + 50
 
   return (
+    <Link
+     className='hover:-translate-y-0.5 opacity-80 hover:opacity-100 duration-500 '
+     href={`products/${props.id}`} >
     <div className={cn(' rounded-t-lg shadow-lg',props.className)}>
       <Card className="rounded-t-lg">
-        <CardContent className='flex flex-col gap-4 items-center rounded-t-lg p-0'>
+        <CardContent className='flex flex-col gap-4 items-start rounded-t-lg p-0'>
             <div className="w-full h-[200px] overflow-hidden  rounded-t-lg">
                 <Image 
                 className='object-cover rounded-t-lg  w-full'
@@ -36,31 +39,15 @@ const ProductCard = (props:productcardprops) => {
                 alt={`${props.label} image`}
                 />
             </div>
-            <div className="flex flex-col  gap-3 tracking-wide">
-            <div className='flex items-center gap-4 flex-wrap justify-between  p-2 '>
-          <Link href={`products/${props.id}`} 
-          className="">
-            <CardTitle className='text-yellow-500 cursor-pointer font-bold underline uppercase '>
-                {props.label}
-            </CardTitle>
-         </Link>
-            <div className='flex items-center gap-2'>
+            <div className='flex text-orange-500 items-center gap-2 p-2'>
             <TypographyH4 className="text-lg">$ {calprice}</TypographyH4>
             <TypographyMuted className=''>(GHC {props.price})</TypographyMuted>
             </div>
-            </div>
-            <CardDescription className='line-clamp-3 leading-normal px-1 text-center'>
-                {props.description}
-            </CardDescription>
-            </div>
-            <CardFooter className='w-full p-2'>
-                <Button className='w-full duration-300 p-4 ease-out hover:-translate-y-0.5'>add to cart</Button>
-            </CardFooter>
         </CardContent>
         
       </Card>
   </div>
-  )
-}
+  </Link>
+  )}
 
 export default ProductCard

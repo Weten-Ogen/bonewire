@@ -5,20 +5,17 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 const ProfileCard = () => {
-  const info = getUserInfo()
-  const [user, setUser] = useState<any>(info);
+  const [user, setUser] = useState<any>();
   const [userinfo,setUserinfo] = useState<any>();
   
   const handleuserdetails = async() => {
-    
-    const fetcheddetails = await getuserbyid(user.id)
-    setUserinfo((prev:any) =>prev =fetcheddetails.data)
-    console.log(userinfo)
+   
+    const info = getUserInfo()
+    console.log(info)
   }
   useEffect(() => {
     handleuserdetails()
-    console.log(user)
-    console.log(userinfo)
+    
   },[user])
 
     return (
