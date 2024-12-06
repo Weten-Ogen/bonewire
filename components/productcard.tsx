@@ -39,7 +39,7 @@ const ProductCard = (props:productcardprops) => {
                 alt={`${props.label} image`}
                 />
             </div>
-            <div className='flex text-orange-500 items-center gap-2 p-2'>
+            <div className='flex text-yellow-500 items-center gap-2 p-2'>
             <TypographyH4 className="text-lg">$ {calprice}</TypographyH4>
             <TypographyMuted className=''>(GHC {props.price})</TypographyMuted>
             </div>
