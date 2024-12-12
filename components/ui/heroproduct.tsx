@@ -18,7 +18,6 @@ const HeroProduct = (props:heroproductprops) => {
    
    
     </div>
-    </div>
   )
 }
 
