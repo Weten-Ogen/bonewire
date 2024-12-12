@@ -57,8 +57,8 @@ const ProductGrid = (props: productgridprops) => {
    
 
     return (
-    <div className='flex flex-col items-start gap-8 md:gap-6 '>
-     <div className='flex flex-wrap gap-2 p-4 '>
+    <div className='flex flex-col items-start '>
+     <div className='flex flex-wrap gap-2 p-4 mt-5 '>
         {filterlist.map(item => {
           return (
             <Button 
@@ -66,7 +66,7 @@ const ProductGrid = (props: productgridprops) => {
               setFilter(item.label)
               
             }}
-            className={` capitalize px-6 ${filter === item.label.toLowerCase() ?  'text-xl font-bold' : 'text-sm'}`} 
+            className={` capitalize px-6 ${filter === item.label.toLowerCase() ?  'text-sm font-bold -translate-y-0.5 duration-500 ease-out' : 'text-sm'}`} 
              key={item.label}>
               {item.label}
             </Button>
@@ -74,7 +74,9 @@ const ProductGrid = (props: productgridprops) => {
         })}
       </div>
 {     
-loading ? <Loader className='animate-spin text-2xl font-bold flex items-center justify-center w-full' /> :
+loading ? <Loader 
+size={40}
+className='animate-spin  font-bold flex items-center justify-center w-full' /> :
       <div className={cn('p-4 ',props.className)}>
         {products.map((item:any )=> {
             return(

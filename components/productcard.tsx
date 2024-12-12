@@ -25,7 +25,7 @@ const ProductCard = (props:productcardprops) => {
 
   return (
     <Link
-     className='hover:-translate-y-0.5 opacity-80 hover:opacity-100 duration-500 '
+     className='hover:-translate-y-0.5 hover:opacity-80 duration-500 '
      href={`products/${props.id}`} >
     <div className={cn(' rounded-t-lg shadow-lg',props.className)}>
       <Card className="rounded-t-lg">

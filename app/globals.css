@@ -80,3 +80,68 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+
+  .custom-shape-divider-bottom-1734018507 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1734018507 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 98px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1734018507 .shape-fill {
+    fill: #ffffff;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1734018507 svg {
+        width: calc(240% + 1.3px);
+        height: 89px;
+    }
+}
+
+
+/* hero statement svg */
+.custom-shape-divider-top-1734018776 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1734018776 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 98px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734018776 .shape-fill {
+  fill: #ffffff;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1734018776 svg {
+      width: calc(206% + 1.3px);
+      height: 98px;
+  }
+}
+
+}

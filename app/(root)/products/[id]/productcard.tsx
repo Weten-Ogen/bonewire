@@ -21,17 +21,17 @@ const ProductCard = ({products}:cardprops) => {
     }
 
     return (
-    <div className='mt-16'>
+    <div className='mt-12'>
         <div className="w-full h-[60vh] md:h-[80vh] overflow-hidden object-contain">
             <Image 
             src={products.imageUrl}
             alt={`${products.label} icon`}
-            width={1000}
-            height={1000}
-            className='w-full  object-cover bg-black/80'
+            width={800}
+            height={800}
+            className='w-full h-auto   object-cover bg-black/80'
             />
         </div>
-        <div className='p-6 md:p-8'>
+        <div className='p-6 md:p-8 max-w-5xl'>
           <div className='flex items-center justify-between flex-wrap gap-4  '>
             <TypographyH3 className=''>
                 {products.label}
@@ -45,24 +45,20 @@ const ProductCard = ({products}:cardprops) => {
             </TypographyMuted>
             </div>
           </div>
-            <div className='w-full  flex items-center justify-center py-5 ' >
-                <TypographyP className='text-lg text-justify max-w-2xl '>
+            <div className='w-full  flex items-center py-5 ' >
+                <TypographyP className='text-lg  max-w-5xl  tracking-wide leading-relaxed '>
                     {products.description}
                 </TypographyP>
             </div>
         </div>
-        <div className="flex items-center gap-4 p-4">
+        <div className="flex items-center gap-4 p-4 max-w-4xl">
             <Button
             onClick={gobackhandler}
-            className='w-full capitalize font-bold px-8 py-2 text-lg hover:-translate-y-0.5 duration-300 ease-out' 
-            variant="outline">
+            variant="ghost">
                 go back
             </Button>
-            <Button
-            className='w-full capitalize font-bold px-8 py-2 text-lg hover:-translate-y-0.5 duration-300 ease-out'
-            >
-                add to cart
-            </Button>
+            <Button>payment info</Button>
+            
         </div>
 
     </div>
