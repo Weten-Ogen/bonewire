@@ -4,7 +4,7 @@ import React from 'react'
 
 
 const About = () => {
-  const []
+  
   const videolist = [
     {
       id: 1,
