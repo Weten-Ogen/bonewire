@@ -32,7 +32,7 @@ const ProductCard = (props:productcardprops) => {
         <CardContent className='flex flex-col gap-4 items-start rounded-t-lg p-0'>
             <div className="w-full h-[180px] overflow-hidden  rounded-t-lg">
                 <Image 
-                className='object-cover rounded-t-lg  max-w-full h-auto'
+                className='object-cover rounded-t-lg  max-w-full max-h-[30vh] h-auto'
                 src={props.imageUrl}
                 width={500}
                 height={500}
@@ -43,7 +43,6 @@ const ProductCard = (props:productcardprops) => {
             <TypographyMuted className='font-bold font-sans text-slate-900 text-lg p-2'>GHC {props.price}</TypographyMuted>
             </div>
         </CardContent>
-        
       </Card>
   </div>
   </Link>
