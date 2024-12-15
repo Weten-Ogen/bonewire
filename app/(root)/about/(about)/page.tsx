@@ -27,7 +27,7 @@ const About = () => {
         />
         <TypographyBlockquote
         children="We give you the platform to purchase your soul wears,dress,accesories and anything about your ghanaian culture wears. You do not  need to be in Ghana to feel your culture.  "
-        className="max-w-2xl shadow-lg rounded-lg leading-loose text-lg tracking-wider mx-auto mt-20 p-4 font-serif"
+        className="max-w-2xl shadow-lg rounded-lg leading-loose text-lg tracking-wider text-white mx-auto mt-20 p-4 font-serif"
         />
       </div>
      
