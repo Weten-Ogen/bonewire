@@ -2,9 +2,8 @@
 import React from 'react'
 import AboutImg from '@/public/images/hero.png'
 import Image from 'next/image'
-
-import { TypographyInlineCode } from '@/components/typography/inlinecode'
 import { TypographyH2 } from '@/components/typography/h2'
+import { TypographyInlineCode } from '@/components/typography/inlinecode'
 
 const About = () => {
   return (
