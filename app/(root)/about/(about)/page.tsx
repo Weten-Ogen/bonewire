@@ -18,7 +18,7 @@ const About = () => {
         className=" w-full  object-cover h-screen" />
       </div>
       <div 
-      className='bg-slate-900/55 absolute h-screen w-full z-20  top-0 left-0'
+      className='bg-slate-900/50 absolute h-screen w-full z-20  top-0 left-0'
       />
       <div className='absolute top-0 pt-20 z-20 flex-center justify-center flex p-4  gap-8 flex-col w-full'>
         <TypographyH2
