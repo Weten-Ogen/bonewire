@@ -3,7 +3,7 @@ import React from 'react'
 import AboutImg from '@/public/images/hero.png'
 import Image from 'next/image'
 import { TypographyH2 } from '@/components/typography/h2'
-import { TypographyInlineCode } from '@/components/typography/inlinecode'
+import { TypographyBlockquote } from '@/components/typography/block'
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
         children="Our story"
         className='w-full text-orange-500 uppercase  text-center'
         />
-        <TypographyInlineCode
+        <TypographyBlockquote
         children="We give you the platform to purchase your soul wears,dress,accesories and anything about your ghanaian culture wears. You do not  need to be in Ghana to feel your culture.  "
         className="max-w-2xl shadow-lg rounded-lg leading-loose text-lg tracking-wider mx-auto mt-20 p-4 font-serif"
         />
