@@ -13,10 +13,10 @@ interface heroprops {
 const HeroStatement = (props:heroprops) => {
   return (
     <div 
-    className={cn('bg-black h-[70vh] w-full my-10 md:my-20  relative ',props.className)}>
-      <div className='max-w-full rounded-lg  md:my-12 md:px-4 z-20'>
+    className={cn('bg-black  h-[90vh] md:h-screen max-w-full  my-10 relative ',props.className)}>
+      <div className='max-w-full w-full h-[90vh]  md:h-screen rounded-lg   z-20  object-contain py-8 '>
         <video width='800' 
-        className='w-full h-auto '
+        className='w-full object-cover max-h-[90vh] h-auto  '
          height="auto"  
         muted 
         autoPlay
@@ -26,15 +26,7 @@ const HeroStatement = (props:heroprops) => {
           type="video/mp4"/>
         </video>
       </div>
-      <div className="z-20 absolute  inset-0 w-full p-8 md:flex items-center hidden justify-center ">
-
-      <TypographyBlockquote className='text-md md:text-lg md:max-w-2xl'>
-        Bonewire is the Leading Ecommerce platform that makes you experience Ghana through culture.All products are hand-made the hiddenafrican way. Africans take pride in their culture because of the blood and tears invested in the process. 
-        We aim to make everyone experience the true BlackStar spirit of an African. Our Ancestors laid their blood for the freedom to experience our culuture.
-        Do not miss out being an African, African, is not where you are born , is who you are and never look down on that.
-        Take pride in your Identity with us.
-      </TypographyBlockquote>
-      </div>
+     
      
     </div>
   )
