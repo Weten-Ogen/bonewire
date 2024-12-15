@@ -39,9 +39,8 @@ const ProductCard = (props:productcardprops) => {
                 alt={`${props.label} image`}
                 />
             </div>
-            <div className='flex text-yellow-500 items-center gap-2 p-2'>
-            
-            <TypographyMuted className='font-bold font-sans text-slate-900 text-lg'>GHC {props.price}</TypographyMuted>
+            <div className='flex text-yellow-500 items-center  '>
+            <TypographyMuted className='font-bold font-sans text-slate-900 text-lg p-2'>GHC {props.price}</TypographyMuted>
             </div>
         </CardContent>
         
