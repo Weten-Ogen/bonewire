@@ -30,7 +30,7 @@ const ProductCard = (props:productcardprops) => {
     <div className={cn(' rounded-t-lg rounded-b-lg shadow-lg',props.className)}>
       <Card className="rounded-t-lg rounded-b-lg">
         <CardContent className='flex flex-col rounded-b-lg  items-start rounded-t-lg p-0'>
-            <div className="w-full  max-h-[20vh]  md:max-w-full overflow-hidden rounded-t-lg  max-h-60">
+            <div className="w-full  max-h-[20vh]  md:max-w-full overflow-hidden rounded-t-lg  md:max-h-60">
                 <Image 
                 className='object-cover rounded-t-lg  max-w-full w-full max-h-[20vh] md:max-h-[50vh] h-auto'
                 src={props.imageUrl}
