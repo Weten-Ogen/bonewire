@@ -25,11 +25,11 @@ const ProductCard = (props:productcardprops) => {
 
   return (
     <Link
-     className='hover:-translate-y-0.5 hover:opacity-80 duration-500 max-w-sm  '
+     className='hover:-translate-y-0.5 hover:opacity-80 duration-500  rounded-b-lg max-w-sm  '
      href={`products/${props.id}`} >
-    <div className={cn(' rounded-t-lg shadow-lg',props.className)}>
-      <Card className="rounded-t-lg">
-        <CardContent className='flex flex-col gap-4 items-start rounded-t-lg p-0'>
+    <div className={cn(' rounded-t-lg rounded-b-lg shadow-lg',props.className)}>
+      <Card className="rounded-t-lg rounded-b-lg">
+        <CardContent className='flex flex-col rounded-b-lg gap-4 items-start rounded-t-lg p-0'>
             <div className="w-full max-h-[20vh]  md:h-[180px] overflow-hidden  rounded-t-lg">
                 <Image 
                 className='object-cover rounded-t-lg  max-w-full w-full max-h-[20vh] h-auto'
