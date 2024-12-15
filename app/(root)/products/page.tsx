@@ -17,10 +17,13 @@ const Products = async() => {
       "Content-Type": "application/json"
     }
   }).then(res => res.json())
- 
+  if(!products){
+    throw new Error('There is no internet connection .')
+  }
+
   return (
     <section className='pb-10'>
-      <div className="bg-black p-2  h-[60vh] text-white pt-20">
+      <div className="bg-black p-2  h-[65vh] md:h-[40vh] text-white pt-20">
      <TypographyLarge className=' capitalize text-left p-4  text-3xl md:text-4xl font-bold'>
        Get value for everything you purchase on this here.
      </TypographyLarge>
@@ -29,7 +32,7 @@ const Products = async() => {
       
       </div>
       <ProductGrid 
-      className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center gap-8  pt-10  '
+      className='grid  grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center gap-8  pt-10  '
       data={products.data}
       />
       <p>

@@ -13,7 +13,8 @@ import HeroCarouComp from "./herocaroucomp"
 
 export function HeroCarousel() {
   return (
-    <div className="w-full h-[60vh]  my-4 md:h-[70vh] object-contain  p-4">
+    <div className="w-full h-[50vh] object-cotain   mt-4 mb-10 "
+   > 
     <Carousel className="w-full   max-w-sm md:w-full mx-auto md:max-w-[80%]">
       <CarouselContent className="w-full  p-4">
         {testimonials.map(item => {

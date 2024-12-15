@@ -13,16 +13,10 @@ interface heroprops {
 const HeroStatement = (props:heroprops) => {
   return (
     <div 
-    className={cn('bg-black h-screen w-full my-10 md:my-20  relative ',props.className)}>
-      <div className='custom-shape-divider-top-1734018776'>
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-    </svg>
-      </div>
-
-      <div className='w-full flex items-center justify-center py-28 px-8 rounded-lg  md:my-12 md:px-4'>
+    className={cn('bg-black h-[70vh] w-full my-10 md:my-20  relative ',props.className)}>
+      <div className='max-w-full rounded-lg  md:my-12 md:px-4 z-20'>
         <video width='800' 
-        className='w-full h-[65vh]  '
+        className='w-full h-auto '
          height="auto"  
         muted 
         autoPlay
@@ -32,7 +26,7 @@ const HeroStatement = (props:heroprops) => {
           type="video/mp4"/>
         </video>
       </div>
-      <div className="z-20 absolute inset-0 w-full p-8 md:flex items-center hidden justify-center ">
+      <div className="z-20 absolute  inset-0 w-full p-8 md:flex items-center hidden justify-center ">
 
       <TypographyBlockquote className='text-md md:text-lg md:max-w-2xl'>
         Bonewire is the Leading Ecommerce platform that makes you experience Ghana through culture.All products are hand-made the hiddenafrican way. Africans take pride in their culture because of the blood and tears invested in the process. 

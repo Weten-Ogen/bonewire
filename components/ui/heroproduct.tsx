@@ -11,7 +11,7 @@ const HeroProduct = (props:heroproductprops) => {
   return (
     <div 
     id="heroproduct" 
-    className={cn('flex relative justify-center w-full bg-black h-[70vh] p-8',props.className)}
+    className={cn('flex relative justify-center w-full bg-black h-[50vh] p-8',props.className)}
     >
       
      <SearchBtn className=""/>

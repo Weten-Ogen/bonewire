@@ -26,7 +26,7 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
   }
 
   return (
-    <div className={cn('relative object-contain  h-[90vh]  overflow-hidden w-full ',props.className)}>
+    <div className={cn('relative object-contain  h-[80vh]  overflow-hidden w-full ',props.className)}>
    
       <Image
       className='w-full  inset-0 h-screen -z-10 object-cover '

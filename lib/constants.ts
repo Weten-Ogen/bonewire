@@ -54,9 +54,6 @@ const filterlist= [
     },
     {
     label: "accessories"
-    },
-    {
-    label: "footwear"
     }
 ]
 

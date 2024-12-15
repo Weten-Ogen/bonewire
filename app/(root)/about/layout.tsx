@@ -1,15 +1,12 @@
 
-
 export default function AboutLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <main className="mt-30">
-        about page
+    <div className="mt-30">
         { children}
-        
-        </main>
+    </div>
   );
 }

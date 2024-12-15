@@ -14,9 +14,9 @@ interface comprops {
 
 const HeroCarouComp = (props:comprops) => {
   return (
-    <CarouselItem className={cn("pl-1 md:basis-1/2 md:basic-1/3  border  shadow-xl shadow-yellow-500  w-full ",props.className)}>
-      <div className="p-1 ">
-              <Card className="">
+    <CarouselItem className={cn("pl-1 md:basis-1/2 md:basic-1/3  border  shadow-xl rounded-lg max-w-md shadow-yellow-500  w-full ",props.className)}>
+      <div className="p-1 rounded-lg ">
+              <Card className="rounded-lg max-w-full">
                 <CardContent className="flex flex-col aspect-square relative items-center gap-4 w-full">
                   <div>
 

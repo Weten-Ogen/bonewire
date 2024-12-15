@@ -25,14 +25,14 @@ const ProductCard = (props:productcardprops) => {
 
   return (
     <Link
-     className='hover:-translate-y-0.5 hover:opacity-80 duration-500 '
+     className='hover:-translate-y-0.5 hover:opacity-80 duration-500 max-w-sm  '
      href={`products/${props.id}`} >
     <div className={cn(' rounded-t-lg shadow-lg',props.className)}>
       <Card className="rounded-t-lg">
         <CardContent className='flex flex-col gap-4 items-start rounded-t-lg p-0'>
             <div className="w-full h-[200px] overflow-hidden  rounded-t-lg">
                 <Image 
-                className='object-cover rounded-t-lg  w-full'
+                className='object-cover rounded-t-lg  max-w-full h-auto'
                 src={props.imageUrl}
                 width={500}
                 height={500}
@@ -40,8 +40,8 @@ const ProductCard = (props:productcardprops) => {
                 />
             </div>
             <div className='flex text-yellow-500 items-center gap-2 p-2'>
-            <TypographyH4 className="text-lg">$ {calprice}</TypographyH4>
-            <TypographyMuted className=''>(GHC {props.price})</TypographyMuted>
+            
+            <TypographyMuted className='font-bold font-sans text-slate-900 text-lg'>GHC {props.price}</TypographyMuted>
             </div>
         </CardContent>
         
