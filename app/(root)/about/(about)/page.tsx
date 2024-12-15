@@ -20,11 +20,13 @@ const About = () => {
       <div 
       className='bg-slate-900/50 absolute h-screen w-full z-20  top-0 left-0'
       />
-      <div className='absolute top-0 pt-20 z-20 flex-center justify-center flex p-4  gap-8 flex-col w-full'>
+      <div className="max-w-2xl mx-auto pt-20 z-20 text-white">
+        <div className='max-w-lg text-center '>
         <TypographyH2
         children="Our story"
-        className='w-full text-orange-500 uppercase  text-center'
+        className=' text-orange-500 uppercase font-bold font sans text-center'
         />
+        </div>
         <TypographyBlockquote
         children="We give you the platform to purchase your soul wears,dress,accesories and anything about your ghanaian culture wears. You do not  need to be in Ghana to feel your culture.  "
         className="max-w-2xl shadow-lg rounded-lg leading-loose text-lg tracking-wider text-white mx-auto mt-20 p-4 font-serif"
