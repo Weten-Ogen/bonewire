@@ -13,10 +13,10 @@ interface heroprops {
 const HeroStatement = (props:heroprops) => {
   return (
     <div 
-    className={cn('bg-black  h-[90vh] md:h-screen max-w-full  my-10 relative ',props.className)}>
-      <div className='max-w-full w-full h-[90vh]  md:h-screen rounded-lg   z-20  object-contain py-8 '>
+    className={cn('md:h-screen max-w-full   relative ',props.className)}>
+      <div className='max-w-full w-full  h-screen rounded-lg   z-20  object-contain py-8 '>
         <video width='800' 
-        className='w-full object-cover max-h-[90vh] h-auto  '
+        className='w-full object-cover md:max-h-screen h-auto  '
          height="auto"  
         muted 
         autoPlay

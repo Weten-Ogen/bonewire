@@ -1,9 +1,14 @@
+import { getUserInfo } from "@/app/actions/authservice";
 import ProfileCard from "./profilecard";
+import { useStyleRegistry } from "styled-jsx";
+import { redirect } from "next/navigation";
+import { getuserbyid } from "@/app/actions/fetch";
 
 
 
 
-const Profile = () => {
+const Profile = async() => {
+  
   const user = {
     name: "Marcus Gideon Oware",
     email: "marcuoware@gmail.com",

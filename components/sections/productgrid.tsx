@@ -77,7 +77,7 @@ const ProductGrid = (props: productgridprops) => {
 loading ? <Loader 
 size={40}
 className='animate-spin  font-bold flex items-center justify-center w-full' /> :
-      <div className={cn('p-4 mx-auto grid-cols-2 md:grid-cols-3 w-full gap-4  ',props.className)}>
+      <div className='grid grid-cols-1 md:grid-cols-3  items-center justify-center gap-8 p-4 w-full mx-auto'>
         {products.map((item:any )=> {
             return(
                 

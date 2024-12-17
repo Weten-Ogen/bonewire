@@ -23,11 +23,6 @@ const HeroInfo = (props:heroinfoprops) => {
             We aid you finding a delivery agent here, that matches yor budget </TypographyP>
         
         
-        <div className='flex relative ml-0 items-end justify-end'>
-            <div className='h-16 w-16 bg-yellow-500 rounded-full  absolute filter mix-blend-multiply animate-pulse ease-in-out delay-700 blur -top-4 -right-12 duration-[2000]'/>
-            <div className='h-16 w-16 bg-slate-500  rounded-full mix-blend-multiply absolute top-5 filter blur -right-10 duration-[2000] animate-pulse delay-1000 ease-in-out'/>
-            <div className='h-16 w-16 bg-red-500  filter blur rounded-full mix-blend-multiply animate-pulse delay-500 ease-in-out '/>
-          </div>
       </div >
       <div className='pt-0 md:pt-10  border  p-4 rounded-lg shadow-xl flex flex-col relative items-start max-w-sm'>
     
@@ -39,11 +34,6 @@ const HeroInfo = (props:heroinfoprops) => {
             <TypographyP className="font-serif">
                 We always here to aid you in your search for authentic cultural experience online.We think culture is for the royalties of which you are a part. We here to  serve you.
             </TypographyP>
-            <div className='flex relative ml-0 items-end justify-end'>
-            <div className='h-16 w-16 bg-yellow-300 rounded-full  absolute filter mix-blend-multiply animate-pulse ease-in-out delay-700 blur -top-4 -right-12 duration-[2000]'/>
-            <div className='h-16 w-16 bg-slate-300  rounded-full mix-blend-multiply absolute top-5 filter blur -right-10 duration-[2000] animate-pulse delay-1000 ease-in-out'/>
-            <div className='h-16 w-16 bg-red-300  filter blur rounded-full mix-blend-multiply animate-pulse delay-500 ease-in-out '/>
-          </div>
       </div>
       <div className='pt-0 md:pt-10  border relative  p-4 rounded-lg shadow-xl flex flex-col max-w-sm  items-start'>
 
@@ -57,11 +47,7 @@ const HeroInfo = (props:heroinfoprops) => {
                 Some customers prefer outfit made out of kente. 
                 We can find you the best of designers to get it done for you.
             </TypographyP>
-          <div className='flex relative ml-0 items-end justify-end'>
-            <div className='h-16 w-16 bg-yellow-500 rounded-full  absolute filter mix-blend-multiply animate-pulse ease-in-out delay-700 blur -top-4 -right-12 duration-[2000]'/>
-            <div className='h-16 w-16 bg-slate-500  rounded-full mix-blend-multiply absolute top-5 filter blur -right-10 duration-[2000] animate-pulse delay-1000 ease-in-out'/>
-            <div className='h-16 w-16 bg-red-500  filter blur rounded-full mix-blend-multiply animate-pulse delay-500 ease-in-out '/>
-          </div>
+          
       </div>
     </section>
   )

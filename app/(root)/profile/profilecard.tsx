@@ -1,10 +1,12 @@
 "use client"
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ProfileBg from '@/public/images/profile.png'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
+import { getUserInfo } from '@/app/actions/authservice'
+import { getuserbyid } from '@/app/actions/fetch'
 
 interface userprops {
   country : string,
@@ -18,7 +20,26 @@ interface userprops {
 
 const ProfileCard = (props:userprops) => {
   const router = useRouter();
-  const handledelete = () => {
+  const [user,setUser] = useState<any>()
+  const [userId, setUserId] = useState<any>()
+
+  const setinitialuser = () => {
+    const initial = getUserInfo();
+    setUserId(initial.id)  
+    console.log(initial)
+    console.log(userId)
+  }
+    useEffect(() => {
+      setinitialuser()
+    
+      const getnewuser = async() => {
+        const newuser = await getuserbyid(userId)
+        return newuser
+      }
+       
+      },[])
+    
+      const handledelete = () => {
 
   }
 
@@ -28,8 +49,8 @@ const ProfileCard = (props:userprops) => {
   }
 
   return (
-    <div  className={cn('min-h-screen md:h-screen grid grid-cols-1 md:grid-cols-2',props.className)}>
-      <div className='max-w-2xl flex items-center justify-center  object-contain bg-black '>
+    <div  className={cn('min-h-screen w-full md:max-w-lg md:h-screen',props.className)}>
+      <div className='max-w-full  flex items-center justify-center  object-contain bg-black '>
       <Image 
       src={ProfileBg}
       alt='profile bg'

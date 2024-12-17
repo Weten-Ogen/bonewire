@@ -99,5 +99,5 @@ export async function  getuserbyid(id:string) {
     )
 
     const requestedData = await res.json();
-    return requestedData;    
+    return requestedData;   
 }

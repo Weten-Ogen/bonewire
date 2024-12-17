@@ -13,7 +13,7 @@ import HeroCarouComp from "./herocaroucomp"
 
 export function HeroCarousel() {
   return (
-    <div className="w-full h-[50vh] object-cotain   mt-4 mb-10 "
+    <div className="w-full h-[60vh] object-cotain   mt-14  "
    > 
     <Carousel className="w-full   max-w-sm md:w-full mx-auto md:max-w-[80%]">
       <CarouselContent className="w-full  p-4">
