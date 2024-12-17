@@ -16,10 +16,12 @@ interface userprops {
 
 const ProfileCard = (props:userprops) => {
  const {user,deleteaccount,getUserdetails} = useUserDetailsStore()
+ const router = useRouter()
  useEffect(() => {
   getUserdetails()
-  
+  router.refresh()
  },[])
+
  const newdate =user?.createdAt
 
    
@@ -93,9 +95,8 @@ const ProfileCard = (props:userprops) => {
             delete account
             </Button>
             <Button
+            onClick={() => router.push('/')}
             className="capitalize hover:-translate-y-0.5 ease-out duration-500 w-full">
-
-            
             go to home
             </Button>
           </div>
