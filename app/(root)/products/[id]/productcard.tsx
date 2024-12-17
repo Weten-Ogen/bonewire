@@ -49,7 +49,7 @@ const ProductCard = ({products}:cardprops) => {
                 </TypographyP>
             </div>
             <div className=" flex items-center gap-4">
-            <Button className='w-full capitalize font-bold font-serif '>go back</Button>
+            <Button onClick={gobackhandler} className='w-full capitalize font-bold font-serif '>go back</Button>
                 <Button className='w-full font-serif  capitalize'>chat now</Button>
                 
             </div>
