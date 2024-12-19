@@ -22,7 +22,7 @@ const Products = async() => {
   }
 
   return (
-    <section className='pb-10'>
+    <section className='pb-10 relative'>
       <div className="bg-black p-2  h-[65vh] md:h-[40vh] text-white pt-20">
      <TypographyLarge className=' capitalize text-left p-4  text-3xl md:text-4xl font-bold'>
        Get value for everything you purchase on this here.

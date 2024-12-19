@@ -16,11 +16,13 @@ interface userprops {
 
 const ProfileCard = (props:userprops) => {
  const {user,deleteaccount,getUserdetails} = useUserDetailsStore()
+
  const router = useRouter()
+ 
  useEffect(() => {
   getUserdetails()
   router.refresh()
- },[])
+ },[user])
 
  const newdate =user?.createdAt
 
