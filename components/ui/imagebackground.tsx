@@ -36,8 +36,8 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
       height={1000}
       />
 
-      <div className='absolute  z-10 text-white  inset-0 pt-20'>
-      <div className='absolute max-w-md bottom-40 flex flex-col z-20 gap-5 p-4'>
+      <div className='absolute  z-10 text-white  inset-0 pt-20 max-w-full md:max-w-lg'>
+      <div className='absolute md:max-w-md bottom-40 flex flex-col z-20 gap-5 p-4'>
         <h2 className='text-5xl'>
             {props.heading}
         </h2>

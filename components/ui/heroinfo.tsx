@@ -13,7 +13,7 @@ const HeroInfo = (props:heroinfoprops) => {
   return (
     <section 
     id="heroinfo" 
-    className={cn('grid grid-cols-1 md:grid-cols-3 w-[99%] mx-auto item-center justify-between h-[140vh] mt-5 md:h-[60vh] p-4 gap-8 md:gap-12 ',props.className)}>
+    className={cn('grid grid-cols-1 md:grid-cols-3 w-[99%]  item-center justify-between min-h-screen  mt-5 md:h-[70vh] p-4 gap-8 md:gap-12 ',props.className)}>
       <div className='pt-0 md:pt-10 relative max-w-sm  p-4 rounded-lg shadow-xl flex  flex-col items-start'>
        
         <Truck className="bg-yellow-300 rounded-lg p-2 " size={56}/>
