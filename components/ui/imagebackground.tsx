@@ -26,7 +26,7 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
   }
 
   return (
-    <div className={cn('relative object-contain  h-[80vh]  overflow-hidden w-full ',props.className)}>
+    <div className={cn('relative object-contain h-[90vh]  overflow-hidden max-w-full w-full',props.className)}>
    
       <Image
       className='w-full  inset-0 h-screen -z-10 object-cover '
@@ -36,15 +36,16 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
       height={1000}
       />
 
-      <div className='absolute  z-10 text-white  inset-0 pt-20 max-w-full md:max-w-lg'>
-      <div className='absolute md:max-w-md bottom-40 flex flex-col z-20 gap-5 p-4'>
-        <h2 className='text-5xl'>
+      <div className='absolute pt-16 p-4 md:p-8  inset-0 flex flex-col items-center md:items-start md:justify-center max-w-lg  justify-center text-white '>
+      <div className=''>
+       
+        <h2 className='text-5xl md:text-7xl font-bold font-serif'>
             {props.heading}
         </h2>
         <div>
         {
           props.subHeading && 
-          <TypographyH4 className='text-2xl'>
+          <TypographyH4 className='text-xl md:text-2xl text-serif py-5'>
             {props.subHeading}
            </TypographyH4>
         }
@@ -54,12 +55,14 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
          <TypographyMuted className=''>{props.message}</TypographyMuted>
         }
         </div>
+        
         <Button
         onClick={redirectToProducts} 
-   
+        
         className='w-full z-20 p-4 cursor-pointer  uppercase'>Order now</Button>
       </div>
-    </div>
+        </div>  
+    
     
     </div>
   )
