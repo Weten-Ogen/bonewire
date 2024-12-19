@@ -23,7 +23,3 @@ export const ProductFormSchema = () => z.object({
   description: z.string(),
   tag: z.string()
 })
-
-export const chatformschema = () => z.object ({
-  message: z.string()
-})

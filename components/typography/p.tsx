@@ -7,7 +7,7 @@ interface TypographyPprops{
 }
 export function TypographyP(props: TypographyPprops) {
     return (
-      <div className={cn("leading-7 ",props.className)}>
+      <div className={cn("leading-7 [&:not(:first-child)]:mt-6",props.className)}>
         {props.children}
       </div>
     )

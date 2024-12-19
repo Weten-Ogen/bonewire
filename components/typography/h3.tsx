@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import React from "react"
 
 interface TypographyH3props {
-    children:string,
+    children : any,
     className: string,
 }
 export function TypographyH3(props: TypographyH3props) {
