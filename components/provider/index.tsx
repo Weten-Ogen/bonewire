@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import NavBar from '../ui/navbar';
+import Chatbox from '../ui/chatbox';
 
 
 interface providerprops {
@@ -10,11 +11,12 @@ interface providerprops {
 
 const Provider = (props: providerprops) => {
   return (
-    <div className=''> 
+    <div className='relative w-full'> 
       <NavBar/>
       <div className=''>
         {props.children}
       </div>
+      <Chatbox className=""/>
     </div>
   )
 }
