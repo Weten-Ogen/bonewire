@@ -19,7 +19,7 @@ export default function Home() {
         <HeroStatement className="mt-24 bg-black text-white "/>
         <HeroCarousel/>
         <HeroProduct className=""/>
-        <Socials className="p-4 flex items-center justify-between"/>
+        <Socials className=""/>
    </div>
   );
 }

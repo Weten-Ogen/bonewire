@@ -7,6 +7,7 @@ import facebookImage from '@/public/facebuk.png'
 import tiktok from '@/public/tiktok.png'
 import insta from  '@/public/insta.png'
 import x from '@/public/x.png'
+import Contactinfo from './contactinfo'
 
 interface socialprops{
   className?: string
@@ -14,7 +15,9 @@ interface socialprops{
 
 const Socials = (props:socialprops) => {
   return (
-    <div className={cn('',props.className)}>
+    <div className='max-w-full p-4' >
+      <Contactinfo />
+    <div className="flex items-center justify-between  p-2 w-full">
       <Link 
       target='_blank'
       href="https://www.facebook.com/bonewire.shop"
@@ -61,6 +64,7 @@ const Socials = (props:socialprops) => {
         />
       </Link>
     </div>
+  </div>
   )
 }
 
