@@ -14,7 +14,7 @@ const HeroInfo = (props:heroinfoprops) => {
     <section 
     id="heroinfo" 
     className={cn('grid grid-cols-1 md:grid-cols-3 w-[99%]  item-center justify-between min-h-sm mt-5 md:h-[70vh] p-4 gap-8 md:gap-12 ',props.className)}>
-      <div className='pt-0  md:pt-10 relative max-w-sm p-6 md:p-4 rounded-lg shadow-xl flex  flex-col items-start'>
+      <div className=' relative max-w-sm p-6 md:p-4 rounded-lg shadow-xl flex  flex-col items-start'>
        
         <Truck className="bg-yellow-300 rounded-lg p-2 " size={56}/>
         
@@ -24,7 +24,7 @@ const HeroInfo = (props:heroinfoprops) => {
         
         
       </div >
-      <div className='pt-0 md:pt-10  border  p-4 rounded-lg shadow-xl flex flex-col relative items-start max-w-sm'>
+      <div className='pt-0 md:pt-10 p-6  border  md:p-4 rounded-lg shadow-xl flex flex-col relative items-start max-w-sm'>
     
         <Server 
         className="bg-yellow-300 rounded-lg p-2 "
@@ -35,7 +35,7 @@ const HeroInfo = (props:heroinfoprops) => {
                 We always here to aid you in your search for authentic cultural experience online.We think culture is for the royalties of which you are a part. We here to  serve you.
             </TypographyP>
       </div>
-      <div className='pt-0 md:pt-10  border relative  p-4 rounded-lg shadow-xl flex flex-col max-w-sm  items-start'>
+      <div className='pt-0 md:pt-10  border relative  p-6 md:p-4 rounded-lg shadow-xl flex flex-col max-w-sm  items-start'>
 
         <HeartHandshake className="bg-yellow-300 rounded-lg p-2 " size={56}/>
     
