@@ -1,3 +1,4 @@
+import Chat from '@/components/chat/chat'
 import Filters from '@/components/sections/filters'
 import ProductGrid from '@/components/sections/productgrid'
 import SearchZone from '@/components/sections/searchzone'
@@ -11,21 +12,22 @@ export const revalidate = 3600
 
 const Products = async() => {
   
-  const products  = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/products`, {
+  const products  = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/products`,{
     cache: "no-store",
     headers: {
       "Content-Type": "application/json"
     }
   }).then(res => res.json())
+  
   if(!products){
     throw new Error('There is no internet connection .')
   }
 
   return (
-    <section className='pb-10 relative'>
+    <section className='pb-10 relative w-full'>
       <div className="bg-black p-2  h-[65vh] md:h-[40vh] text-white pt-20">
      <TypographyLarge className=' capitalize text-left p-4  text-3xl md:text-4xl font-bold'>
-       Get value for everything you purchase on this here.
+       We are here you serve you .King and Queens
      </TypographyLarge>
       <SearchZone 
       classsName=''/>
@@ -37,6 +39,7 @@ const Products = async() => {
       />
       <p>
       </p>
+      <Chat/>
     </section>
   )
 }
