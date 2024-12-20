@@ -42,7 +42,7 @@ const Chat = (props:chatprops) => {
             Please what do you need help with
           </SheetDescription>
         </SheetHeader>
-        <div className="h-[85vh] border rounded-lg">
+        <div className="h-[75] border rounded-lg">
 
         </div>
         <ChatBox/>
