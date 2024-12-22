@@ -20,9 +20,11 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ initialMessages = [] }) => {
   }
 
   return (
-    <div>
+    <div className='w-full relative'>
       {
-        close ? <Button onClick={() => setClose(prev => !prev)}>
+        close ? <Button 
+         className='absolute bottom-0 right-5 '
+        onClick={() => setClose(prev => !prev)}>
           <MessageCircle/>
         </Button>:
 
