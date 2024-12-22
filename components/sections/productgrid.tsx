@@ -57,7 +57,7 @@ const ProductGrid = (props: productgridprops) => {
    
 
     return (
-    <div className='flex flex-col items-start '>
+    <div className='flex flex-col items-start relative'>
      <div className='flex flex-wrap gap-2 p-4 mt-5 '>
         {filterlist.map(item => {
           return (
@@ -90,11 +90,13 @@ className='animate-spin  font-bold flex items-center justify-center w-full' /> :
         })}
       </div>
       }
-    </div>
+      
     
+    </div>
   )
 
 }
+
 
 
 export default ProductGrid
