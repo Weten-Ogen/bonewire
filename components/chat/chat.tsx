@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { useChat } from 'ai/react'
-import { Send, Minimize2, Maximize2, X, MessageCircle } from 'lucide-react'
+import { Send, Minimize2, Maximize2, X, MessageCircle, MessageSquare } from 'lucide-react'
 import { AIAssistantProps } from '@/types/chat'
 import { Button } from '../ui/button'
 
@@ -20,13 +20,19 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ initialMessages = [] }) => {
   }
 
   return (
-    <div className='w-full relative'>
+    <div className='w-full fixed right-0 bottom-5 h-50 w-50 rounded-full p-2'>
       {
-        close ? <Button 
-         className='absolute bottom-0 right-5 '
-        onClick={() => setClose(prev => !prev)}>
-          <MessageCircle/>
-        </Button>:
+        close ? 
+        <div className='p-2'>
+
+          <MessageSquare
+           onClick={() => setClose(prev => !prev)}
+           fill='yellow'
+           stroke='yellow'
+           size={80}
+           className=' '/>
+        </div>
+       :
 
     <div className={`fixed bottom-4 right-4 w-80 bg-white rounded-lg shadow-lg transition-all duration-300 ease-in-out ${isMinimized ? 'h-14' : 'h-[32rem]'}`}>
       <div className="bg-yellow-400 p-3 rounded-t-lg flex justify-between items-center">

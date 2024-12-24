@@ -26,9 +26,9 @@ const Products = async() => {
 
   return (
     <section className='pb-10 relative w-full'>
-      <div className="bg-black p-2  h-[65vh] md:h-[40vh] text-white pt-20">
-     <TypographyLarge className=' capitalize text-left p-4  text-3xl md:text-4xl font-bold'>
-       We are here you serve you .King and Queens
+      <div className="bg-black p-2  h-[70vh] md:h-[50vh] text-white pt-20">
+     <TypographyLarge className='  text-left p-4  text-3xl md:p-2 md:max-w-2xl font-bold text-serif'>
+       We have all kinds of kente products just for you.
      </TypographyLarge>
       <SearchZone 
       classsName=''/>
