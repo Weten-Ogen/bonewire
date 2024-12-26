@@ -57,11 +57,11 @@ const ProfileCard = (props:userprops) => {
           {user?.country}
           </p>
         </div>
-        <div className='flex items-center justify-between  gap-2'>
+        <div className='flex items-center justify-between  gap-2 max-w-sm'>
           <p className='text-2xl  font-bold font-sans'>
             Email 
           </p>
-          <p className=' text-2xl max-w-[sm] font-serif '>
+          <p className=' text-2xl  font-serif '>
 
           {user?.email}
           </p>
