@@ -61,7 +61,7 @@ const ProfileCard = (props:userprops) => {
           <p className='text-2xl  font-bold font-sans'>
             Email 
           </p>
-          <p className=' text-2xl max-w-[100px] font-serif '>
+          <p className=' text-2xl max-w-[sm] font-serif '>
 
           {user?.email}
           </p>
