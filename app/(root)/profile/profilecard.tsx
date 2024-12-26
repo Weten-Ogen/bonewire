@@ -21,8 +21,8 @@ const ProfileCard = (props:userprops) => {
  
  useEffect(() => {
   getUserdetails()
-  router.refresh()
- },[user])
+  
+ },[])
 
  const newdate =user?.createdAt
 
@@ -89,7 +89,7 @@ const ProfileCard = (props:userprops) => {
           </p>
           <p className='capitalize text-2xl font-serif '>
 
-          {user && user?.contact}
+          {user && user?.contactNumber}
           </p>
         </div>
           <div className='flex items-center gap-5 text-lg tracking-wider font-sans  pt-5'>

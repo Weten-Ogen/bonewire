@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Sheet,SheetClose,SheetContent,SheetTrigger,SheetPortal,SheetHeader,SheetTitle } from '../ui/sheet'
 import LogoImage from '../ui/logoimage'
 import { Button } from '../ui/button'
@@ -17,16 +17,21 @@ interface mobilenavprops{
 
 
 const SideBar = (props:mobilenavprops) => {
+   const [usedetails, setUserdetails] = useState<any>()
+
   const router = useRouter()
   const userInfo = getUserInfo();
   const filternavlinks = navlinks.filter(item => item.label !== "Admin" )
+  
   
   const logout = () => {
     removeUser()
     router.push('/auth/signin')
     router.refresh()
   }
-
+  useEffect(() => {
+    setUserdetails(userInfo)
+  }, [])
   return (
     <Sheet>
       <SheetTrigger className='cursor-pointer' asChild>
@@ -51,7 +56,7 @@ const SideBar = (props:mobilenavprops) => {
       </div>
       <div>
       {
-        userInfo?.role !== "user" ?
+        usedetails?.role == "admin" ?
         <div className='flex flex-col  gap-4 mt-5 pl-4'>
         {navlinks.map(item => {
           return (

@@ -7,7 +7,7 @@ interface userprops {
     name: string,
     email: string,
     country: string,
-    contact:number,
+    contactNumber:number,
     address?: string,
     createdAt: Date,
 }
@@ -16,12 +16,14 @@ type userStore   =  {
     user: userprops | null,
     getUserdetails: () => void,
     deleteaccount: () => void,
+
 }
 
 export const useUserDetailsStore = create<userStore>((set) => ({
 user : null,
 getUserdetails: async() => {
-    const userinfo = getUserInfo()
+    const userinfo = await getUserInfo()
+    
     const fetcheduser= await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/user/${userinfo.id}`,{
         method:"GET",
         headers:{
@@ -29,9 +31,11 @@ getUserdetails: async() => {
         },
         cache:"no-store"
     }).then(res => res.json())
+   
     set((state) => ({user: state.user= fetcheduser.data}))
 },
 deleteaccount: () =>{
+    
+},
 
-}
 }))

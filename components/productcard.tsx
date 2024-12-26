@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from '@/lib/utils'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from './ui/card'
 import Image, { StaticImageData } from 'next/image'
 import { Button } from './ui/button'
@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { TypographyH3 } from './typography/h3'
 import { TypographyP } from './typography/p'
 import { TypographyH4 } from './typography/h4'
+import { useUserDetailsStore } from '@/store/userdetail'
 
 interface productcardprops{
 className?: string,
@@ -21,8 +22,15 @@ description:string
 }
 
 const ProductCard = (props:productcardprops) => {
-  const calprice  = Math.ceil(props.price / 16.50)  + 50
+  const {user,getUserdetails}  = useUserDetailsStore()
+
   const convertedprice = parseFloat(props.price.toString()).toFixed(2)
+  const dollarprice = Math.floor(props.price / 14.6 )
+  const converteddollarprice = parseFloat(dollarprice.toString())
+
+  useEffect(() => {
+    getUserdetails()
+  },[])
 
   return (
     <Link
@@ -46,7 +54,10 @@ const ProductCard = (props:productcardprops) => {
               <TypographyMuted className=' text-sm '>{props.label}</TypographyMuted>
               </div>
               <div className=' w-full text-yellow-500 '>
-              <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>GHC {convertedprice}</TypographyMuted>
+              {user?.country === "Ghana" ? 
+              <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>GHC {convertedprice}</TypographyMuted> :
+              <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>USD {converteddollarprice}</TypographyMuted>
+            }
               </div>
               <div className='w-full pt-5 '>
                 <Button className='font-bold capitalize tracking-wider w-full'>chat now</Button>
