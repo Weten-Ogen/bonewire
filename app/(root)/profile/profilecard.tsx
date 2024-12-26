@@ -29,7 +29,7 @@ const ProfileCard = (props:userprops) => {
    
   return (
     <div  className={cn('min-h-screen w-full md:flex  md:p-4 md:h-screen',props.className)}>
-      <div className='max-w-full md:max-w-2xl  flex items-center justify-center bg-black object-contain   '>
+      <div className='max-w-full md:max-w-2xl  flex items-center justify-center bg-yellow-500 object-contain   '>
       <Image 
       src={ProfileBg}
       alt='profile bg'
