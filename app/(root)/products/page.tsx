@@ -1,5 +1,3 @@
-
-import AIAssistant from '@/components/chat/chat'
 import Filters from '@/components/sections/filters'
 import ProductGrid from '@/components/sections/productgrid'
 import SearchZone from '@/components/sections/searchzone'
@@ -40,7 +38,7 @@ const Products = async() => {
       />
       <p>
       </p>
-      <AIAssistant/>
+  
     </section>
   )
 }

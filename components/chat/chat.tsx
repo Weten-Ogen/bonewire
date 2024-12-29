@@ -1,106 +1,109 @@
 'use client'
 
-import React, { useState } from 'react'
-import { useChat } from 'ai/react'
-import { Send, Minimize2, Maximize2, X, MessageCircle, MessageSquare } from 'lucide-react'
-import { AIAssistantProps } from '@/types/chat'
-import { Button } from '../ui/button'
+import { useEffect, useState } from 'react'
+import { io, Socket } from 'socket.io-client'
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
-const AIAssistant: React.FC<AIAssistantProps> = ({ initialMessages = [] }) => {
-  const { messages, input, handleInputChange, handleSubmit } = useChat({ initialMessages })
-  const [isMinimized, setIsMinimized] = useState<boolean>(false)
-  const [isTyping, setIsTyping] = useState<boolean>(false)
-  const [close , setClose] = useState<boolean>(true)
+interface Message {
+  id: string
+  text: string
+  sender: string
+}
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+export default function Chat() {
+  const [socket, setSocket] = useState<Socket | null>(null)
+  const [messages, setMessages] = useState<Message[]>([])
+  const [inputMessage, setInputMessage] = useState('')
+  const [connected, setConnected] = useState(false)
+
+  useEffect(() => {
+    const initSocket = async () => {
+      // Initialize socket connection
+      await fetch('/api/socket')
+      const newSocket = io()
+
+      newSocket.on('connect', () => {
+        console.log('Connected to Socket.IO server')
+        setConnected(true)
+      })
+
+      newSocket.on('message', (message: Message) => {
+        setMessages((prev) => [...prev, message])
+      })
+
+      newSocket.on('disconnect', () => {
+        console.log('Disconnected from Socket.IO server')
+        setConnected(false)
+      })
+
+      setSocket(newSocket)
+
+      return () => {
+        newSocket.close()
+      }
+    }
+
+    initSocket()
+  }, [])
+
+  const sendMessage = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsTyping(true)
-    handleSubmit(e)
-    setIsTyping(false)
+    if (inputMessage.trim() && socket) {
+      const message: Message = {
+        id: Date.now().toString(),
+        text: inputMessage,
+        sender: 'user'
+      }
+      socket.emit('message', message)
+      setInputMessage('')
+    }
   }
 
   return (
-    <div className='w-full fixed right-0 bottom-5 h-50 w-50 rounded-full p-2'>
-      {
-        close ? 
-        <div className='p-2'>
-
-          <MessageSquare
-           onClick={() => setClose(prev => !prev)}
-           fill='yellow'
-           stroke='yellow'
-           size={80}
-           className=' '/>
-        </div>
-       :
-
-    <div className={`fixed bottom-4 right-4 w-80 bg-white rounded-lg shadow-lg transition-all duration-300 ease-in-out ${isMinimized ? 'h-14' : 'h-[32rem]'}`}>
-      <div className="bg-yellow-400 p-3 rounded-t-lg flex justify-between items-center">
-        <h2 className="text-white font-semibold">AI Assitant</h2>
-        <div className="flex space-x-2">
-          <button onClick={() => setIsMinimized(!isMinimized)} className="text-white hover:text-yellow-100">
-            {isMinimized ? <Maximize2 size={18} /> : <Minimize2 size={18} />}
-          </button>
-          <button
-          onClick={() => setClose(prev=> !prev)}
-          className="text-white hover:text-yellow-100">
-            <X size={18} />
-          </button>
-        </div>
-      </div>
-      {!isMinimized && (
-        <>
-          <div className="h-[calc(100%-8rem)] overflow-auto p-4 space-y-4">
-            {messages.map((m) => (
+    <Card className=" w-full max-w-md mx-auto">
+      <CardHeader>
+        <CardTitle className="flex items-center justify-between">
+          Chat Room
+          <span className={`h-3 w-3 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`} />
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <ScrollArea className="h-[400px] w-full pr-4">
+          {messages.map((msg) => (
+            <div
+              key={msg.id}
+              className={`mb-4 flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
               <div
-                key={m.id}
-                className={`flex ${
-                  m.role === 'user' ? 'justify-end' : 'justify-start'
+                className={`rounded-lg px-4 py-2 max-w-[80%] ${
+                  msg.sender === 'user'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted'
                 }`}
               >
-                <div
-                  className={`max-w-[80%] p-2 rounded-lg ${
-                    m.role === 'user'
-                      ? 'bg-yellow-400 text-white'
-                      : 'bg-gray-100 text-gray-800'
-                  }`}
-                >
-                  {m.content}
-                </div>
+                {msg.text}
               </div>
-            ))}
-            {isTyping && (
-              <div className="flex justify-start">
-                <div className="bg-gray-100 text-gray-800 max-w-[80%] p-2 rounded-lg">
-                  Typing...
-                </div>
-              </div>
-            )}
-          </div>
-          <form onSubmit={onSubmit} className="p-4 border-t border-gray-200">
-            <div className="flex space-x-2">
-              <input
-                type="text"
-                value={input}
-                onChange={handleInputChange}
-                placeholder="Type your message..."
-                className="flex-1 p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                />
-              <button
-                type="submit"
-                className="bg-yellow-400 text-white p-2 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-600"
-                >
-                <Send size={18} />
-              </button>
             </div>
-          </form>
-        </>
-      )}
-    </div>
-  }
-    </div>
+          ))}
+        </ScrollArea>
+      </CardContent>
+      <CardFooter>
+        <form onSubmit={sendMessage} className="flex w-full gap-2">
+          <Input
+            value={inputMessage}
+            onChange={(e) => setInputMessage(e.target.value)}
+            placeholder="Type a message..."
+            disabled={!connected}
+          />
+          <Button type="submit" disabled={!connected}>
+            Send
+          </Button>
+        </form>
+      </CardFooter>
+    </Card>
   )
 }
-
-export default AIAssistant
 

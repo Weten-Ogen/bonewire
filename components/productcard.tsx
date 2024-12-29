@@ -11,6 +11,7 @@ import { TypographyH3 } from './typography/h3'
 import { TypographyP } from './typography/p'
 import { TypographyH4 } from './typography/h4'
 import { useUserDetailsStore } from '@/store/userdetail'
+import { useRouter } from 'next/navigation'
 
 interface productcardprops{
 className?: string,
@@ -23,7 +24,7 @@ description:string
 
 const ProductCard = (props:productcardprops) => {
   const {user,getUserdetails}  = useUserDetailsStore()
-
+  const  router = useRouter()
   const convertedprice = parseFloat(props.price.toString()).toFixed(2)
   const dollarprice = Math.floor(props.price / 14.6 )
   const converteddollarprice = parseFloat(dollarprice.toString())
@@ -60,7 +61,11 @@ const ProductCard = (props:productcardprops) => {
             }
               </div>
               <div className='w-full pt-5 '>
-                <Button className='font-bold capitalize tracking-wider w-full'>chat now</Button>
+                <Button className='font-bold capitalize tracking-wider w-full'
+                onClick={() => {
+                  router.push(`products/${props.id}`)
+                }}
+                >more</Button>
                 
               </div>
             </div>
