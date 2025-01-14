@@ -2,7 +2,6 @@
 
 import { pusherServer } from "@/lib/pusher"
 
-
 export const sendMessage = (message:string) => {    
 
     // trigger event
