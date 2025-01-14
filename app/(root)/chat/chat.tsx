@@ -37,7 +37,7 @@ const Chat = () => {
 
   return (
     <div className='w-full h-full items-center md:max-w-lg mx-auto p-4 md:p-8 mt-20  bg-transparent '>
-      <div className="w-full h-full   min-h-[70vh] overflow-y-auto p-2 flex flex-col gap-y-2 border border-black z-30">
+      <div className="w-full h-full   min-h-[68vh] overflow-y-auto rounded-lg p-2 flex flex-col gap-y-2 border border-black z-30">
           {!uniqueMessages.length ? (
             <div className="text-center text-gray-500">No messages yet</div>
           ):(
