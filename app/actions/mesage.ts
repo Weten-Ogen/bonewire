@@ -4,9 +4,10 @@ import { pusherServer } from "@/lib/pusher"
 
 
 
-export const sendMessage = (message:string, roomId:string) => {    
+export const sendMessage = (message:string) => {    
+
     // trigger event
-    pusherServer.trigger(roomId, "incomming-message", 
+    pusherServer.trigger('messaging',"incomming-message", 
     {
         message
     }
