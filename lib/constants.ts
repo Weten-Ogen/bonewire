@@ -150,10 +150,38 @@ const testimonials = [
 "https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/WhatsApp%20Video%202024-12-01%20at%2010.37.45_12d88489-FmhBhtGywQRvp3QQIF0XQOVsO1Zk2y.mp4"
 
 
+const foooterlinks = [  {
+    label: 'home',
+    reff: '/'
+},
+{
+    label: 'about',
+    reff: '/about'
+},
+{
+    label: 'products',
+    reff: '/products'
+},
+{
+    label: 'chat us',
+    reff: '/chat'
+}, {
+    label: 'profile',
+    reff: '/profile'
+},
+{
+    label: 'meet us',
+    reff: '#hero'
+}, {
+    label : 'services',
+    reff: '#services'
+}
+]
 export {
     navlinks,
     filterlist,
     fakedata,
     admincard,
+    foooterlinks,
     testimonials
 }

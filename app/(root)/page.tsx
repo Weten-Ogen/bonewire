@@ -9,17 +9,31 @@ import { HeroCarousel } from "@/components/ui/testimonialcarousel";
 export default function Home() {
   return (
    <div className="">
-      <div className="-z-10">
+      <div className="-z-10" id="hero">
        <ImageWithBackGround 
-       heading="Kente Mall"
-       subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+            heading="Kente Mall"
+            subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."
+            
         />  
         </div>
-        <HeroInfo className=""/>
-        <HeroStatement className="mt-24 bg-black text-white "/>
-        <HeroCarousel/>
-        <HeroProduct className=""/>
-        <Socials className=""/>
+        <div id="services">
+        <HeroInfo 
+          className=""
+        />
+</div>
+
+        <HeroStatement 
+           className="mt-24 bg-black text-white "
+        />
+
+        <HeroCarousel
+        />
+        <HeroProduct 
+        className=""
+        />
+        <Socials 
+        className=""
+        />
    </div>
   );
 }
