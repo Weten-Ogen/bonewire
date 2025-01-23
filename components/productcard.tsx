@@ -55,7 +55,7 @@ const ProductCard = (props:productcardprops) => {
               <TypographyMuted className=' text-sm '>{props.label}</TypographyMuted>
               </div>
               <div className=' w-full text-yellow-500 '>
-              {user?.country === "Ghana" ? 
+              {user?.country === "Ghana" || "Guest" ? 
               <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>GHC {convertedprice}</TypographyMuted> :
               <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>USD {converteddollarprice}</TypographyMuted>
             }

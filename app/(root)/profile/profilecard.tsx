@@ -18,7 +18,9 @@ const ProfileCard = (props:userprops) => {
  const {user,deleteaccount,getUserdetails} = useUserDetailsStore()
 
  const router = useRouter()
- 
+ if(!user?.email) {
+  router.push('/auth/signin')
+}
  useEffect(() => {
   getUserdetails()
   

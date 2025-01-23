@@ -10,7 +10,7 @@ export const revalidate = 3600
 
 
 const Products = async() => {
-  
+    
   const products  = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/products`,{
     cache: "no-store",
     headers: {

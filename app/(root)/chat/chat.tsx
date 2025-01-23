@@ -7,8 +7,15 @@ import React, { useEffect, useState } from 'react'
 import Message from './messageui'
 import { pusherClient } from '@/lib/pusher'
 import { useUserDetailsStore } from '@/store/userdetail'
+import { getUserInfo } from '@/app/actions/authservice'
+import { useRouter } from 'next/navigation'
 
 const Chat = () => {
+  const router = useRouter()
+  const userInfo = getUserInfo()
+  if(!userInfo) {
+    router.push('/auth/signin')
+  }
   const [messages, setMessages] = useState<string[]>([]);
   const [message, setMessage] = useState<string>('');
   
