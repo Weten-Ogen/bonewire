@@ -2,14 +2,15 @@
 
 import { useUserDetailsStore } from '@/store/userdetail'
 import React from 'react'
+interface msgprops {
+  message: string,
 
-interface messageprops {
-    message:string,
-    
 }
 
-const Message = (props:messageprops) => {   
+
+const Message =(props : msgprops) => {   
     const avatar= "u"
+    
   return (
     <div className={` flex gap-2  
     bg-transparent rounded-lg `}>

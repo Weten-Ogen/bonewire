@@ -10,7 +10,14 @@ import { useUserDetailsStore } from '@/store/userdetail'
 import { getUserInfo } from '@/app/actions/authservice'
 import { useRouter } from 'next/navigation'
 
-const Chat = () => {
+interface chatprops {
+  roomId : string
+}
+interface messagprops {
+  message: string, 
+  roomId: string
+}
+const Chat = (props: chatprops) => {
   const router = useRouter()
   const userInfo = getUserInfo()
   if(!userInfo) {
@@ -18,29 +25,34 @@ const Chat = () => {
   }
   const [messages, setMessages] = useState<string[]>([]);
   const [message, setMessage] = useState<string>('');
-  
- 
+  const [room ,setRoomId] = useState<string>('')
+  const [sender ,setSender] = useState<string>('')
 
-  const {user} = useUserDetailsStore();
+  const {user,getUserdetails} = useUserDetailsStore();
 
   const onSendMessage = async() => {
-    await sendMessage(message)
+    await sendMessage(message,room,sender)
+ 
   }
 
   useEffect(() => {
-   
-    pusherClient.subscribe('messaging');
-    pusherClient.bind("incomming-message",(data: {message:string,email:string}) => {
-      console.log(message)
-      setMessages((prev) => [...prev, data.message])
+    getUserdetails()
+    if(user){
+      setSender(user.id)
+    }
+    setRoomId(props.roomId)
+    pusherClient.subscribe(room);
+    pusherClient.bind("incomming-message",(data:{message:string}) => {
+      
+      setMessages((prev:any) => [...prev, data.message])
       
       setMessage('')
     })
-    return () => pusherClient.unsubscribe('messaging')
+    return () => pusherClient.unsubscribe(room)
 
 }, [])
 
-  const uniqueMessages = messages.filter(( value,index, self) => self.indexOf(value) === index )
+  const uniqueMessages = messages.filter(( value,index, self) =>{ return self.indexOf(value) === index })
 
   return (
     <div className='w-full h-full items-center md:max-w-lg mx-auto p-4 md:p-8 mt-20  bg-transparent '>
@@ -48,11 +60,11 @@ const Chat = () => {
           {!uniqueMessages.length ? (
             <div className="text-center text-gray-500">No messages yet</div>
           ):(
-            uniqueMessages.map((message, index) => (
+            uniqueMessages.map((item,index:number) => (
               <Message 
-              key={index} 
-              message={message}
-             
+              key={item}
+              message={item}
+                
                />
             )))
           }

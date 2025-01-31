@@ -42,65 +42,65 @@ const ProfileCard = (props:userprops) => {
       </div>
       <div className='text-black pt-12 flex px-4 flex-col gap-4 w-full'>
         <div className='flex items-center  justify-between gap-2'>
-          <p className='text-2xl  font-bold font-sans'>
+          <p className='text-primaryFont  font-bold font-poppins'>
             Name 
           </p>
-          <p className='capitalize text-2xl font-serif '>
+          <p className='capitalize text-extraSmall  font-poppins'>
 
           {user?.name}
           </p>
         </div>
         <div className='flex items-center justify-between  gap-2'>
-          <p className='text-2xl  font-bold font-sans'>
+          <p className='text-primaryFont  font-bold font-poppins'>
             Country 
           </p>
-          <p className='capitalize text-2xl font-serif '>
+          <p className='capitalize text-extraSmall font-poppins'>
 
           {user?.country}
           </p>
         </div>
-        <div className='flex items-center justify-between  gap-2 max-w-sm'>
-          <p className='text-2xl  font-bold font-sans'>
+        <div className='flex items-center  justify-between  gap-2 '>
+          <p className='text-primaryFont  font-bold font-poppins'>
             Email 
           </p>
-          <p className=' text-2xl  font-serif '>
+          <p className=' text-extraSmall  font-poppins '>
 
           {user?.email}
           </p>
         </div>
         <div className='flex items-center justify-between gap-2 text-wrap'>
-          <p className='text-2xl  font-bold font-sans'>
+          <p className='text-primaryFont  font-bold font-poppins'>
             Address 
           </p>
-          <p className='capitalize text-2xl font-serif  '>
+          <p className='capitalize text-extraSmall font-poppins  '>
           {user?.address}
           </p>
         </div>
         <div className='flex items-center justify-between  gap-2'>
-          <p className='text-2xl  font-bold font-sans'>
+          <p className='text-primaryFont  font-bold font-poppins'>
             Joined in 
           </p>
-          <p className=' text-2xl font-serif '>
+          <p className=' text-extraSmall font-poppins '>
 
           {newdate && user?.createdAt.toString().slice(0,10)}
           </p>
         </div>
         <div className='flex items-center justify-between  gap-2'>
-          <p className='text-2xl  font-bold font-sans'>
+          <p className='text-primaryFont  font-bold font-poppins'>
             Contact 
           </p>
-          <p className='capitalize text-2xl font-serif '>
+          <p className='capitalize text-extraSmall font-poppins '>
 
           {user && user?.contactNumber}
           </p>
         </div>
           <div className='flex items-center gap-5 text-lg tracking-wider font-sans  pt-5'>
-            <Button className='capitalize hover:-translate-y-0.5 ease-out duration-500 w-full '> 
+            <Button className='capitalize font-poppins font-bold text-primaryFont hover:-translate-y-0.5 ease-out duration-500 w-full '> 
             delete account
             </Button>
             <Button
             onClick={() => router.push('/')}
-            className="capitalize hover:-translate-y-0.5 ease-out duration-500 w-full">
+            className="capitalize hover:-translate-y-0.5 ease-out duration-500 w-full font-poppins text-primaryFont font-bold">
             go to home
             </Button>
           </div>

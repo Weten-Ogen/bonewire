@@ -66,7 +66,7 @@ const ProductGrid = (props: productgridprops) => {
               setFilter(item.label)
               
             }}
-            className={` capitalize px-6 ${filter === item.label.toLowerCase() ?  'text-sm font-bold -translate-y-0.5 duration-500 ease-out' : 'text-sm'}`} 
+            className={` capitalize px-6 font-poppins ${filter === item.label.toLowerCase() ?  'text-extraSmall font-bold -translate-y-0.5 duration-500 ease-out' : 'text-sm'}`} 
              key={item.label}>
               {item.label}
             </Button>

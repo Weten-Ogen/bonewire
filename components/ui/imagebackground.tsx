@@ -37,15 +37,15 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
       />
 
       <div className='absolute pt-16 p-4 md:p-8  inset-0 flex flex-col items-center md:items-start md:justify-center max-w-lg  justify-center text-white '>
-      <div className=''>
+      <div className='flex flex-col items-center'>
        
-        <h2 className='text-5xl md:text-7xl font-bold font-serif'>
+        <h2 className='text-mediumFont font-bold font-poppins'>
             {props.heading}
         </h2>
         <div>
         {
-          props.subHeading && 
-          <TypographyH4 className='text-xl md:text-2xl text-serif py-5'>
+            props.subHeading && 
+          <TypographyH4 className='text-primaryFont py-5 font-poppins  font-medium'>
             {props.subHeading}
            </TypographyH4>
         }
@@ -59,7 +59,7 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
         <Button
         onClick={redirectToProducts} 
         
-        className='w-full z-20 p-4 cursor-pointer  uppercase'>Order now</Button>
+        className='w-full z-20 p-4 cursor-pointer font-poppins text-extraSmall font-bold uppercase '>order now</Button>
       </div>
         </div>  
     

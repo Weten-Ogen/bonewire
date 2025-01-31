@@ -51,17 +51,17 @@ const ProductCard = (props:productcardprops) => {
             </div>
             <div className='flex flex-col items-center px-4 py-2 relative min-h-auto'>
 
-              <div className='flex flex-wrap w-full text-yellow-500 items-center  '>
-              <TypographyMuted className=' text-sm '>{props.label}</TypographyMuted>
+              <div className='flex flex-wrap w-full  items-center  '>
+              <TypographyMuted className=' text-mediumFont text-primaryColor font-poppins font-bold pt-4 '>{props.label}</TypographyMuted>
               </div>
-              <div className=' w-full text-yellow-500 '>
+              <div className=' w-full py-4 '>
               {user?.country === "Ghana" || "Guest" ? 
-              <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>GHC {convertedprice}</TypographyMuted> :
-              <TypographyMuted className='font-bold font-sans text-slate-900 text-2xl '>USD {converteddollarprice}</TypographyMuted>
+              <TypographyMuted className='font-medium text-extraSmall text-slate-900 font-poppins'>GHC {convertedprice}</TypographyMuted> :
+              <TypographyMuted className='font-medium font-poppins text-slate-900 text-extraSmall '>USD {converteddollarprice}</TypographyMuted>
             }
               </div>
               <div className='w-full pt-5 '>
-                <Button className='font-bold capitalize tracking-wider w-full'
+                <Button className='font-bold capitalize tracking-wider w-full font-poppins text-extraSmall'
                 onClick={() => {
                   router.push(`products/${props.id}`)
                 }}

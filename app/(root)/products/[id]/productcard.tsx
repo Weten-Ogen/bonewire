@@ -1,18 +1,23 @@
 "use client"
+import { getUserInfo } from '@/app/actions/authservice'
+import { createRoom } from '@/app/actions/mesage'
 import { TypographyH2 } from '@/components/typography/h2'
 import { TypographyH3 } from '@/components/typography/h3'
 import { TypographyMuted } from '@/components/typography/muted'
 import { TypographyP } from '@/components/typography/p'
 import { Button } from '@/components/ui/button'
+import { useUserDetailsStore } from '@/store/userdetail'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface cardprops {
     products: any
 }
 const ProductCard = ({products}:cardprops) => {
+    const [roomId, setRoomId] = useState<any>()
     const router = useRouter()
+    const {user} = useUserDetailsStore()
     const calprice  = Math.ceil(products.price / 16.50)  + 50
     const convertprice = products.price.toFixed(2)
 
@@ -20,6 +25,15 @@ const ProductCard = ({products}:cardprops) => {
         router.push('/products')
         router.refresh()
     }
+    const joinroom = async() => {
+        const room = await createRoom()
+        console.log(room)
+        const roomId = await room.data
+        setRoomId(roomId)
+    }
+    useEffect(() => {
+        joinroom()
+    },[])
 
     return (
     <div className='mt-12 md:flex min-h-screen md:h-screen gap-8 p-4'>
@@ -32,29 +46,29 @@ const ProductCard = ({products}:cardprops) => {
             className='max-w-full md:max-[50%] h-auto   object-cover bg-gray-400'
             />
         </div>
-        <div className='w-full max-w-lg space-y-5'>
+        <div className='w-full max-w-lg space-y-5 md:mt-10'>
           <div className='my-5'>
-            <TypographyH3 className='text-sm font-medium font-serif '>
+            <TypographyH3 className='text-primaryFont font-bold font-poppins '>
                 {products.label}
             </TypographyH3>
             <div  className='w-full my-2'>
-            <TypographyMuted className='text-4xl font-bold text-black font-sans'>
+            <TypographyMuted className='text-extraSmall font-semibold text-black font-poppins'>
                 GHC {convertprice }
             </TypographyMuted>
             </div>
           </div>
             <div className='w-full'  >
-                <TypographyP className='text-lg text-left max-w-lg '>
+                <TypographyP className='text-extraSmall text-left max-w-lg font-poppins tracking-wide leading-8'>
                     {products.description}
                 </TypographyP>
             </div>
             <div className=" flex items-center gap-4">
-            <Button onClick={gobackhandler} className='w-full capitalize font-bold font-serif '>go back</Button>
+            <Button onClick={gobackhandler} className='w-full capitalize font-bold font-poppins text-extraSmall '>go back</Button>
                 <Button
                 onClick={() => {
-                    router.push('/chat')
+                    router.push(`/chat/${roomId}`)
                 }}
-                className='w-full font-serif  capitalize'>chat now</Button>
+                className='w-full font-poppins font-bold text-extraSmall  capitalize'>chat now</Button>
                 
             </div>
         </div>

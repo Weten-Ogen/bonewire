@@ -8,8 +8,8 @@ import Link from 'next/link'
 
 const Contactinfo = () => {
   return (
-    <div className='w-full max-w-4xl mx-auto  h-[5vh]'>
-      <div className='flex items-center justfy-between gap-16 uppercase text-sm'>
+    <div className='w-full max-w-4xl mx-auto  h-[12vh]'>
+      <div className='flex items-center justfy-between flex-wrap gap-8 p-4 uppercase text-extraSmall font-poppins font-bold'>
        {
         foooterlinks.map((item) => {
          return <Link 

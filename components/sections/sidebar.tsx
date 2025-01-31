@@ -45,12 +45,15 @@ const SideBar = (props:mobilenavprops) => {
       side={'left'} 
       className=' w-full  md:w-[400px] sm:w-[540px] ' >
 
-      <div className='flex items-center relative '>
+      <div className='flex   relative '>
+        <div>
+
         <LogoImage
         className=''
         
         />
-        <TypographyH2 className='text-lg f'>
+        </div>
+        <TypographyH2 className='text-primaryFont font-poppins font-bold'>
           Bonewire
         </TypographyH2>
       </div>
@@ -65,7 +68,7 @@ const SideBar = (props:mobilenavprops) => {
               <div>
               <item.icon/>
               </div>
-              <p className='uppercase'>{item.label}</p>
+              <p className='uppercase text-extraSmall  font-poppins'>{item.label}</p>
             </Link>
             </SheetClose> 
           )

@@ -30,10 +30,10 @@ const HeroCarouComp = (props:comprops) => {
                     />
                   </div>
                   <div className='absolute bg-black/65 p-4 md:p-16 w-full h-full flex flex-col items-center gap-5  inset-0 text-white'>
-                  <CardTitle className='uppercase text-white text-2xl'>{props.name}</CardTitle>
+                  <CardTitle className='uppercase text-white text-primaryFont font-poppins font-bold'>{props.name}</CardTitle>
 
                   <CardDescription className='text-gray-400
-                  text-center text-lg'>{props.comment}</CardDescription>
+                  text-center text-extraSmall  font-poppins tracking-wide leading-8 font-semibold'>{props.comment}</CardDescription>
                   </div>
                   </div>
                 </CardContent>

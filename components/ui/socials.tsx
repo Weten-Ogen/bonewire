@@ -17,7 +17,7 @@ const Socials = (props:socialprops) => {
   return (
     <div className='max-w-full p-4' >
       <Contactinfo />
-    <div className="flex items-center justify-between  p-2 w-full">
+    <div className="flex items-center justify-between   p-2 w-full">
       <Link 
       target='_blank'
       href="https://www.facebook.com/bonewire.shop"

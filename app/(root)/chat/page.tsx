@@ -1,12 +1,10 @@
 import React from 'react'
 import Chat from './chat'
-
+import DisplayRooms from './displayroom'
 
 export default function page() {
   
   return (
-    <div>
-      <Chat/>
-    </div>
+    <p>welcoome to the chat page</p>
   )
 }
