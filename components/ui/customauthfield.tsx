@@ -26,7 +26,7 @@ const CustomAuthField = (props:customfieldprops) => {
       name={props.name}
       render={({ field }) => (
         <FormItem className="">
-          <FormLabel className="font-bold text-xl">
+          <FormLabel className="font-bold font-poppins text-primaryFont">
             {props.label}
           </FormLabel>
           <div className="flex w-full flex-col">
@@ -39,7 +39,7 @@ const CustomAuthField = (props:customfieldprops) => {
                 />
             </FormControl>
           </div>
-            <FormMessage className="form-message text-red-500 mt-2 text-md" />
+            <FormMessage className="form-message font-poppins text-red-500 mt-2 text-extraSmall" />
           </FormItem>)}
     />)}
 export default CustomAuthField

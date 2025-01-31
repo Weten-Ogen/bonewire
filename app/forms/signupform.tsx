@@ -111,13 +111,13 @@ const SignUpForm = () => {
             placeholder='Enter your password'
             />
               <Link href="/auth/signin" 
-              className=' cursor-pointer'>
+              className='font-semibold tracking-wide font-poppins text-extraSmall cursor-pointer'>
               Click here to Sign into your account
             </Link>
           <div className='mt-5 w-full'>
             <Button 
             variant="outline"
-            className='w-full uppercase font-bold text-lg py-6 px-4 b' type="submit">sign up</Button>
+            className='w-full uppercase font-poppins text-primaryFont font-bold text-lg py-6 px-4 b' type="submit">sign up</Button>
           </div>
         </form>
     </Form>

@@ -13,7 +13,7 @@ const page = () => {
         imageurl=""
 
         />
-      <TypographyH2 className='text-3xl font-bold my-3'>
+      <TypographyH2 className='text-mediumFont tracking-wide font-poppins font-bold my-3'>
         Log in for Bonewire 
       </TypographyH2>
       </div>

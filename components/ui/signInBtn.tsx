@@ -14,7 +14,7 @@ const SignInBtn = (props: signinbtnprops) => {
   return (
     <Link
     href="/signin" 
-    className={cn(`capitalize ${
+    className={cn(`capitalize font-poppins text-primaryFont ${
  buttonVariants({variant:"outline"})}`,props.className)}>
         {props.text}
     </Link>

@@ -80,7 +80,7 @@ const SignInForm = () => {
         />
         <div>
         <Link href="/auth/signup" 
-        className='cursor-pointer'>
+        className='text-extraSmall font-bold font-poppins tracking-wider cursor-pointer'>
         click here to sign up for an account.
         </Link>
         </div>
@@ -88,7 +88,7 @@ const SignInForm = () => {
             <Button  
             variant="outline"
             type='submit'
-            className='w-full cursor-pointer py-6 px-4 uppercase' 
+            className='w-full font-bold text-primaryFont font-poppins cursor-pointer py-6 px-4 uppercase' 
             >
               log in 
             </Button>

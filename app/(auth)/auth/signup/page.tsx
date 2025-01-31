@@ -12,7 +12,7 @@ const page = () => {
         <LogoImage 
         className=''
         />
-      <TypographyH2 className='text-3xl font-bold my-3'>
+      <TypographyH2 className='text-mediumFont font-poppins tracking-wide font-bold my-3'>
         Sign up for Bonewire 
       </TypographyH2>
       </div>
