@@ -2,12 +2,12 @@ import ProductForm from '@/app/forms/productform'
 import { TypographyH2 } from '@/components/typography/h2'
 import React from 'react'
 
-interface pageprops {
+interface pagprops {
     params : {
         id: string
     }
 }
-const page = ({params}: pageprops) => {
+export default function page({params}:pagprops) {
   return (
     <div className='p-4 md:p-12'>
       <TypographyH2 className='mb-5'>
@@ -18,4 +18,4 @@ const page = ({params}: pageprops) => {
   )
 }
 
-export default page
+
