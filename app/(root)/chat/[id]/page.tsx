@@ -1,12 +1,12 @@
 import React from 'react'
 import Chat from '../chat'
 
-interface pageprops {
+interface chatprops {
     params: {
         id: string
     }
 }
-export default function page(props : pageprops) {
+export default function page(props : chatprops) {
   return (
     <div>
         <Chat
