@@ -23,16 +23,20 @@ export const useUserDetailsStore = create<userStore>((set) => ({
 user : null,
 getUserdetails: async() => {
     const userinfo = await getUserInfo()
-    
-    const fetcheduser= await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/user/${userinfo.id}`,{
-        method:"GET",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        cache:"no-store"
-    }).then(res => res.json())
+    try {
+        
+        const fetcheduser= await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/user/${userinfo.id}`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            cache:"no-store"
+        }).then(res => res.json())
+        set((state) => ({user: state.user= fetcheduser.data}))
+    } catch (error) {
+        console.log('an error occured at the userdetails')
+    }
    
-    set((state) => ({user: state.user= fetcheduser.data}))
 },
 deleteaccount: () =>{
     

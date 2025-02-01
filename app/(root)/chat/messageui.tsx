@@ -14,8 +14,8 @@ const Message =(props : msgprops) => {
   return (
     <div className={` flex gap-2  
     bg-transparent rounded-lg `}>
-      <p className='rounded-full font-extrabold font-sans uppercase bg-gray-200 p-2 '>{avatar}</p>
-      <p className='font-bold font-serif text-sm text-left bg-gray-200  p-2 rounded-lg'>{props.message}</p>
+      <p className='rounded-full font-bold font-poppins text-extraSmall uppercase bg-gray-200 p-2 '>{avatar}</p>
+      <p className='font-bold font-poppins text-extraSmall text-left bg-gray-200  p-2 rounded-lg'>{props.message}</p>
     </div>
   )
 }

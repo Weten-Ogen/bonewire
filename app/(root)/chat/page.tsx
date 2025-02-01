@@ -5,6 +5,6 @@ import DisplayRooms from './displayroom'
 export default function page() {
   
   return (
-    <p>welcoome to the chat page</p>
+    <p className='font-poppins'>welcome to the chat page</p>
   )
 }

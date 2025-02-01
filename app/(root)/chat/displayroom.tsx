@@ -23,7 +23,7 @@ const DisplayRooms = (props : displayprops) => {
             <div className='flex flex-col items-center gap-4 p-4'>
                 {props.rooms.map((item:any) =>{
                     return <Link
-                                className='container shadow-lg p-4' 
+                                className='container shadow-lg p-4 font-poppins text-primaryFont ' 
                                 href={`/chat/${item.id}`}
                                 key={item.id}
                                 >
