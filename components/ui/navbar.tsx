@@ -20,7 +20,7 @@ const NavBar = () => {
       getUserdetails()
     },[user])
     return (
-    <div className='fixed p-2 flex items-center justify-between bg-muted top-0 border border-b-black left-0 w-full h-[7vh] md:h-[6vh] z-50'>
+    <div className='fixed p-2 flex items-center justify-between bg-muted top-0 border bg-white shadow-xl left-0 w-full h-[7vh] md:h-[6vh] z-50'>
 
       <LogoImage
       className=''/>

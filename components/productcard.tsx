@@ -1,10 +1,9 @@
 "use client"
-
 import { cn } from '@/lib/utils'
 import React, { useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from './ui/card'
 import Image, { StaticImageData } from 'next/image'
-import { Button } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
 import { TypographyMuted } from './typography/muted'
 import Link from 'next/link'
 import { TypographyH3 } from './typography/h3'
@@ -26,6 +25,7 @@ const ProductCard = (props:productcardprops) => {
   const {user,getUserdetails}  = useUserDetailsStore()
   const  router = useRouter()
   const convertedprice = parseFloat(props.price.toString()).toFixed(2)
+  
   const dollarprice = Math.floor(props.price / 14.6 )
   const converteddollarprice = parseFloat(dollarprice.toString())
 
@@ -34,9 +34,9 @@ const ProductCard = (props:productcardprops) => {
   },[])
 
   return (
-    <Link
-     className='hover:-translate-y-0.5 hover:opacity-80 duration-500  rounded-b-lg max-w-lg  '
-     href={`products/${props.id}`} >
+    <div
+     className='hover:-translate-y-0.5  duration-500  rounded-b-lg max-w-lg  '
+     >
     <div className={cn(' rounded-t-lg rounded-b-lg shadow-lg',props.className)}>
       <Card className="rounded-t-lg rounded-b-lg">
         <CardContent className='flex  gap-4 rounded-b-lg  items-start rounded-t-lg p-0'>
@@ -60,19 +60,21 @@ const ProductCard = (props:productcardprops) => {
               <TypographyMuted className='font-medium font-poppins text-slate-900 text-extraSmall '>USD {converteddollarprice}</TypographyMuted>
             }
               </div>
-              <div className='w-full pt-5 '>
-                <Button className='font-bold capitalize tracking-wider w-full font-poppins text-extraSmall'
-                onClick={() => {
-                  router.push(`products/${props.id}`)
-                }}
-                >more</Button>
-                
+              <div className='w-full pt-5 z-20 '>
+                <Link 
+                  className={`
+                    tracking-wide text-mediumFont font-poppins font-bold
+                    ${buttonVariants({variant: 'link'})}`} 
+                  href={`/products/${props.id}`}
+                >
+                  more
+                </Link>  
               </div>
             </div>
         </CardContent>
       </Card>
   </div>
-  </Link>
+  </div>
   )}
 
 export default ProductCard
