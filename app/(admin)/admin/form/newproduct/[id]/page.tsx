@@ -7,7 +7,7 @@ interface pageprops {
         id: string
     }
 }
-const page = (props: pageprops) => {
+const page = ({params}: pageprops) => {
   return (
     <div className='p-4 md:p-12'>
       <TypographyH2 className='mb-5'>
