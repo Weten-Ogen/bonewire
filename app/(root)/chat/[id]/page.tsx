@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { use } from 'react'
 import Chat from '../chat'
 
 
-export default function page({
-  params
-}: {
-  params: {id: string}
-}) {
+export default  function page({params}: {
+  params: Promise<{id: string}>}) {
+  const {id} = use(params)
+
   return (
     <div>
         <Chat
-        roomId={props.params.id}
+        roomId={id}
         />
     </div>
   )

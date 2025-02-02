@@ -3,6 +3,7 @@ import { TypographyLead } from '@/components/typography/lead'
 import { TypographyP } from '@/components/typography/p'
 
 import ProductCard from './productcard'
+import { use } from 'react'
 
 interface pagprops {
     params: {
@@ -11,10 +12,11 @@ interface pagprops {
 }
 
 
-export default async  function page({params}:pagprops) {
+export default async  function page({params}:{params : Promise<{id: string}>}) {
+    const {id} = use(params)
     
     const product = await fetch(
-        `${process.env. NEXT_PUBLIC_BACKEND_API_URL}/products/${params.id}`,
+        `${process.env. NEXT_PUBLIC_BACKEND_API_URL}/products/${id}`,
         {
         cache: "no-store",
         headers: {
