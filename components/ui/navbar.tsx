@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react'
 import LogoImage from './logoimage'
 import AvatarIcon from './avaatar'
 import SideBar from '../sections/sidebar'
-
-import Link from 'next/link'
 import NavBarLinks from './navbarlinks'
 import { Button } from './button'
 import { useRouter } from 'next/navigation'
