@@ -15,13 +15,13 @@ const config: Config = {
   			]
   		},
   		fontSize: {
-  			extraSmall: '0.8rem',
-  			primaryFont: '1.2rem',
-  			mediumFont: '2.0rem',
-  			regularFont: '4.0rem',
-  			secondaryFont: '4.2rem',
-  			upperFont: '4.8rem',
-  			tertiaryFont: '9.8rem'
+  			extraSmall: '0.96rem',
+  			primaryFont: '1.36rem',
+  			mediumFont: '2.16rem',
+  			regularFont: '3.36rem',
+  			secondaryFont: '4.16rem',
+  			upperFont: '5.32rem',
+  			tertiaryFont: '4.16rem'
   		},
   		colors: {
   			primaryColor: '#09090b',

@@ -6,7 +6,6 @@ import { navlinks } from '@/lib/constants'
 import { LogOut, Menu } from 'lucide-react'
 import { TypographyH2 } from '../typography/h2'
 import Link from 'next/link'
-import { getUserInfo, removeUser } from '@/app/actions/authservice'
 import { useRouter } from 'next/navigation'
 
 interface mobilenavprops{
@@ -18,18 +17,9 @@ const SideBar = (props:mobilenavprops) => {
    const [usedetails, setUserdetails] = useState<any>()
 
   const router = useRouter()
-  const userInfo = getUserInfo();
+  
   const filternavlinks = navlinks.filter(item => item.label !== "Admin" )
   
-  
-  const logout = () => {
-    removeUser()
-    router.push('/auth/signin')
-    router.refresh()
-  }
-  useEffect(() => {
-    setUserdetails(userInfo)
-  }, [])
   return (
     <Sheet>
       <SheetTrigger className='cursor-pointer' asChild>
@@ -92,11 +82,11 @@ const SideBar = (props:mobilenavprops) => {
 </div>
       <div className='flex gap-4 items-center justify-between w-[90%] mx-auto absolute bottom-0  p-4 '>
         <p className='text-wrap'>
-          {userInfo?.email ||  "Guest"} 
+         
         </p>
         <div className='flex gap-2'>
           <SheetClose asChild>
-          <p onClick={logout} className='flex items-center gap-2'>
+          <p  className='flex items-center gap-2'>
           <p className=''>Log out</p>
           <LogOut/>
           </p>

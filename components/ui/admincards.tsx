@@ -9,7 +9,6 @@ import { Card, CardContent } from './card'
 import { TypographyH3 } from '../typography/h3'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { getUserInfo } from '@/app/actions/authservice'
 import { TypographyH2 } from '../typography/h2'
 
 interface admincardprops {
@@ -21,12 +20,7 @@ interface admincardprops {
 
 const AdminCards = (props: admincardprops) => {
   const router = useRouter();
-  const userInfo = getUserInfo()
   
-  if((userInfo?.role  !== "admin") ) {
-     router.push('/')
-     router.refresh()
-  }
   return (
     <div className={cn('p-2',props.className)}>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-[90%] mx-auto '>

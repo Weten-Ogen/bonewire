@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { navlinks } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { getUserInfo } from '@/app/actions/authservice'
+import { usePathname } from 'next/navigation';
 
 interface compprops {
     className?:string
@@ -13,11 +12,8 @@ interface compprops {
 const NavBarLinks = (props:compprops) => {
     const [user, SetUser] = useState<any>()
 
-    useEffect(() => {
-      SetUser((prev:any) => prev= getUserInfo())
-    },[])
     const pathName = usePathname()
-    const usernavlinks = navlinks.filter(item => item.label.toLowerCase() !== "admin")
+    const usernavlinks = navlinks.filter(item => item.label.toLowerCase() !== "")
 
     if(user?.role === "admin") {
       return (

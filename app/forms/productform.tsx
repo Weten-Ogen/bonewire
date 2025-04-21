@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
-import { createProduct } from '../actions/fetch'
+
 
 
 interface productprops {
@@ -49,11 +49,9 @@ const ProductForm = (props:productformprops) => {
 
   const OnSubmit = async(values:any) => {
     setLoading(prev=> !prev)  
-    const res = await createProduct(values)
+   
   
      setLoading(prev => !prev)
-     productform.reset()
-      router.push('/products')
       router.refresh()
       toast("Product has been created")
       

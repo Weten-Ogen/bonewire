@@ -29,7 +29,7 @@ const HeroStatement = (props:heroprops) => {
           <source 
               src="https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/hero-cz5Q8VVWebkyiN3FgvDiunqjYFhR3o.mp4" 
               type="video/mp4"
-              />
+          />
         </video>
       
       </div>
