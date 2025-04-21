@@ -1,5 +1,5 @@
 "use client"
-import { sendMessage } from '@/app/actions/mesage'
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Send } from 'lucide-react'
@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 import Message from './messageui'
 import { pusherClient } from '@/lib/pusher'
 import { useUserDetailsStore } from '@/store/userdetail'
-import { getUserInfo } from '@/app/actions/authservice'
+
 import { useRouter } from 'next/navigation'
 
 interface chatprops {
@@ -19,10 +19,7 @@ interface messagprops {
 }
 const Chat = (props: chatprops) => {
   const router = useRouter()
-  const userInfo = getUserInfo()
-  if(!userInfo) {
-    router.push('/auth/signin')
-  }
+
   const [messages, setMessages] = useState<string[]>([]);
   const [message, setMessage] = useState<string>('');
   const [room ,setRoomId] = useState<string>('')
@@ -31,7 +28,7 @@ const Chat = (props: chatprops) => {
   const {user,getUserdetails} = useUserDetailsStore();
 
   const onSendMessage = async() => {
-    await sendMessage(message,room,sender)
+   
  
   }
 
