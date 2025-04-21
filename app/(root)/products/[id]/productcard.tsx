@@ -1,6 +1,5 @@
 "use client"
-import { getUserInfo } from '@/app/actions/authservice'
-import { createRoom } from '@/app/actions/mesage'
+
 import { TypographyH2 } from '@/components/typography/h2'
 import { TypographyH3 } from '@/components/typography/h3'
 import { TypographyMuted } from '@/components/typography/muted'
@@ -26,10 +25,7 @@ const ProductCard = ({products}:cardprops) => {
         router.refresh()
     }
     const joinroom = async() => {
-        const room = await createRoom()
-        console.log(room)
-        const roomId = await room.data
-        setRoomId(roomId)
+        
     }
     useEffect(() => {
         joinroom()
