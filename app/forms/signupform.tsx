@@ -8,12 +8,10 @@ import {z} from 'zod'
 import { Form } from '@/components/ui/form' 
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { registerUser } from '@/app/actions/register'
-import { loginUser } from '@/app/actions/login'
 import { toast } from 'sonner'
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import { storeUserInfo } from '@/app/actions/authservice'
+
 
 const formSchema = AuthFormSchema('sign-up')
   
@@ -37,27 +35,6 @@ const SignUpForm = () => {
     )
   
     const OnSubmit = async(values: any) =>{
-
-        setLoading(prev => !prev)
-        const res = await registerUser(values)
-        
-        setLoading(prev => !prev)
-
-        if(res?.data?.id) {
-          
-          
-          const result = await loginUser({
-            password: values.password,
-            email: values.email
-          })
-          authform.reset()
-          if(result?.data?.accessToken) {
-            storeUserInfo({accessToken : result?.data?.accessToken});
-            router.push("/")
-            router.refresh()
-            toast('Signed up  Successfully')
-          }
-        }
       
     }
 

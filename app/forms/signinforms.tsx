@@ -8,8 +8,7 @@ import CustomAuthField from '@/components/ui/customauthfield'
 import { Button } from '@/components/ui/button'
 import {z} from 'zod'
 import Link from 'next/link'
-import { loginUser } from '@/app/actions/login'
-import { storeUserInfo } from '@/app/actions/authservice'
+
 import {  useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { Loader2 } from 'lucide-react'
@@ -32,26 +31,8 @@ const SignInForm = () => {
     }
   })
 
-  const handleLogin = async(values:any) => {
-      setLoading(prev => !prev)
-      const res = await loginUser({
-        email: values.email,
-        password: values.password
-      });
-      
-      authform.reset()
-      setLoading(prev => !prev)
-      if(res?.data?.accessToken) {
-        storeUserInfo({accessToken:res?.data?.accessToken});
-        router.push("/")
-        router.refresh()
-        toast('Sign In Successfully')
-      }
-      
-  }
- 
-  
-  
+  const handleLogin = async(values:any) => {};
+
   return( 
   <>
     {loading 
