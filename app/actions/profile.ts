@@ -1,13 +1,14 @@
-export const createProfile = async() => {
+"use server"
 
+export async function createProfile() {
+    
 }
-export const deleteProfile = async() => {
-
+export async function getProfile() {
+    
 }
-export const updateProfile = async() => {
-
+export async function deleteProfile() {
+    
 }
-
-export const  getProfile  = async() => {
+export async function updateProfile() {
     
 }

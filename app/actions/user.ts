@@ -1,14 +1,14 @@
-export const getUsers = async() => {
+"use server"
 
+export async function createUser() {
+    
 }
-
-export const createUsers = async() => {
-
+export async function getUser() {
+    
 }
-export const deleteUsers = async() => {
-
+export async function deleteUser() {
+    
 }
-export const updateUsers = async() => {
-
+export async function updateUser() {
+    
 }
-
