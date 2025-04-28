@@ -9,6 +9,7 @@ import { useUserDetailsStore } from '@/store/userdetail'
 import { login, logout, getSession } from '@/app/actions/auth'
 import { Avatar, AvatarImage } from './avatar'
 import AvatarIcon from './avaatar'
+import { toast, useSonner } from 'sonner'
 
 
 const NavBar = () => {  
@@ -16,6 +17,7 @@ const NavBar = () => {
     const pathname = usePathname()
     const {user,session,getUserdetails} = useUserDetailsStore()
     useEffect(() => {
+      if(session) toast("you succcessfully login")
       getUserdetails()
     },[])
     return (
