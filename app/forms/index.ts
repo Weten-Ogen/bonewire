@@ -19,7 +19,8 @@ export const AuthFormSchema = (type:string) => z.object({
 export const ProductFormSchema = () => z.object({
   label : z.string().min(3),
   imageUrl: z.string(),
-  price : z.coerce.number(),
+  price : z.string(),
   description: z.string(),
-  tag: z.string()
+  tag: z.string(),
+ 
 })

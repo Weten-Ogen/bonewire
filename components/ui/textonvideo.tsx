@@ -1,6 +1,7 @@
 'use client'
 import { cn } from '@/lib/utils'
-import React from 'react'
+import { useUserDetailsStore } from '@/store/userdetail'
+import React, { useEffect } from 'react'
 
 interface textonvideoprops {
     className?:string,
@@ -11,6 +12,11 @@ interface textonvideoprops {
 }
 
 const TextOnVideo = (props:textonvideoprops) => {
+    const {getUserdetails,session,user} = useUserDetailsStore();
+    useEffect(() =>{
+        getUserdetails()
+    },[])
+   
   return (
     <div className={cn('w-full relative  h-screen overflow-hidden',props.className)}>
         <div className={cn('absolute bg-secondaryColor inset-0 text-primaryColor font-poppins z-10 max-w-300 w-300 h-300',props.textClass)}>

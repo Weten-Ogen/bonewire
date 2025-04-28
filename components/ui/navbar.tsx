@@ -1,22 +1,23 @@
 "use  client"
 import React, { useEffect, useState } from 'react'
 import LogoImage from './logoimage'
-import AvatarIcon from './avaatar'
 import SideBar from '../sections/sidebar'
 import NavBarLinks from './navbarlinks'
 import { Button } from './button'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useUserDetailsStore } from '@/store/userdetail'
-
+import { login, logout, getSession } from '@/app/actions/auth'
+import { Avatar, AvatarImage } from './avatar'
+import AvatarIcon from './avaatar'
 
 
 const NavBar = () => {  
     const router = useRouter()
-    const {user,getUserdetails} = useUserDetailsStore()
-
+    const pathname = usePathname()
+    const {user,session,getUserdetails} = useUserDetailsStore()
     useEffect(() => {
       getUserdetails()
-    },[user])
+    },[])
     return (
     <div className='fixed p-2 flex items-center justify-between bg-muted top-0 border bg-white shadow-xl left-0 w-full h-[7vh] md:h-[6vh] z-50'>
 
@@ -24,21 +25,33 @@ const NavBar = () => {
       className=''/>
       <NavBarLinks className="hidden md:flex md:items-center  gap-4 "/>
       <div className='flex items-center '>
-          <div  className='flex items-center gap-1 p-4 md:hidden'>        
+      {session ?
+          <div  className='flex items-center '>        
             <SideBar >
-                  <AvatarIcon 
-                className=''
-                />
-            </SideBar>
+                 <AvatarIcon
+                    src={session?.user?.image as string}
+                    alt={session?.user?.name as string}
+
+                 />
+            </SideBar> 
+            <form action={logout}>
+              <Button type='submit'>
+                log out
+              </Button>
+            </form>
           </div>
-        <div className={`${user ? 'hidden' : 'block'}`}>
-          <Button
-              className='text-extraSmall font-poppins bg-white text-secondaryColor font-bold tracking-wider' 
-              onClick={()=>router.push('/auth/signin')}  
-              >
+          :
+        <form action={async() =>{login(pathname)}}  className={`${user ? 'hidden' : 'block'}`}>
+            
+            <Button
+            type='submit'
+            className='text-extraSmall font-poppins bg-white text-secondaryColor font-bold tracking-wider' 
+            
+            >
             log in
           </Button>
-        </div>
+        </form>
+      }
       </div>
     </div>
   )

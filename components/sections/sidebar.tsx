@@ -21,8 +21,11 @@ const SideBar = (props:mobilenavprops) => {
   const filternavlinks = navlinks.filter(item => item.label !== "Admin" )
   
   return (
-    <Sheet>
-      <SheetTrigger className='cursor-pointer' asChild>
+    <div>
+
+    <Sheet >
+      <SheetTrigger className='cursor-pointer'  asChild>
+        
         <Menu 
         size={32}
         className='h-10 w-10'
@@ -56,7 +59,7 @@ const SideBar = (props:mobilenavprops) => {
               <div>
               <item.icon/>
               </div>
-              <p className='uppercase text-extraSmall  font-poppins'>{item.label}</p>
+              <div className='uppercase text-extraSmall  font-poppins'>{item.label}</div>
             </Link>
             </SheetClose> 
           )
@@ -66,12 +69,12 @@ const SideBar = (props:mobilenavprops) => {
       <div className='flex flex-col  gap-4 mt-5 pl-4'>
         {filternavlinks.map(item => {
           return (
-            <SheetClose  asChild key={item.label}>
+            <SheetClose   key={item.label}>
             <Link href={item.href}  className='flex gap-4 p-2 '>
               <div>
               <item.icon/>
               </div>
-              <p className='uppercase'>{item.label}</p>
+              <div className='uppercase'>{item.label}</div>
             </Link>
             </SheetClose> 
           )
@@ -79,23 +82,24 @@ const SideBar = (props:mobilenavprops) => {
       </div>
 
 }
-</div>
       <div className='flex gap-4 items-center justify-between w-[90%] mx-auto absolute bottom-0  p-4 '>
         <p className='text-wrap'>
          
         </p>
         <div className='flex gap-2'>
           <SheetClose asChild>
-          <p  className='flex items-center gap-2'>
+          <div  className='flex items-center gap-2'>
           <p className=''>Log out</p>
           <LogOut/>
-          </p>
+          </div>
           </SheetClose>
         </div>
       </div>
       
+</div>
       </SheetContent>
     </Sheet>
+</div>
   )
 }
 

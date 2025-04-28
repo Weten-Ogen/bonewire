@@ -7,7 +7,10 @@ import { HeroCarousel } from "@/components/ui/testimonialcarousel";
 import TextOnVideo from "@/components/ui/textonvideo";
 
 
+
 export default function Home() {
+  
+  
   return (
    <div className="">
       <div className="-z-10" id="hero">
