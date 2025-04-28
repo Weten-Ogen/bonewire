@@ -12,12 +12,7 @@ interface errorprops {
 const errorPage = (props:errorprops) => {
   return (
     <section className=''>
-      <div>
-        
-      </div>
-      <div>
-        <Button onClick={props.reset}>Refresh</Button>
-      </div>
+     
       <Back/>
     </section>
   )
