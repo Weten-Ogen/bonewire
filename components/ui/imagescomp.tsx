@@ -11,15 +11,16 @@ interface BlobFile {
 
 export default function AllImages() {
   const [images, setImages] = useState<BlobFile[]>([]);
-
+ 
   useEffect(() => {
     const fetchImages = async () => {
       const res = await fetch('/api/image',{
-        cache:'no-store'
+        cache:'no-store',
       });
       const blobs = await res.json();
       setImages(blobs);
     };
+  
 
     fetchImages();
   }, []);
