@@ -14,7 +14,9 @@ export default function AllImages() {
 
   useEffect(() => {
     const fetchImages = async () => {
-      const res = await fetch('/api/image');
+      const res = await fetch('/api/image',{
+        cache:'no-store'
+      });
       const blobs = await res.json();
       setImages(blobs);
     };
