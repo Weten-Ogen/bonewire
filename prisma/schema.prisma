@@ -25,7 +25,7 @@ model User {
   customs       CustomProduct[]
   createdAt     DateTime        @default(now())
   updatedAt     DateTime        @updatedAt
-  role  UserRole @default(USER)
+  role            UserRole  @default(USER)
 }
 
 model Account {

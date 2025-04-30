@@ -10,6 +10,7 @@ export async function createProduct(data:any) {
 }
 export async function getProducts() {
     const products = await prisma.product.findMany()
+    return products
 }
 export async function deleteProduct(id:string) {
     const product = await prisma.product.delete({

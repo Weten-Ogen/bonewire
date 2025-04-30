@@ -4,9 +4,9 @@ import ProductCard from '../productcard'
 import { cn } from '@/lib/utils'
 import { filterlist } from '@/lib/constants'
 import { Button } from '../ui/button'
-
 import { Loader, Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { getProducts } from '@/app/actions/product'
 
 
 interface productprops {
@@ -28,8 +28,12 @@ const ProductGrid = (props: productgridprops) => {
     const [filter, setFilter]= useState<any>("all")
     
 
-    const handlefirstfetch = () => {
-        setProducts((prev:any) => [...props.data])
+    const handlefirstfetch = async() => {
+      setLoading(true)
+      const fetchProducts = await getProducts();
+      console.log(fetchProducts)
+      setProducts((prev:any) => [...props.data])
+      setLoading(prev => !prev)
     }
 
     const handlefiltsetter = async() => {
