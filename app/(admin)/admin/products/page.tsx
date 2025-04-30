@@ -1,17 +1,23 @@
 
-import { DataTable } from '@/components/tables/data-table'
-import { productColumns } from '@/components/tables/product-columns'
-import { fakedata } from '@/lib/constants'
+import { getProducts } from '@/app/actions/product'
 import React from 'react'
+import AdminProductGrid from './productgrid'
+import Back from '../goback'
 
 
 const Products = async () => {
- 
+  const products = await getProducts()
 
   return (
-    <section className="p-8">
-      
-      
+    <section className="p-4 flex flex-col gap-10  mt-0">
+      <Back
+        path='/admin/'
+        label='go back to admin'
+      />
+      <AdminProductGrid
+        className=''
+        data={products}
+      />
     </section>
   )
 }

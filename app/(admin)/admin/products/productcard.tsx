@@ -1,12 +1,11 @@
 "use client"
 import { cn } from '@/lib/utils'
 import React, { useEffect } from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardTitle } from './ui/card'
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from '@/components/ui/card'
 import Image, { StaticImageData } from 'next/image'
-import { Button, buttonVariants } from './ui/button'
-import { TypographyMuted } from './typography/muted'
+import { Button, buttonVariants } from '@/components/ui/button'
+import { TypographyMuted } from '@/components/typography/muted'
 import Link from 'next/link'
-
 import { useUserDetailsStore } from '@/store/userdetail'
 import { useRouter } from 'next/navigation'
 
@@ -19,7 +18,7 @@ price: number ,
 description:string
 }
 
-const ProductCard = (props:productcardprops) => {
+const AdminProductCard = (props:productcardprops) => {
   const {user,getUserdetails}  = useUserDetailsStore()
   const  router = useRouter()
   const convertedprice = parseFloat(props.price.toString()).toFixed(2)
@@ -63,7 +62,7 @@ const ProductCard = (props:productcardprops) => {
                   className={`
                     tracking-wide text-mediumFont font-poppins font-bold
                     ${buttonVariants({variant: 'link'})}`} 
-                  href={`/products/${props.id}`}
+                  href={`/admin/products/${props.id}`}
                 >
                   more
                 </Link>  
@@ -75,4 +74,4 @@ const ProductCard = (props:productcardprops) => {
   </div>
   )}
 
-export default ProductCard
+export default AdminProductCard

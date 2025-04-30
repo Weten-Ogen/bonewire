@@ -4,10 +4,20 @@ import { ArrowLeft, ChevronLeft } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const Back = () => {
+interface backprops {
+  path?:string,
+  className?: string,
+  label?:string
+}
+const Back = (props:backprops) => {
 
   const router = useRouter()
   const handleclick = () => {
+    if(props.path) {
+      router.push(props.path)
+      router.refresh()
+      return
+    }
     router.push("/")
     router.refresh()
   }
@@ -18,7 +28,7 @@ const Back = () => {
     onClick={handleclick} 
     className='capitalize border-none text-orange-600 font-bold mx-8 my-2 p-4 w-[40%] text-lg ' >
       <ArrowLeft />
-      go to home screen
+     {props.label? props.label : "go back to home screen"}
     </Button>
   )
 }

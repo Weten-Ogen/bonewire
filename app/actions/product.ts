@@ -10,6 +10,16 @@ export async function createProduct(data:any) {
 
     revalidatePath('/products')
 }
+
+export async function getProductById(id:string){
+    const product = await prisma.product.findFirst({
+        where: {
+            id
+        }
+    })
+    return product
+}
+
 export async function getProducts() {
     const products = await prisma.product.findMany()
     return products
