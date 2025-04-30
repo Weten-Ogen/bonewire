@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Card, CardContent } from './card';
+import { Button } from './button';
 
 interface BlobFile {
   url: string;
@@ -11,7 +12,26 @@ interface BlobFile {
 
 export default function AllImages() {
   const [images, setImages] = useState<BlobFile[]>([]);
- 
+  const handleDelete = async (pathname: string) => {
+    try {
+      const res = await fetch('/api/image', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pathname }),
+      });
+  
+      if (res.ok) {
+        setImages((prev) => prev.filter((img) => img.pathname !== pathname));
+      } else {
+        console.error('Delete failed');
+      }
+    } catch (err) {
+      console.error('Error:', err);
+    }
+  };
+  
   useEffect(() => {
     const fetchImages = async () => {
       const res = await fetch('/api/image',{
@@ -46,6 +66,8 @@ export default function AllImages() {
               <p>pathname</p>
               <p className='text-wrap text-extraSmall text-secondaryColor'>{img.url}</p>
             </div>
+            <Button onClick={() => handleDelete(img.pathname)}>Delete</Button>
+
           </CardContent>
           </Card>
         ))}

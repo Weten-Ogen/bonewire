@@ -5,17 +5,18 @@ import { cn } from '@/lib/utils'
 import { filterlist } from '@/lib/constants'
 import { Button } from '../ui/button'
 import { Loader, Loader2 } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import { getProducts } from '@/app/actions/product'
+
+
 
 
 interface productprops {
     id:string,   
     label:string,
     imageUrl:string,
-    price: number,
+    price: string,
     description:string,
     tag:string,
+    createdAt:Date,
 }
 
 interface productgridprops{
@@ -28,28 +29,27 @@ const ProductGrid = (props: productgridprops) => {
     const [filter, setFilter]= useState<any>("all")
     
 
-    const handlefirstfetch = async() => {
+    const handlefirstfetch = () => {
       setLoading(true)
-      const fetchProducts = await getProducts();
-      console.log(fetchProducts)
-      setProducts((prev:any) => [...props.data])
-      setLoading(prev => !prev)
+      setProducts((prev:any) => [...prev,...props.data])
+      setLoading(false)
     }
-
-    const handlefiltsetter = async() => {
+    const handlefilterSearch = (filt: string) => {
+      setFilter(filt);
+      setLoading(true);
     
+      if (filt.toLowerCase() === 'all') {
+        setProducts(props.data);
+      } else {
+        const filtered = props.data.filter((prod: any) => prod.tag.toLowerCase() === filt.toLowerCase());
+        setProducts(filtered);
+      }
+      setLoading(false)
     }
-      
 
     useEffect(() => {
         handlefirstfetch()
     },[])
-    useEffect(() => {
-      handlefiltsetter()
-    },[filter])
-
-    
-    
    
 
     return (
@@ -59,8 +59,7 @@ const ProductGrid = (props: productgridprops) => {
           return (
             <Button 
             onClick={() => {
-              setFilter(item.label)
-              
+              handlefilterSearch(item.label) 
             }}
             className={` capitalize px-6 font-poppins ${filter === item.label.toLowerCase() ?  'text-extraSmall font-bold -translate-y-0.5 duration-500 ease-out' : 'text-sm'}`} 
              key={item.label}>
@@ -70,15 +69,19 @@ const ProductGrid = (props: productgridprops) => {
         })}
       </div>
 {     
-loading ? <Loader 
-size={40}
-className='animate-spin  font-bold flex items-center justify-center w-full' /> :
+loading ?
+   <Loader 
+      
+      size={40}
+      className='animate-spin bg-secondaryColor  font-bold flex items-center justify-center w-full ' 
+    />
+   :
       <div className='grid grid-cols-1 md:grid-cols-3  items-center justify-center gap-8 p-4 w-full mx-auto'>
-        {products.map((item:any )=> {
+        {products.map((item:any,index:number )=> {
             return(
                 
                     <ProductCard 
-                    key ={item.id} 
+                    key ={index} 
                     {...item}
                     />
             

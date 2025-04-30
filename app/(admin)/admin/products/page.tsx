@@ -11,6 +11,7 @@ const Products = async () => {
   return (
     <section className="p-8">
       
+      
     </section>
   )
 }

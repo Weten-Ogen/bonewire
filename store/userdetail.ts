@@ -28,7 +28,6 @@ session:null,
 getUserdetails:async() => {
     const session = await getSession()
     const  user = await getUser(session?.user?.id as string)
-    console.log(user)
     set({session})
 }
 }));

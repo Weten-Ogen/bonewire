@@ -1,3 +1,4 @@
+import { getProducts } from '@/app/actions/product'
 import Filters from '@/components/sections/filters'
 import ProductGrid from '@/components/sections/productgrid'
 import SearchZone from '@/components/sections/searchzone'
@@ -6,10 +7,12 @@ import { fakedata } from '@/lib/constants'
 import { headers } from 'next/headers'
 import React from 'react'
 
-export const revalidate = 3600
+export const revalidate = 3500
 
 
 const Products = async() => {
+  const products =  await getProducts();
+
     
   return (
     <section className='pb-10 relative w-full'>
@@ -21,9 +24,11 @@ const Products = async() => {
       classsName=''/>
       
       </div>
-     
-     
-  
+      <ProductGrid
+      className=''
+      data={products}
+      
+      />
     </section>
   )
 }

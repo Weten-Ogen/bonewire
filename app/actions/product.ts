@@ -1,12 +1,14 @@
 "use server"
 
 import {prisma} from "@/lib/prisma"
+import { revalidatePath } from "next/cache"
 
 export async function createProduct(data:any) {
     const product = await prisma.product.create({
         data
     })
-    return 
+
+    revalidatePath('/products')
 }
 export async function getProducts() {
     const products = await prisma.product.findMany()

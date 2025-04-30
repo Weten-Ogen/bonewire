@@ -45,7 +45,7 @@ const ProductForm = (props:productformprops) => {
       imageUrl: "",
       description: "",
       price: "2",
-      tag: "accessories",
+      tag: "all",
      
     }
   })  
