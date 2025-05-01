@@ -5,6 +5,25 @@ export async function GET() {
   return Response.json(blobs);
 }
 
+import { put } from '@vercel/blob';
+import { NextRequest } from 'next/server';
+
+export async function POST(req: NextRequest) {
+  const formData = await req.formData();
+  const file = formData.get('file') as File;
+
+  if (!file) {
+    return new Response(JSON.stringify({ error: 'No file provided' }), { status: 400 });
+  }
+
+  const blob = await put(file.name, file, {
+    access: 'public', // or 'private' if you want access-restricted blobs
+  });
+
+  return new Response(JSON.stringify(blob), { status: 200 });
+}
+
+
 export async function DELETE(req: Request) {
   try {
     const { pathname } = await req.json();

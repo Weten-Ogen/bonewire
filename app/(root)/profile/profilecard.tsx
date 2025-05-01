@@ -33,6 +33,8 @@ const ProfileCard = (props:userprops) => {
       </div>
       <div className='text-black pt-12 flex px-4 flex-col gap-4 w-full'>
         <div>
+          {
+            session &&
           <Image 
             src={session?.user?.image as string}
             alt={session?.user?.name as string}
@@ -40,6 +42,7 @@ const ProfileCard = (props:userprops) => {
             height={50}
             className='rounded-full h-10 w-10'
           />
+          }
         </div>
         <div className='flex items-center  justify-between gap-2'>
           <p className='text-primaryFont  font-bold font-poppins'>
