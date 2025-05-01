@@ -1,23 +1,24 @@
-// app/api/upload/route.ts
 import { put } from '@vercel/blob';
 import { NextRequest } from 'next/server';
 
+export const dynamic = 'force-dynamic'; // avoid caching
 
 export async function POST(req: NextRequest) {
-  const formData = await req.formData();
-  const files = formData.getAll('files') as File[];
+  try {
+    const formData = await req.formData();
+    const file = formData.get('file') as File;
 
-  const uploadResults = await Promise.all(
-    files.map(async (file) => {
-      const blob = await put(file.name, file, {
-        access: 'public',
-      });
-      return blob;
-    })
-  );
+    if (!file) {
+      return new Response(JSON.stringify({ error: 'No file provided' }), { status: 400 });
+    }
 
-  return new Response(JSON.stringify(uploadResults), {
-    status: 200,
-    headers: { 'Content-Type': 'application/json' },
-  });
+    const blob = await put(file.name, file, {
+      access: 'public',
+    });
+
+    return new Response(JSON.stringify(blob), { status: 200 });
+  } catch (error) {
+    console.error('Upload failed:', error);
+    return new Response(JSON.stringify({ error: 'Failed to upload file' }), { status: 500 });
+  }
 }

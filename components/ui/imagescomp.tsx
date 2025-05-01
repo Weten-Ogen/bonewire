@@ -1,8 +1,8 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import { Card, CardContent } from './card';
 import { Button } from './button';
+import { Loader2 } from 'lucide-react';
 
 interface BlobFile {
   url: string;
@@ -12,44 +12,49 @@ interface BlobFile {
 
 export default function AllImages() {
   const [images, setImages] = useState<BlobFile[]>([]);
+  const [deletingPath, setDeletingPath] = useState<string | null>(null);
+ 
+  
+  
   const handleDelete = async (pathname: string) => {
-    try {
-      const res = await fetch('/api/image', {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ pathname }),
-      });
+    console.log('Deleting:', pathname); // Debug log
+    setDeletingPath(pathname);
   
-      if (res.ok) {
-        setImages((prev) => prev.filter((img) => img.pathname !== pathname));
-      } else {
-        console.error('Delete failed');
-      }
-    } catch (err) {
-      console.error('Error:', err);
+    const res = await fetch('/api/image', {
+      method: 'DELETE',
+      cache: 'no-store',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ pathname }),
+    });
+  
+    if (res.ok) {
+      setImages((prev) => prev.filter((img) => img.pathname !== pathname));
+    } else {
+      console.error('Delete failed');
     }
-  };
   
-  useEffect(() => {
-    const fetchImages = async () => {
+    setDeletingPath(null);
+  };
+ 
+  const handleUploadedImages = async() => {
       const res = await fetch('/api/image',{
         cache:'no-store',
       });
       const blobs = await res.json();
-      setImages(blobs);
-    };
+     
+      setImages((prev) => [...blobs]);
+  }
   
-
-    fetchImages();
-  }, []);
-
   return (
     <div>
       <h1>All Uploaded Images</h1>
+      <Button onClick={handleUploadedImages}>get uploaded images</Button>
+      
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
         {images.map((img, i) => (
+            
           <Card
             key={i}
           >
@@ -66,8 +71,15 @@ export default function AllImages() {
               <p>pathname</p>
               <p className='text-wrap text-extraSmall text-secondaryColor'>{img.url}</p>
             </div>
-            <Button onClick={() => handleDelete(img.pathname)}>Delete</Button>
-
+            <div>
+                  {
+                  deletingPath === img.pathname ? (
+                  <Loader2 className="animate-spin w-4 h-4 " />
+                ) : (
+                  <Button onClick={() => handleDelete(img.pathname)}>Delete</Button>
+                )}
+            </div>
+                <p>{img.pathname }</p>
           </CardContent>
           </Card>
         ))}
@@ -75,3 +87,5 @@ export default function AllImages() {
     </div>
   );
 }
+
+            

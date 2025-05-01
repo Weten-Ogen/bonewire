@@ -1,12 +1,13 @@
-import { list, del } from '@vercel/blob';
+import { list, del,put } from '@vercel/blob';
+import { NextRequest } from 'next/server';
+
+export const dynamic = 'force-dynamic';
+
 
 export async function GET() {
   const { blobs } = await list();
   return Response.json(blobs);
 }
-
-import { put } from '@vercel/blob';
-import { NextRequest } from 'next/server';
 
 export async function POST(req: NextRequest) {
   const formData = await req.formData();
@@ -17,9 +18,9 @@ export async function POST(req: NextRequest) {
   }
 
   const blob = await put(file.name, file, {
-    access: 'public', // or 'private' if you want access-restricted blobs
+    access: 'public', 
   });
-
+  
   return new Response(JSON.stringify(blob), { status: 200 });
 }
 
@@ -32,11 +33,11 @@ export async function DELETE(req: Request) {
       return new Response(JSON.stringify({ error: 'Missing pathname' }), { status: 400 });
     }
 
-    await del(pathname);  // This actually deletes the blob from Vercel storage
-
+    await del(pathname);  
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     console.error('Failed to delete blob:', error);
-    return new Response(JSON.stringify({ error: 'Failed to delete blob' }), { status: 500 });
+    return new Response(JSON.stringify({ error: 'Failed to delete blob' }), 
+    { status: 500 });
   }
 }
