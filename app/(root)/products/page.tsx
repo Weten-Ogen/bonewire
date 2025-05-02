@@ -1,10 +1,7 @@
 import { getProducts } from '@/app/actions/product'
-import Filters from '@/components/sections/filters'
 import ProductGrid from '@/components/sections/productgrid'
 import SearchZone from '@/components/sections/searchzone'
 import { TypographyLarge } from '@/components/typography/large'
-import { fakedata } from '@/lib/constants'
-import { headers } from 'next/headers'
 import React from 'react'
 
 export const revalidate = 3500
