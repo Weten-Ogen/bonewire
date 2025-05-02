@@ -9,6 +9,7 @@ export async function createProduct(data:any) {
     })
 
     revalidatePath('/products')
+    revalidatePath('/admin/product')
 }
 
 export async function getProductById(id:string){
@@ -38,4 +39,6 @@ export async function updateProduct(id:string,data:any) {
         },
         data:data
     })
+    revalidatePath('/products')
+    revalidatePath('/admin/products')
 }
