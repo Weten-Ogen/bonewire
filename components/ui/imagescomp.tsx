@@ -17,12 +17,11 @@ export default function AllImages() {
   
   
   const handleDelete = async (pathname: string) => {
-    console.log('Deleting:', pathname); // Debug log
+    
     setDeletingPath(pathname);
   
     const res = await fetch('/api/image', {
       method: 'DELETE',
-      cache: 'no-store',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -40,7 +39,6 @@ export default function AllImages() {
  
   const handleUploadedImages = async() => {
       const res = await fetch('/api/image',{
-        cache:'no-store',
       });
       const blobs = await res.json();
      

@@ -1,9 +1,10 @@
-
 import { getProducts } from '@/app/actions/product'
 import React from 'react'
 import AdminProductGrid from './productgrid'
 import Back from '../goback'
 
+
+export const dynamic = 3000
 
 const Products = async () => {
   const products = await getProducts()

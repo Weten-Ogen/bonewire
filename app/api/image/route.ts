@@ -3,12 +3,13 @@ import { NextRequest } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-
+// Gets the images from  vercel blob
 export async function GET() {
   const { blobs } = await list();
   return Response.json(blobs);
 }
 
+// adds an image to vercel blob
 export async function POST(req: NextRequest) {
   const formData = await req.formData();
   const file = formData.get('file') as File;
@@ -24,7 +25,7 @@ export async function POST(req: NextRequest) {
   return new Response(JSON.stringify(blob), { status: 200 });
 }
 
-
+// deleting an image on vercel blob
 export async function DELETE(req: Request) {
   try {
     const { pathname } = await req.json();
