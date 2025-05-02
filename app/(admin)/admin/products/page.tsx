@@ -4,7 +4,7 @@ import AdminProductGrid from './productgrid'
 import Back from '../goback'
 
 
-export const dynamic = 3000
+export const dynamic = "force-dynamic"
 
 const Products = async () => {
   const products = await getProducts()
