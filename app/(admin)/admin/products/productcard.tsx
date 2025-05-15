@@ -64,7 +64,7 @@ const AdminProductCard = (props:productcardprops) => {
                     ${buttonVariants({variant: 'link'})}`} 
                   href={`/admin/products/${props.id}`}
                 >
-                  more
+                  edit
                 </Link>  
               </div>
             </div>
