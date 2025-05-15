@@ -14,10 +14,8 @@ interface cardprops {
     products: any
 }
 const ProductCard = ({products}:cardprops) => {
-    const [roomId, setRoomId] = useState<any>()
     const router = useRouter()
-    const {user} = useUserDetailsStore()
-    const calprice  = Math.ceil(products.price / 16.50)  + 50
+    
     const convertprice = products.price.toFixed(2)
 
     const gobackhandler  = () => {
@@ -60,11 +58,7 @@ const ProductCard = ({products}:cardprops) => {
             </div>
             <div className=" flex items-center gap-4">
             <Button onClick={gobackhandler} className='w-full capitalize font-bold font-poppins text-extraSmall '>go back</Button>
-                <Button
-                onClick={() => {
-                    router.push(`/chat/${roomId}`)
-                }}
-                className='w-full font-poppins font-bold text-extraSmall  capitalize'>chat now</Button>
+                
                 
             </div>
         </div>

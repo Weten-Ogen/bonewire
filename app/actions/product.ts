@@ -12,7 +12,7 @@ export async function createProduct(data:any) {
     revalidatePath('/admin/product')
 }
 
-export async function getProductById(id:string){
+export async function getProductById(id:any){
     const product = await prisma.product.findFirst({
         where: {
             id

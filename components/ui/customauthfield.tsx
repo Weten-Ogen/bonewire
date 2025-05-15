@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './form'
-import { Textarea } from './textarea'
 import { Control, FieldPath } from 'react-hook-form'
 import {z} from 'zod'
 import { AuthFormSchema } from '../../app/forms'

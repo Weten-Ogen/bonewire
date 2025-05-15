@@ -1,10 +1,11 @@
 "use client"
-import React, { useCallback, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import AdminProductCard from './productcard'
 import { cn } from '@/lib/utils'
 import { filterlist } from '@/lib/constants'
 import { Button } from '@/components/ui/button'
-import { Loader, Loader2 } from 'lucide-react'
+import { Loader } from 'lucide-react'
+import { getProducts } from '@/app/actions/product'
 
 
 
@@ -34,14 +35,18 @@ const AdminProductGrid = (props: productgridprops) => {
       setProducts((prev:any) => [...prev,...props.data])
       setLoading(false)
     }
-    const handlefilterSearch = (filt: string) => {
+
+    const handlefilterSearch = async(filt: string) => {
       setFilter(filt);
       setLoading(true);
     
       if (filt.toLowerCase() === 'all') {
-        setProducts(props.data);
+        const product = await getProducts();
+        setProducts(products);
       } else {
-        const filtered = props.data.filter((prod: any) => prod.tag.toLowerCase() === filt.toLowerCase());
+        const product =  await getProducts()
+        
+        const filtered = product.filter((prod: any) => prod.tag.toLowerCase() === filt.toLowerCase());
         setProducts(filtered);
       }
       setLoading(false)
@@ -51,7 +56,6 @@ const AdminProductGrid = (props: productgridprops) => {
         handlefirstfetch()
     },[])
    
-
     return (
     <div className='flex flex-col items-start relative'>
      <div className='flex flex-wrap gap-2 p-4 mt-5 '>

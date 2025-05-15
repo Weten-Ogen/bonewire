@@ -8,9 +8,7 @@ export const revalidate = 3500
 
 
 const Products = async() => {
-  const products =  await getProducts();
-
-    
+  const products =  await getProducts();    
   return (
     <section className='pb-10 relative w-full'>
       <div className="bg-black p-2  h-[70vh] md:h-[50vh] text-white pt-20">

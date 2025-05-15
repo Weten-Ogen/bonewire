@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { filterlist } from '@/lib/constants'
 import { Button } from '../ui/button'
 import { Loader, Loader2 } from 'lucide-react'
+import { getProducts } from '@/app/actions/product'
 
 
 
@@ -28,6 +29,7 @@ const ProductGrid = (props: productgridprops) => {
     const [loading , setLoading] = useState<boolean>(false)
     const [filter, setFilter]= useState<any>("all")
     
+   
 
     const handlefirstfetch = () => {
       setLoading(true)
@@ -39,9 +41,10 @@ const ProductGrid = (props: productgridprops) => {
       setLoading(true);
     
       if (filt.toLowerCase() === 'all') {
-        setProducts(props.data);
+        setProducts(products);
+        console.log(filt)
       } else {
-        const filtered = props.data.filter((prod: any) => prod.tag.toLowerCase() === filt.toLowerCase());
+        const filtered = products.filter((prod: any) => prod.tag.toLowerCase() === filt.toLowerCase());
         setProducts(filtered);
       }
       setLoading(false)
@@ -50,6 +53,7 @@ const ProductGrid = (props: productgridprops) => {
     useEffect(() => {
         handlefirstfetch()
     },[])
+   
    
 
     return (

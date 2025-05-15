@@ -4,10 +4,8 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import ProfileBg from '@/public/images/profile.png'
 import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/navigation'
 import { useUserDetailsStore } from '@/store/userdetail'
-import { updateUser } from '@/app/actions/user'
-import {  getSession } from '@/app/actions/auth'
+
 
 interface userprops {
   className?: string

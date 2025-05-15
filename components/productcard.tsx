@@ -50,12 +50,12 @@ const ProductCard = (props:productcardprops) => {
             <div className='flex flex-col items-center px-4 py-2 relative min-h-auto'>
 
               <div className='flex flex-wrap w-full  items-center  '>
-              <TypographyMuted className=' text-mediumFont text-primaryColor font-poppins font-bold pt-4 '>{props.label}</TypographyMuted>
+              <TypographyMuted className=' text-regularFont text-primaryColor font-poppins font-bold pt-4 capitalize '>{props.label}</TypographyMuted>
               </div>
               <div className=' w-full py-4 '>
               {user?.country === "Ghana" || "Guest" ? 
               <TypographyMuted className='font-medium text-extraSmall text-slate-900 font-poppins'>GHC {convertedprice}</TypographyMuted> :
-              <TypographyMuted className='font-medium font-poppins text-slate-900 text-extraSmall '>USD {converteddollarprice}</TypographyMuted>
+              <TypographyMuted className=' font-poppins  text-[0.6rem]'>USD {converteddollarprice}</TypographyMuted>
             }
               </div>
               <div className='w-full pt-5 z-20 '>

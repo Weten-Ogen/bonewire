@@ -22,8 +22,6 @@ const NavLinks = (props:navlinksprops) => {
                   </div>
                     <Links 
                     className='uppercase'
-                    type="link"
-                    
                     href={item.href}
                     text={item.label}
                     />

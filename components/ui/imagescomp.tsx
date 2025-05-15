@@ -78,7 +78,7 @@ export default function AllImages() {
                 )}
             </div>
                 <p>{img.pathname }</p>
-          </CardContent>
+         </CardContent>
           </Card>
         ))}
       </div>
