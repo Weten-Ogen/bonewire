@@ -15,7 +15,7 @@ className?: string,
 id:string,   
 label:string,
 imageUrl:string | StaticImageData,
-price: number ,
+price: string,
 description:string
 }
 
@@ -24,7 +24,7 @@ const ProductCard = (props:productcardprops) => {
   const  router = useRouter()
   const convertedprice = parseFloat(props.price.toString()).toFixed(2)
   
-  const dollarprice = Math.floor(props.price / 14.6 )
+  const dollarprice = Math.floor(parseInt(props.price) / 14.6 )
   const converteddollarprice = parseFloat(dollarprice.toString())
 
   useEffect(() => {

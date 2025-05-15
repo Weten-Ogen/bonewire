@@ -19,7 +19,7 @@ export default async  function page({params}:{params : Promise<{id: string}>}) {
         <div className='flex gap-10 flex-col'>
           <Back
             path="/admin/products"
-            label="go back to products"
+            label="go back to  products"
           />
           <TypographyH4 className="text-center capitalize text-2xl">
             Edit your  product
