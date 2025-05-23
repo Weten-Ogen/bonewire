@@ -49,12 +49,12 @@ const CarouselShowCard = ({ item, type, pauseCarousel, resumeCarousel }: carprop
           </CardContent>
         </Card>
       ) : (
-        <Card className='p-0'>
-          <CardContent className='p-0'>
+        <Card className='w-full p-0'>
+          <CardContent className='w-full p-0'>
             <video
               ref={videoRef}
               width='1000'
-              className='w-full object-cover h-[70vh] rounded-lg shadow-xl'
+              className='w-full  h-[50vh]  object-contain rounded-lg shadow-xl'
               height='auto'
               muted
               autoPlay
