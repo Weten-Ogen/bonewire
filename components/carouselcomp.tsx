@@ -25,7 +25,7 @@ const CarouselComp = (props:carouselComp) => {
             align: 'start',
             }}
         >
-            <CarouselContent className="md:w-[80%] md:mx-auto p-4">
+            <CarouselContent className="w-full md:mx-auto p-0">
                 {
                     props.data.map((item:any,i:number) => {
                     return(
