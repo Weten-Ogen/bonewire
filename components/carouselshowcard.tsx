@@ -37,7 +37,7 @@ const CarouselShowCard = (props:carprops) => {
                                 loop 
                             >
                         <source 
-                            src={props.item} 
+                            src={props.item.videourl} 
                             type="video/mp4"
                         />
                         </video>                                        
