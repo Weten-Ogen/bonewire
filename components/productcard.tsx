@@ -1,5 +1,5 @@
 "use client"
-import { cn } from '@/lib/utils'
+import { cn, formatCurrency } from '@/lib/utils'
 import React, { useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from './ui/card'
 import Image, { StaticImageData } from 'next/image'
@@ -55,7 +55,7 @@ const ProductCard = (props:productcardprops) => {
               <div className=' w-full py-4 '>
               {user?.country === "Ghana" || "Guest" ? 
               <TypographyMuted className='font-medium text-extraSmall text-slate-900 font-poppins'>GHC {convertedprice}</TypographyMuted> :
-              <TypographyMuted className=' font-poppins  text-[0.6rem]'>USD {converteddollarprice}</TypographyMuted>
+              <TypographyMuted className=' font-poppins  text-[0.6rem]'>{formatCurrency(props.price)}</TypographyMuted>
             }
               </div>
               <div className='w-full pt-5 z-20 '>
