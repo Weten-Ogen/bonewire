@@ -57,7 +57,7 @@ const CarouselShowCard = ({ item, type, pauseCarousel, resumeCarousel }: carprop
               className='w-full  h-[50vh]  object-contain rounded-lg shadow-xl'
               height='auto'
               muted
-             
+              autoPlay
             >
               <source src={item.videourl} type='video/mp4' />
             </video>
