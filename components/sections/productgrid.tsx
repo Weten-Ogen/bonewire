@@ -44,7 +44,7 @@ const ProductGrid = (props: productgridprops) => {
             if (filt.toLowerCase() === 'all') {
                 setProducts(fetchedProducts)
             } else {
-                const filtered = fetchedProducts.filter(prod =>
+                const filtered = fetchedProducts.filter((prod:any) =>
                     prod.tag.trim().toLowerCase() === filt.trim().toLowerCase()
                 )
                 setProducts(filtered)

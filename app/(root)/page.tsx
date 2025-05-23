@@ -12,18 +12,18 @@ export default function Home() {
   
   
   return (
-   <div className="">
+   <div className="mt-10">
       <div className="-z-10" id="hero">
+       <ImageWithBackGround 
+            heading="Kente Mall"
+            subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."   
+        />  
        <TextOnVideo
          text="The home of Quality Kente Products."
          videoUrl="https://www.youtube.com/watch?v=lT-weavRajg"
          className=""
 
        />
-       <ImageWithBackGround 
-            heading="Kente Mall"
-            subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."   
-        />  
         </div>
         <div id="services">
         <HeroInfo 

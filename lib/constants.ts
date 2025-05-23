@@ -128,7 +128,52 @@ const admincard = [
     
 ]
 
+const  carouselImage = [
 
+    {
+        id: '1',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.57%20PM%20%283%29-4p94xZxzGXLUopQh3N4rRnZE4IeD3c.jpeg'
+    },
+ {
+        id: '2',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.57%20PM%20%284%29-XPzJhAKyzgBYB6Ovnf3uwo35DLI7ov.jpeg'
+    },
+     {
+        id: '3',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.57%20PM-pheyJtcmyF7bUzio7D1OAUsri569l1.jpeg'
+    },
+     {
+        id: '4',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.58%20PM%20%282%29-VTH82zAvdsDEVp6pp418i84TPmDMpc.jpeg'
+    },
+     {
+        id: '5',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.59%20PM-j8CtbsMKoiLYPYxT2aXD7SNWwTbYHd.jpeg'
+    },
+     {
+        id: '6',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.57%20PM%20%284%29-XPzJhAKyzgBYB6Ovnf3uwo35DLI7ov.jpeg'
+    },
+     {
+        id: '7',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.57%20PM%20%282%29-SMRIwGmRanjzL6k0f23oFLD2Fvlo3M.jpeg'
+    },
+     {
+        id: '8',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/F90F0421-4A27-4AA8-98DC-B7FBCD942BD5-sufLrwLlR4oVTTi4og1RJkIuwVEOhl.jpeg'
+    },
+     {
+        id: '9',
+        imageurl : 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-22%20at%209.31.57%20PM%20%284%29-XPzJhAKyzgBYB6Ovnf3uwo35DLI7ov.jpeg'
+    },
+    {
+        id: '10',
+        imageurl: 'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/D16DA946-E0F5-4BD9-824A-16AC57C4D1BB-lARllHk9vCoTAuVGrDNv0cPAshPT3j.jpeg'
+    }
+     
+    
+   
+]
 const testimonials = [
     {
         name: "Mr. Amos Opoku",

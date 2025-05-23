@@ -13,7 +13,6 @@ interface imagewithbgprops {
     heading : string,
     subHeading?:string,
     message?:string,
-  
     className?: string
 }
 
@@ -27,21 +26,23 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
 
   return (
     <div className={cn('relative object-contain h-[90vh]  overflow-hidden max-w-full w-full',props.className)}>
-   
-      <Image
-      className='w-full  inset-0 h-screen -z-10 object-cover '
-      src={HeroImage}
-      alt={props.heading}
-      width={1000}
-      height={1000}
-      />
+      <div className=''>
+        <Image
+        className='w-full h-screen object-cover '
+        src={HeroImage}
+        alt={props.heading}
+        width={1000}
+        height={1000}
+        />
+      </div>
 
-      <div className='absolute pt-16 p-4 md:p-8  inset-0 flex flex-col items-center md:items-start md:justify-center max-w-lg  justify-center text-white '>
-      <div className='flex flex-col items-center'>
+      <div className='absolute pt-16 p-4 md:p-8  inset-0 flex flex-col items-center md:items-start md:justify-center  w-full  justify-center text-white bg-black/80 '>
+      <div className='flex flex-col  max-w-lg'>
        
         <h2 className='text-mediumFont font-bold font-poppins'>
             {props.heading}
         </h2>
+
         <div>
         {
             props.subHeading && 
@@ -50,6 +51,7 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
            </TypographyH4>
         }
         </div>
+
         <div>
         {props.message &&
          <TypographyMuted className=''>{props.message}</TypographyMuted>
@@ -59,7 +61,9 @@ const ImageWithBackGround = (props:imagewithbgprops) => {
         <Button
         onClick={redirectToProducts} 
         
-        className='w-full z-20 p-4 cursor-pointer font-poppins text-extraSmall font-bold uppercase '>order now</Button>
+        className='w-full z-20 p-4 cursor-pointer font-poppins text-extraSmall font-bold uppercase '>
+          order now
+        </Button>
       </div>
         </div>  
     
