@@ -228,5 +228,6 @@ export {
     fakedata,
     admincard,
     foooterlinks,
-    testimonials
+    testimonials,
+    carouselImage
 }

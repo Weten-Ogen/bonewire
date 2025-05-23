@@ -1,3 +1,4 @@
+import CarouselComp from "@/components/carouselcomp";
 import HeroInfo from "@/components/ui/heroinfo";
 import HeroProduct from "@/components/ui/heroproduct";
 import HeroStatement from "@/components/ui/herostatement";
@@ -5,6 +6,7 @@ import ImageWithBackGround from "@/components/ui/imagebackground";
 import Socials from "@/components/ui/socials";
 import { HeroCarousel } from "@/components/ui/testimonialcarousel";
 import TextOnVideo from "@/components/ui/textonvideo";
+import { carouselImage } from "@/lib/constants";
 
 
 
@@ -18,12 +20,10 @@ export default function Home() {
             heading="Kente Mall"
             subHeading="Your home of quality products, giving you the Ghana culture vibes and luxury of kente products."   
         />  
-       <TextOnVideo
-         text="The home of Quality Kente Products."
-         videoUrl="https://www.youtube.com/watch?v=lT-weavRajg"
-         className=""
-
-       />
+        <CarouselComp
+        data={carouselImage}
+        type="pic"
+        />
         </div>
         <div id="services">
         <HeroInfo 

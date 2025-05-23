@@ -4,6 +4,7 @@ import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 import Image from 'next/image'
 
 import AutoPlay from  'embla-carousel-autoplay'
+import CarouselShowCard from './carouselshowcard'
 
 interface carouselComp {
     className?:string,
@@ -11,10 +12,10 @@ interface carouselComp {
     type:string
 }
 const CarouselComp = (props:carouselComp) => {
-     const plugin = React.useRef(AutoPlay({ delay: 3000, stopOnInteraction: true }))
+     const plugin = React.useRef(AutoPlay({ delay: 2000, stopOnInteraction: true }))
 
   return (
-    <div>
+    <div className='md:w-[80%] md:mx-auto p-4'>
         <Carousel
             className="ease-in-out w-full"
             plugins={[plugin.current]}
@@ -24,38 +25,15 @@ const CarouselComp = (props:carouselComp) => {
             align: 'start',
             }}
         >
-            <CarouselContent>
+            <CarouselContent className="md:w-[80%] md:mx-auto p-4">
                 {
                     props.data.map((item:any,i:number) => {
                     return(
-                        props.type ?
-                        <CarouselItem className='max-w-full h-auto'>
-                            <div>
-                                <Image 
-                                    src={item.imageurl}
-                                    alt={item.imageurl}
-                                    width={500}
-                                    height={500}
-                                    className='w-full object-contain'
-                                />
-                            </div>
-                        </CarouselItem>
-                        : 
-                        <CarouselItem>
-                            <video 
-                                width='1000' 
-                                className='w-full object-cover  h-[70vh] rounded-lg shadow-xl'
-                                height="auto"  
-                                muted 
-                                autoPlay
-                                loop 
-                            >
-                        <source 
-                            src="https://l8yhwwsvkn8vkuaa.public.blob.vercel-storage.com/hero-cz5Q8VVWebkyiN3FgvDiunqjYFhR3o.mp4" 
-                            type="video/mp4"
-                        />
-                        </video>                                        
-     
+                        <CarouselItem key={i}>
+                            <CarouselShowCard
+                                item={item}
+                                type={props.type}
+                            />   
                         </CarouselItem>
                     )
                     })
