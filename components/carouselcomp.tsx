@@ -15,7 +15,7 @@ const CarouselComp = (props:carouselComp) => {
      const plugin = React.useRef(AutoPlay({ delay: 2000, stopOnInteraction: true }))
 
   return (
-    <div className='md:w-[80%] md:mx-auto p-4'>
+    <div className=' w-full h-[80vh] md:h-screen md:w-[80%] md:mx-auto p-4'>
         <Carousel
             className="ease-in-out w-full"
             plugins={[plugin.current]}
