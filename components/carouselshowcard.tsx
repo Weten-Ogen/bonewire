@@ -35,7 +35,7 @@ const CarouselShowCard = ({ item, type, pauseCarousel, resumeCarousel }: carprop
   }, [pauseCarousel, resumeCarousel])
 
   return (
-    <div className='w-[300px] h-[300px] object-contain'>
+    <div className='md:w-[300px] md:h-[300px] w-full h-[60vh] object-contain'>
       {type === 'pic' ? (
         <Card className='p-0'>
           <CardContent className='p-0'>
