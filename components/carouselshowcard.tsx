@@ -9,12 +9,12 @@ interface carprops {
 }
 const CarouselShowCard = (props:carprops) => {
   return (
-    <div className='w-[300px] h-[300px] object-contain'>
+    <div className='md:w-[300px] md:h-[300px] object-contain p-4 w-full'>
         {
             props.type == 'pic' ?
 
-        <Card className='p-0'>
-            <CardContent className='p-0'>
+        <Card className='w-full p-0'>
+            <CardContent className='w-full p-0'>
                 <Image
                     
                     src={props.item.imageurl}
@@ -26,8 +26,8 @@ const CarouselShowCard = (props:carprops) => {
             </CardContent>
         </Card>
         : 
-        <Card className='p-0'>
-            <CardContent className='p-0'>
+        <Card className='w-full p-0'>
+            <CardContent className='w-full p-0'>
                 <video 
                                 width='1000' 
                                 className='w-full object-cover  h-[70vh] rounded-lg shadow-xl'
