@@ -6,7 +6,7 @@ import ImageWithBackGround from "@/components/ui/imagebackground";
 import Socials from "@/components/ui/socials";
 import { HeroCarousel } from "@/components/ui/testimonialcarousel";
 import TextOnVideo from "@/components/ui/textonvideo";
-import { carouselImage } from "@/lib/constants";
+import { carouselImage, carouselVideo } from "@/lib/constants";
 
 
 
@@ -31,8 +31,9 @@ export default function Home() {
         />
         </div>
 
-        <HeroStatement 
-           className="mt-24  text-white "
+        <CarouselComp
+          data={carouselVideo}
+          type="video"
         />
 
         <HeroCarousel

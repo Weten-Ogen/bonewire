@@ -14,7 +14,7 @@ const HeroStatement = (props:heroprops) => {
   return (
     <div 
         className={cn('h-[90vh] max-w-full   overflow-hidden relative ',props.className)}
-    >
+    >   
       <div 
           className='max-w-4xl md:mx-auto p-4 mt-10 md:p-8 w-full h-[100vh] overflow-hidden   rounded-lg    z-20  object-contain py-8'
       >

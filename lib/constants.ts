@@ -41,7 +41,16 @@ const navlinks = [
 
 ]
 
-
+const carouselVideo =[
+    {
+        id: '1',
+        videourl:'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Video%202025-05-22%20at%209.31.57%20PM-4g6cv7xI8IqGfSQYlONaitXduzeiSg.mp4'
+    },
+    {
+        id: '2',
+        videourl:'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Video%202025-05-22%20at%209.31.57%20PM-4g6cv7xI8IqGfSQYlONaitXduzeiSg.mp4'
+    },
+]
 const filterlist= [
     {
      label: "all"
@@ -229,5 +238,6 @@ export {
     admincard,
     foooterlinks,
     testimonials,
-    carouselImage
+    carouselImage,
+    carouselVideo
 }
