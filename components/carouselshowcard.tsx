@@ -37,8 +37,8 @@ const CarouselShowCard = ({ item, type, pauseCarousel, resumeCarousel }: carprop
   return (
     <div className='md:w-[300px] md:h-[300px] w-full h-[60vh] object-contain'>
       {type === 'pic' ? (
-        <Card className='p-0'>
-          <CardContent className='p-0'>
+        <Card className='w-full p-0'>
+          <CardContent className='w-full p-0'>
             <Image
               src={item.imageurl}
               alt={item.imageurl}
@@ -58,7 +58,6 @@ const CarouselShowCard = ({ item, type, pauseCarousel, resumeCarousel }: carprop
               height='auto'
               muted
              
-              controls
             >
               <source src={item.videourl} type='video/mp4' />
             </video>
