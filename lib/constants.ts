@@ -48,7 +48,7 @@ const carouselVideo =[
     },
     {
         id: '2',
-        videourl:'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Video%202025-05-22%20at%209.31.59%20PM-823AjD4aLgcv71NlP3d2DdqfzB7Nuu.mp4'
+        videourl:'https://z55xsbizyi4m9dqn.public.blob.vercel-storage.com/WhatsApp%20Video%202025-05-22%20at%209.31.59%20PM-ypTnyOK4NJTqcuKcK5FdK99esajqGY.mp4'
     },
     {
         id: '3',
