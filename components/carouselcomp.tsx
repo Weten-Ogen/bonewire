@@ -22,7 +22,7 @@ const CarouselComp = (props:carouselComp) => {
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
             opts={{
-            align:'start',
+            align:'center',
             }}
         >
             <CarouselContent className="w-full md:mx-auto p-0">
